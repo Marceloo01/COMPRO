@@ -1,0 +1,72 @@
+.rodape {
+    margin-top:100vh;
+    width: 100%;
+    height: 350px;
+    display:flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 2000px;
+}
+.rodape > *{
+    text-align: center;
+    width: 25%;
+    height: 100%;
+}
+.rodtxt {
+    cursor: default;
+}
+.rodLogo {
+    cursor: default;
+}
+.rodLogo img{
+    padding-top: 20px;
+    height: 100px;
+}
+.texto1 {
+    cursor: default;
+    padding-top: 20px;
+}
+.rodRedes img {
+    margin-left: 15px;
+    cursor: pointer;
+    height: 50px;
+    border: solid 1px black;
+    border-radius: 50%;
+}
+#redeS {
+    position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cop {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 10px;
+    
+}
+
+@media screen and (max-width:950px) {
+    .rodLogo img {
+        padding-top:60px;
+        height: 50px;
+    }
+    .texto1 {
+        padding-top: 60px;
+    }
+    .rodape{
+        height:550px;
+        display: inline-block;
+    }
+    .rodape > *{
+        float: left;
+        width: 50%;
+        height: 50%;
+    }
+    .cop {
+        font-size: 10px;
+    }
+}
