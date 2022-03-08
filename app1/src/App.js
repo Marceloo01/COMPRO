@@ -7,12 +7,13 @@ import './css/menu.css';
 import {Routes,Route,Link} from 'react-router-dom'
 import Rodape from './componentes/rodape.js'
 import Login from './Telas/login.js'
+import Slid from './componentes/Slide.js'
 //id projeto: compro-94dcf
 function App() {
 
   const [sel,setSel]=useState(1);
   
-  const [logou,setLogou]=useState(null);
+  const [logou,setLogou]=useState(1);
   
   const verificarLogin = async (u)=>{
     let newUser={
@@ -71,6 +72,7 @@ function App() {
         </Routes>
 
         </header>
+        <Slid/>
         <Rodape/>
       </div>
       )
