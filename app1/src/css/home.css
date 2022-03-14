@@ -61,7 +61,7 @@ body {
     width: 50%;
     border-radius: 25px;
 }
-button:hover {
+.texto button:hover {
     background-color: #77cae4;
 }
 
@@ -89,6 +89,4 @@ button:hover {
         padding:10px;
         box-sizing: border-box;
     }
-    
-
 }

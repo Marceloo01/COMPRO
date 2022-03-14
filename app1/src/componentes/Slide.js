@@ -1,11 +1,10 @@
 import React from "react";
 import Bloco from "./blocoSupermercado.js"
 import '../css/EstiloSlide.css';
-import Supermercado from '../img/SupermercadoSlide.jpg'; 
 
 export default function Slid(){
     return (
-        <>
+        <div id="conjuntoSlide">
         <div className="titulo">
             Supermercados    
         </div>
@@ -15,8 +14,13 @@ export default function Slid(){
             <Bloco/>
             <Bloco/>
             <Bloco/>
+            <Bloco/>
+            <Bloco/>
+            <Bloco/>
+            <Bloco/>
+            <Bloco/>
         </div>
 
-        </>
+        </div>
     )
 }

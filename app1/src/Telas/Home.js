@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../css/home.css';
 import corpo1 from '../img/corpo1.jpg'
+import Slid from '../componentes/Slide.js'
 
 export default function Home() {
   
@@ -15,6 +16,7 @@ export default function Home() {
             </div>
         </div>
       </div>
+      <Slid/>
     </>
     
   );
