@@ -1,17 +1,19 @@
 import React,{useState} from 'react';
 import Home from './Telas/Home.js'
 import menuLateral from './img/menu-lateral.png'
-import carrinho from './img/carrinho.png'
-import COMPRO from './img/COMPRO.png'
+import carrinho from './img/carrinho1.png'
+import COMPRO from './img/COMPRO_Linha.png'
 import './css/menu.css';
 import {Routes,Route,Link} from 'react-router-dom'
 import Rodape from './componentes/rodape.js'
 import Login from './Telas/login.js'
+import Supermercados from './Telas/supermercados.js'
+import { click } from '@testing-library/user-event/dist/click';
 //id projeto: compro-94dcf
 function App() {
 
   const [sel,setSel]=useState(1);
-  
+  var clicks=0;
   const [logou,setLogou]=useState(0);
   
   const verificarLogin = async (u)=>{
@@ -34,18 +36,16 @@ function App() {
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
     var fundo=document.getElementById('fundoMenu');
-    console.log('oi2')
-    if(carrinho.style.left!='70%') {
-      console.log('oi')
+    clicks++;
+    if(clicks%2!=0) {
       fundo.style.display="block"
       carrinho.style.opacity="1"
-      carrinho.style.left='70%';
+      carrinho.style.transform="translateX(-100%)"
       
     } else {
-      console.log('oi1')
       fundo.style.display="none"
       carrinho.style.opacity="0"
-      carrinho.style.left='100%';
+      carrinho.style.transform="translateX(0%)"
 
       
     }
@@ -62,8 +62,8 @@ function App() {
         <div id="menuCarrinho">
             <div className="headerCarrinho">
               
-              <div className="textoCarrinho">
-                Seu Carrinho
+              <div className="tituloCarrinho">
+                Carrinho de produtos
               </div>
               <button id="x"onClick={abrirCarrinho}>X</button>
               </div>
@@ -77,8 +77,8 @@ function App() {
         <header>
         
         <div className="cab">
-          <img src={logou.avatar}/>
-          <div className="inicioTxt">Compre fácil com COMPRO</div>
+          <img src={COMPRO}/>
+          {/* <div className="inicioTxt">Compre fácil com COMPRO</div> */}
         </div>
         
         <div className="menu">
@@ -107,7 +107,7 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/Contato' element={<p>Contato</p>}></Route>
           <Route path='/Produtos' element={<p>Produtos</p>}></Route>
-          <Route path='/Supermercado' element={<p>Supermercado</p>}></Route>
+          <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<p>Ajuda</p>}></Route>
         </Routes>
 

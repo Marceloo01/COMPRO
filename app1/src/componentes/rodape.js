@@ -15,13 +15,10 @@ export default function Rodape() {
     <footer className="rodape">
         <div className="rodLogo">
             <img src={logo}/>
-            <br/>
-            ComPro
-            
-            
+            <h2>ComPro</h2>            
         </div>
         <div className="rodtxt">
-            <div className="texto1">
+            <div className="rod-titulo">
                 <b>Patrocinadores</b>
             </div>
             <p className="text">Ferrari</p>
@@ -31,7 +28,7 @@ export default function Rodape() {
         </div>
         
         <div className="rodtxt">
-        <div className="texto1">
+            <div className="rod-titulo">
                 <b>Contato</b>
             </div>
             <p className="text">knoob077@gmail.com</p>
@@ -40,11 +37,9 @@ export default function Rodape() {
             <p className="text">Piscininha</p>
 
         </div>
-            <div className="rodRedes">
-                
+        <div className="rodRedes"> 
+        <h3>Redes Sociais</h3>       
             <div id="redeS">
-                <h3>Redes Sociais</h3>
-                <br/>
                 <img src={zap}/>
                 <img src={inst}/>
                 <img src={facebook}/>
@@ -55,7 +50,7 @@ export default function Rodape() {
         <div className="cop">
             Copyright 2022 &copy; Todos os direitos reservados.
             <br/>
-O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do SENAI-SP.
+            O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do SENAI-SP.
         </div>
     </>
     

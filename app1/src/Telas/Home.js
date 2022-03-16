@@ -10,11 +10,14 @@ export default function Home() {
   return (
     <>
       <div className="corpo">
-        <div className="corpo1">
-            <div className="corpo1-img1"><img src={corpo1}/>
-              <div className="texto">Precisa de ajuda para aprender a mexer no site<br/><br/><button>Clique aqui</button></div>  
+            <div className="corpo-img">
+              <img src={corpo1}/>    
             </div>
-        </div>
+            <div className="texto">
+              <span className="destaque">Precisa de ajuda</span><p>Temos um site de apoio para nosso clientes, para aprender a mexer no site clique logo em baixo nesse botão</p>
+              <button>Clique aqui</button>
+            </div>
+        
       </div>
       <Slid/>
     </>

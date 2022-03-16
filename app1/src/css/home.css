@@ -11,34 +11,43 @@ body::-webkit-scrollbar-thumb:hover {
 }
 body {
     margin: 0 auto;
+    overflow-x: hidden;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .corpo {
     position: relative;
     left: 50%;
+    margin-top:30px;
     transform: translateX(-50%);
-    width: 60%;
-    max-width: 1200px;
-}
-
-.corpo1 {
     width: 100%;
-    padding: 20px;
-    background-color: rgb(237, 250, 250);
+    min-width: 800px;
+    max-width: 1200px;
+    padding: 20px;    
+    border-radius: 15px;
     box-sizing: border-box;
     height: auto;
-}
-.corpo1-img1 {
-    width: 100%;
+    align-items: center;
+    justify-content:space-between;
     display: flex;
+    orientation: horizontal;
+}
+
+.corpo-img {
+    width: 55%;
+    height:auto;
+    text-align:center;
 }
 .texto {
     cursor: default;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 50%;
-    text-align: center;
-    margin-top: 12%;
-    font-size: 40px;
+    width: 45%;
+    text-align:left;
+    padding:20px;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+}
+.texto > p{
+    font-size: 18px;
 }
 .texto button {
     cursor: pointer;
@@ -52,41 +61,56 @@ body {
     background-color: #7cd5f0;
     border-radius: 5px;
 }
-.link {
-    display: inline;
-    width: 100%;
-    text-align: center;
+.destaque{
+    color: #02c4ff;
+    font-size: 50px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 60px;
 }
-.corpo1-img1 img {
-    width: 50%;
-    border-radius: 25px;
+.corpo-img > img {
+    width: 400px;
+    height:auto;
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 2%;
+    border-top-left-radius: 10%;
 }
 .texto button:hover {
     background-color: #77cae4;
 }
 
-@media screen and (max-width:950px) {
-    
+@media screen and (max-width:850px) {
     .texto {
-        font-size: 20px;
+        
+        font-size: 25px;
         width: 100%;
+        max-width:500px;
     }
-    .corpo1-img1{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .corpo1-img1 img {
+    .corpo-img{
         border-radius: 10px;
-        margin-top: 30px;
         width: 100%;
+    }
+    .corpo-img img{
+        width: 90%;
+        max-width:500px;
     }
     .texto button {
         font-size: 16px;
     }
+    .destaque{
+        font-size:40px;
+        margin-bottom:10px;
+    }
     .corpo{
         width: 100%;
         padding:10px;
+        flex-direction: column;
         box-sizing: border-box;
+        min-width: 300px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        max-width:600px;
     }
+
 }
