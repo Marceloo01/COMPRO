@@ -1,5 +1,6 @@
 import react from "react";
-import "../css/TelaSupermercados.css"
+import "../css/TelaSupermercados.css";
+import Supermercado from '../img/SupermercadoSlide.jpg';
 
 export default function superMer() {
 
@@ -13,7 +14,9 @@ export default function superMer() {
                 <div className="Stxt">
                     Primeiro Colocado
                 </div>
-                <div className="Simg"></div>
+                <div className="Simg">
+                    <img src={Supermercado}/>
+                </div>
             </div>
         </div>
 

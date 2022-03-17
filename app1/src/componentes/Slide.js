@@ -6,7 +6,7 @@ export default function Slid(){
     return (
         <div id="conjuntoSlide">
         <div className="titulo">
-            Supermercados    
+            Top supermercados para você  
         </div>
         <div className="corpoSlide">
             <Bloco/>

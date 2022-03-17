@@ -1,11 +1,9 @@
 .bodySuper{
     width: 100%;
     height: 1000px;
-    background-color: rgb(235, 235, 235);
 
 }
 .super1 {
-    background-color: rgb(148, 148, 148);
     width: 100%;
     height: 600px;
     display:grid;
@@ -17,30 +15,21 @@
     height: auto;
     text-align: center;
     font-size: 40px;
-    color: rgb(59, 59, 59);
     margin-top: 225px;
 }
 .Simg {
-    padding-top:50px;
-    height: 500px;
+    padding: 150px;
+    overflow: hidden;
 }
 .Simg > img {
-    position: relative;
-    float: left;
-    height: 500px;
+    
 }
 @media screen and (max-width:950px) {
     .super1 {
-        background-color: rgb(148, 148, 148);
         width: 100%;
         height: 400px;
         display: block;
         box-sizing: border-box;
-    }
-    .Simg > img {
-        width: 100%;
-        height: auto;
-        padding-top: 95px;
     }
     .Stxt {
         padding-top: 50px;

@@ -102,7 +102,7 @@ function App() {
               <img src={carrinho}/>
             </div>
           </div>
-        </div>
+        </div> 
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/Contato' element={<p>Contato</p>}></Route>
