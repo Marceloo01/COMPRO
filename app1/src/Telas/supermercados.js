@@ -8,7 +8,7 @@ export default function superMer() {
         <>
         <div className="bodySuper">
             <div className="super">
-                <h1>Veja os Supermercdos</h1>
+                <h1>Veja os Supermercados</h1>
             </div>
             <div className="super1">
                 <div className="Stxt">

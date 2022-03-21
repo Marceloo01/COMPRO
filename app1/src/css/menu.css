@@ -203,7 +203,7 @@ nav > *:hover {
         height: 0px;
         top: 70px;
         overflow: hidden;
-        transition: all 0.7s ;
+        transition: all 1.3s ;
     }
     #icone {
         display:block;

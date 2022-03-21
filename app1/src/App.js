@@ -1,21 +1,25 @@
 import React,{useState} from 'react';
-import Home from './Telas/Home.js'
-import menuLateral from './img/menu-lateral.png'
-import carrinho from './img/carrinho1.png'
-import COMPRO from './img/COMPRO_Linha.png'
+import Home from './Telas/Home.js';
+import menuLateral from './img/menu-lateral.png';
+import carrinho from './img/carrinho1.png';
+import COMPRO from './img/COMPRO_Linha.png';
 import './css/menu.css';
-import {Routes,Route,Link} from 'react-router-dom'
-import Rodape from './componentes/rodape.js'
-import Login from './Telas/login.js'
-import Supermercados from './Telas/supermercados.js'
+import {Routes,Route,Link} from 'react-router-dom';
+import Rodape from './componentes/rodape.js';
+import Login from './Telas/login.js';
+import Supermercados from './Telas/supermercados.js';
 import { click } from '@testing-library/user-event/dist/click';
+import Ajuda from './Telas/ajuda.js';
+import './css/variaveis.css';
+import Contato from './Telas/contato.js';
+
 //id projeto: compro-94dcf
 function App() {
 
   const [sel,setSel]=useState(1);
   var clicks=0;
   const [logou,setLogou]=useState(0);
-  
+  const heightMenu=270
   const verificarLogin = async (u)=>{
     let newUser={
       id:u.uid,
@@ -24,13 +28,25 @@ function App() {
     }
     setLogou(newUser);
   }
-
+  document.body.onload=()=>{
+    let urlPagina=window.location.pathname;
+    if(urlPagina=='/')
+      setSel(1)
+    else if(urlPagina=='/Supermercado')
+      setSel(2)
+    else if(urlPagina=='/Produtos')
+      setSel(3)
+    else if(urlPagina=='/Contato')
+      setSel(4)
+    else if(urlPagina=='/Ajuda')
+      setSel(5)
+  }
   const abrirMenu=()=>{ 
     var menu = document.getElementById('nav');
-    if(menu.style.height=='230px'){
+    if(menu.style.height==heightMenu+'px'){
       menu.style.height='0px';
     }else{
-      menu.style.height='230px';
+      menu.style.height=heightMenu+'px';
     }
   }
   const abrirCarrinho = ()=>{
@@ -102,16 +118,18 @@ function App() {
               <img src={carrinho}/>
             </div>
           </div>
-        </div> 
+        </div>
+      </header> 
+        <main>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/Contato' element={<p>Contato</p>}></Route>
+          <Route path='/Contato' element={<Contato/>}></Route>
           <Route path='/Produtos' element={<p>Produtos</p>}></Route>
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
-          <Route path='/Ajuda' element={<p>Ajuda</p>}></Route>
+          <Route path='/Ajuda' element={<Ajuda/>}></Route>
         </Routes>
-
-        </header>
+        </main>
+        
   
         <Rodape/>
       </div>

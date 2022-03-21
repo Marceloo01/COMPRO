@@ -22,8 +22,11 @@
     overflow: hidden;
 }
 .Simg > img {
-    
+    float: left;
+    width: 100%;
+    height: auto;
 }
+
 @media screen and (max-width:950px) {
     .super1 {
         width: 100%;

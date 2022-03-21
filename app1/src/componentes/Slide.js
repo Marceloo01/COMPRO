@@ -20,6 +20,10 @@ export default function Slid(){
             <Bloco/>
             <Bloco/>
         </div>
+        <div className="botoes-slide">
+            <input type="button" value="<"/>
+            <input type="button" value=">"/>
+        </div>
 
         </div>
     )

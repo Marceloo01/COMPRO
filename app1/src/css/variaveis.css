@@ -1,0 +1,11 @@
+:root{
+    --corTexto:#2bc2bd;
+    --corFundoAzulClaro:#e9f3f7;
+}
+main {
+    height:auto;
+    width: 100%;
+    padding:80px;
+    box-sizing: border-box;
+    max-width: 2000px;
+}
