@@ -12,9 +12,14 @@ import { click } from '@testing-library/user-event/dist/click';
 import Ajuda from './Telas/ajuda.js';
 import './css/variaveis.css';
 import Contato from './Telas/contato.js';
+import Produtos from './Telas/produtos.js';
 
+
+//Nunito font
 //id projeto: compro-94dcf
 function App() {
+
+  
 
   const [sel,setSel]=useState(1);
   var clicks=0;
@@ -41,13 +46,17 @@ function App() {
     else if(urlPagina=='/Ajuda')
       setSel(5)
   }
-  const abrirMenu=()=>{ 
+  const abrirMenu=(urlPagina)=>{
     var menu = document.getElementById('nav');
     if(menu.style.height==heightMenu+'px'){
       menu.style.height='0px';
     }else{
       menu.style.height=heightMenu+'px';
     }
+
+
+    
+
   }
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
@@ -70,6 +79,7 @@ function App() {
     if(logou!=null){
       {document.title="Home"}
       return(
+        
         
       <div className="App">
         <div id="fundoMenu">
@@ -124,7 +134,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/Contato' element={<Contato/>}></Route>
-          <Route path='/Produtos' element={<p>Produtos</p>}></Route>
+          <Route path='/Produtos' element={<Produtos/>}></Route>
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
         </Routes>

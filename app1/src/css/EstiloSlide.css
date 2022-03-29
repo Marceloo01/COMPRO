@@ -1,23 +1,20 @@
 
 .corpoSlide::-webkit-scrollbar{
-    height: 0px;
+    height: 5px;
 }
 .corpoSlide {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    position: relative;
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    padding-top: 70px;
-    
+    margin-top: 100px;
+    padding: 10px;
 }
 
 .corpoSlide > img {
     padding: 10px;
-    margin-right: 40px;
-    height: 250px;
 }
 .titulo {
     width: 100%;
@@ -42,7 +39,7 @@
     transform:translateX(-50%);
 }
 .botoes-slide{
-    padding-top: 20px;
+    padding-top: 100px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -52,17 +49,52 @@
     box-sizing: border-box;
     height: 50px;
     width: 50px;
-    border: 1px solid #808080;
+    border: 1px solid #909090;
     cursor: pointer;
     border-radius: 50%;
     background-color: transparent;
 }
+
+.conjunto {
+    margin: 10px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #303030;
+    border-top-left-radius: 25px;
+    user-select: none;
+    height: auto;
+}
+.Supermercado-img {
+    padding: 0;
+    width: 25vw;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    height: auto;
+}
+.Supermercado-img > img {
+    width: 100%;
+    height: auto;
+}
+.nome-supermercado {
+    height: auto;
+}
+.nome-supermercado > h1 {
+    font-size: 25px;
+}
 @media screen and (max-width:950px) {
-    .corpoSlide > img {
-        width: 190px;
-        height:auto;
+    #conjuntoSlide {
+        padding: 2px;
     }
     .titulo{
         font-size: 30px;
+    }
+    .Supermercado-img {
+        width: 35vh;
+    }
+    .corpoSlide > .conjunto {
+        padding: 5px;
+    }
+    .nome-supermercado > h1 {
+        font-size: 17px;
     }
 }
