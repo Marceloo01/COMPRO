@@ -14,7 +14,7 @@
     background-color: var(--corFundoAzulClaro);
 }
 .subTitulo-ajuda {
-    width: 100%;
+    width: auto; 
     margin-top: 100px;
     height: auto;
     text-align: left;
@@ -33,4 +33,22 @@
 .carrinho-Ajuda > img {
     padding-top: 20px;
     height: 500px;
+}
+@media screen and (max-width:950px) {
+    .titulo-ajuda {
+        overflow: hidden;
+        font-size: 30px;
+    }
+    .subTitulo-ajuda {
+        text-align: left;
+        font-size: 23px;
+    }
+    .carrinho-Ajuda {
+        font-size: 20px;
+    }
+    .carrinho-Ajuda > img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
 }

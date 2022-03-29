@@ -16,7 +16,8 @@ body::-webkit-scrollbar-thumb:hover {
 body {
     margin: 0 auto;
     overflow-x: hidden;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    
     animation-name: example;
     animation-duration: 1.5s;
     

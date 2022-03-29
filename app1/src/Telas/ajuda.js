@@ -23,7 +23,7 @@ export default function Ajuda() {
             Supermercados
         </div>
 
-
+ 
         <div className="subTitulo-ajuda">
             Produtos
         </div>
