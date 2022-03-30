@@ -13,7 +13,7 @@ import Ajuda from './Telas/ajuda.js';
 import './css/variaveis.css';
 import Contato from './Telas/contato.js';
 import Produtos from './Telas/produtos.js';
-
+import Supers from './Telas/InfoSuper.js'
 
 //Nunito font
 //id projeto: compro-94dcf
@@ -45,6 +45,8 @@ function App() {
       setSel(4)
     else if(urlPagina=='/Ajuda')
       setSel(5)
+    else
+      setSel(-1)
   }
   const abrirMenu=(urlPagina)=>{
     var menu = document.getElementById('nav');
@@ -137,6 +139,7 @@ function App() {
           <Route path='/Produtos' element={<Produtos/>}></Route>
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
+          <Route path='/1' element={<Supers/>}></Route>
         </Routes>
         </main>
         
