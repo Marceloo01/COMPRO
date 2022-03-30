@@ -15,6 +15,13 @@ export default function Contato (){
             <strong>E-mail: </strong>knoob077 /marcelinhooliveira2090<br/>
             <strong>Whatsapp: </strong>12991747752<br/>
         </div>
+
+        <div className="subtitulo-contato">
+            Sobre nós
+        </div>
+        <div className="subtitulo-contato">
+            
+        </div>
         </>
     )
 }

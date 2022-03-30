@@ -1,0 +1,56 @@
+.conjunto-info {
+    width: 50%;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #303030;
+    border-top-left-radius: 25px;
+    user-select: none;
+    height: auto;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.Supermercado-img-info {
+    padding: 0;
+    width: 100%;
+    border-top-left-radius: 20px;
+    overflow: hidden;
+    height: auto;
+}
+.Supermercado-img-info > img {
+    width: 100%;
+    height: auto;
+}
+.nome-supermercado-info {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.nome-supermercado-info > h1 {
+    font-size: 25px;
+    text-align: center;
+}
+.nome-supermercado-info > h2 {
+    font-weight: 500;
+    font-size: 17px;
+    text-align: left;
+}
+@media screen and (max-width:950px) {
+    .Supermercado-img-info {
+        width: 100%;
+    }
+    .conjunto-info {
+        width: 90%;
+        overflow: hidden;
+    }
+    .conjunto {
+        padding: 5px;
+    }
+    .nome-supermercado-info > h1 {
+        font-size: 17px;
+    }
+    .nome-supermercado-info > h2 {
+        font-size: 15px;
+    }
+}
