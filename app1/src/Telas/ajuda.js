@@ -6,10 +6,10 @@ export default function Ajuda() {
 
     return(
         <>
-        <div id="fundoTitulo">
-            <h1 className="titulo-ajuda">Precisa de Ajuda</h1>
+        <div className="titulo">
+            <h1>Precisa de Ajuda</h1>
         </div>
-        <div className="subTitulo-ajuda">
+        <div className="subititulo">
             Carrinho
         </div>
         <div className="carrinho-Ajuda">
@@ -19,12 +19,12 @@ export default function Ajuda() {
         </div>
 
 
-        <div className="subTitulo-ajuda">
+        <div className="subititulo">
             Supermercados
         </div>
 
  
-        <div className="subTitulo-ajuda">
+        <div className="subititulo">
             Produtos
         </div>
         </>

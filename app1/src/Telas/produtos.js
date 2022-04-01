@@ -4,8 +4,8 @@ export default function Produtos() {
 
     return(
         <>
-            <div id="fundoTitulo">
-                <h1 className="titulo-ajuda">Veja os Produtos</h1>
+            <div className="titulo">
+                <h1>Veja os Produtos</h1>
             </div>
         </>
     )

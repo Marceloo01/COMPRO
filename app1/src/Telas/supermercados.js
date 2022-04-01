@@ -1,13 +1,26 @@
 import react from "react";
-import "../css/TelaSupermercados.css";
+import Supermercado from "../img/SupermercadoSlide.jpg";
 
 export default function superMercados() {
 
     return (
         <>
-        <div id="fundoTitulo">
-            <h1 className="titulo-ajuda">Veja os Supermercados</h1>
+        <div className="titulo">
+            <h1>Veja os Supermercados</h1>
         </div>
+
+        <div className="subititulo">melhores classificações</div>
+
+        <div className="conjunto">
+            <div className="Supermercado-img">
+                <img src={Supermercado}/>
+            </div>
+            <div className="nome-supermercado">
+                <h1>Senhor dos pasteis</h1>
+                <h2>Localização: Avenida Baden Powell - Jardim Nova Europa, Campinas - SP</h2>
+            </div>
+        </div>
+
 
         </>
     )

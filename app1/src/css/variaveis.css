@@ -1,6 +1,29 @@
 :root{
     --corTexto:#2bc2bd;
     --corFundoAzulClaro:#e9f3f7;
+    --tamanhoFundo:200px;
+    
+}
+.subititulo {
+    width: auto; 
+    margin-top: 100px;
+    height: auto;
+    text-align: left;
+    font-size: 40px;
+    padding: 20px;
+    color: #505050;
+}
+.titulo {
+    height: var(--tamanhoFundo);
+    background-color: var(--corFundoAzulClaro);
+}
+.titulo > h1 {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 70px;
+    line-height: var(--tamanhoFundo);
+    color: var(--corTexto);
 }
 main {
     height:auto;
@@ -16,5 +39,11 @@ main {
 @media screen and (max-width:950px) {
     main {
         padding: 5px;
+    }
+    .titulo > h1 {
+        font-size: 30px;
+    }
+    .subtitulo {
+        font-size: 23px;
     }
 }
