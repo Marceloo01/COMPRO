@@ -5,10 +5,10 @@ import '../css/EstiloSlide.css';
 export default function Slid(){
     return (
         <div id="conjuntoSlide">
-            <div className="titulo">
+            <div className="titulo-slide">
                 Top supermercados para você  
             </div>
-            <div className="corpoSlide">
+            <div className="corpoSlide"> 
                 <Bloco/>
                 <Bloco/>
                 <Bloco/>

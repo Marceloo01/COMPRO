@@ -55,10 +55,6 @@ function App() {
     }else{
       menu.style.height=heightMenu+'px';
     }
-
-
-    
-
   }
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
@@ -139,7 +135,7 @@ function App() {
           <Route path='/Produtos' element={<Produtos/>}></Route>
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
-          <Route path='/1' element={<Supers/>}></Route>
+          <Route path='/informacoes' element={<Supers/>}></Route>
         </Routes>
         </main>
         

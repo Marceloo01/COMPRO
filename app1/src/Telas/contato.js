@@ -4,10 +4,10 @@ import '../css/contato.css';
 export default function Contato (){
     return (
         <>
-        <div className="titulo-contato">
+        <div className="titulo">
             <h1>Contato</h1>
         </div>
-        <div className="subtitulo-contato">
+        <div className="subititulo">
             formas de contato
         </div>
         <div className="formas-contato">
@@ -16,10 +16,10 @@ export default function Contato (){
             <strong>Whatsapp: </strong>12991747752<br/>
         </div>
 
-        <div className="subtitulo-contato">
+        <div className="subititulo">
             Sobre nós
         </div>
-        <div className="subtitulo-contato">
+        <div className="subititulo">
             
         </div>
         </>
