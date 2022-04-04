@@ -20,7 +20,7 @@ export default function Home() {
             </div>
         
       </div>
-      <Slid/>
+      <Slid titulo="Top supermercados para você" />
       <SlideProd/>
     </>
     

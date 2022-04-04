@@ -2,11 +2,11 @@ import React from "react";
 import Bloco from "./blocoSupermercado.js";
 import '../css/EstiloSlide.css';
 
-export default function Slid(){
+export default function Slid(props){
     return (
         <div id="conjuntoSlide">
             <div className="titulo-slide">
-                Top supermercados para você  
+                {props.titulo}  
             </div>
             <div className="corpoSlide"> 
                 <Bloco/>
@@ -22,7 +22,6 @@ export default function Slid(){
                 <input type="button" value="<"/>
                 <input type="button" value=">"/>
             </div>
-
         </div>
     )
 }

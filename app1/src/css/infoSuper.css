@@ -2,7 +2,6 @@
     width: 50%;
     padding: 3px;
     border-radius: 5px;
-    border: 1px solid #303030;
     border-top-left-radius: 25px;
     user-select: none;
     height: auto;
@@ -14,7 +13,7 @@
 .Supermercado-img-info {
     padding: 0;
     width: 100%;
-    border-top-left-radius: 20px;
+    border-top-left-radius: 10px;
     overflow: hidden;
     height: auto;
 }
