@@ -1,7 +1,6 @@
 
 .corpoSlide::-webkit-scrollbar{
     height: 10px;
-    
 }
 .corpoSlide::-webkit-scrollbar-thumb {
     background-color: #303030;
@@ -17,7 +16,6 @@
     margin-top: 100px;
     padding: 10px;
 }
-
 .corpoSlide > img {
     padding: 10px;
 }
@@ -44,7 +42,7 @@
     transform:translateX(-50%);
 }
 .botoes-slide{
-    padding-top: 100px;
+    padding-top: 50px;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -59,7 +57,6 @@
     border-radius: 50%;
     background-color: transparent;
 }
-
 .conjunto {
     margin: 10px;
     padding: 3px;

@@ -14,6 +14,7 @@ import './css/variaveis.css';
 import Contato from './Telas/contato.js';
 import Produtos from './Telas/produtos.js';
 import Supers from './Telas/InfoSuper.js'
+import Pesquisa from './componentes/pesquisa.js';
 
 //Nunito font
 //id projeto: compro-94dcf
@@ -49,9 +50,11 @@ function App() {
       setSel(-1)
   }
   const abrirMenu=(urlPagina)=>{
+    
     var menu = document.getElementById('nav');
     if(menu.style.height==heightMenu+'px'){
       menu.style.height='0px';
+
     }else{
       menu.style.height=heightMenu+'px';
     }
@@ -64,11 +67,13 @@ function App() {
       fundo.style.display="block"
       carrinho.style.opacity="1"
       carrinho.style.transform="translateX(-100%)"
+      document.body.style.overflow='hidden';
       
     } else {
       fundo.style.display="none"
       carrinho.style.opacity="0"
       carrinho.style.transform="translateX(0%)"
+      document.body.style.overflow='scroll';
 
       
     }

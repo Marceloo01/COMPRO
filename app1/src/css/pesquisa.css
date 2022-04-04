@@ -1,0 +1,29 @@
+.pesquisa {
+    border: 1px solid #303030;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    display: flex;
+}
+.pesquisa > input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 80%;
+    height: 35px;
+    border-right: 1px solid #000000;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    word-spacing: normal;
+}
+.pesquisa > img {
+    float: right;
+}
+.pesquisa > input:focus {
+    box-shadow: 0 0 0 1;
+    outline: 0;
+}

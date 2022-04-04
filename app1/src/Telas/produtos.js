@@ -1,4 +1,6 @@
 import react from 'react';
+import '../css/variaveis.css';
+import Pesquisa from '../componentes/pesquisa.js';
 
 export default function Produtos() {
 
@@ -7,6 +9,10 @@ export default function Produtos() {
             <div className="titulo">
                 <h1>Veja os Produtos</h1>
             </div>
+            <Pesquisa/>
+            
+            <div className="subititulo">Tipo De Produtos</div>
+
         </>
     )
 }
