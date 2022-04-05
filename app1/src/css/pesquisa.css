@@ -5,15 +5,16 @@
     background-color: #ffffff;
     box-sizing: border-box;
     margin-top: 50px;
-    width: 200px;
+    width: 250px;
     height: 40px;
     display: flex;
+    float: right;
 }
 .pesquisa > input {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 80%;
-    height: 35px;
+    width: 90%;
+    height: 38px;
     border-right: 1px solid #000000;
     border-left: none;
     border-top: none;
@@ -22,8 +23,15 @@
 }
 .pesquisa > img {
     float: right;
+    width: 15%;
 }
 .pesquisa > input:focus {
     box-shadow: 0 0 0 1;
     outline: 0;
+}
+@media screen and (max-width:950px) {
+    .pesquisa {
+        width: 100%;
+        padding-left: 5px;
+    }
 }

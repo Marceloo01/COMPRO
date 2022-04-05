@@ -140,7 +140,7 @@ function App() {
           <Route path='/Produtos' element={<Produtos/>}></Route>
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
-          <Route path='/informacoes' element={<Supers/>}></Route>
+          <Route path='/Supermercado/informacoes' element={<Supers/>}></Route>
         </Routes>
         </main>
         

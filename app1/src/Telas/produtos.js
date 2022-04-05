@@ -9,7 +9,7 @@ export default function Produtos() {
             <div className="titulo">
                 <h1>Veja os Produtos</h1>
             </div>
-            <Pesquisa/>
+            <Pesquisa hint="Procure por produtos"/>
             
             <div className="subititulo">Tipo De Produtos</div>
 

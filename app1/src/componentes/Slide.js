@@ -18,10 +18,10 @@ export default function Slid(props){
                 <Bloco/>
                 <Bloco/>
             </div>
-            <div className="botoes-slide">
+            {/* <div className="botoes-slide">
                 <input type="button" value="<"/>
                 <input type="button" value=">"/>
-            </div>
+            </div> */}
         </div>
     )
 }
