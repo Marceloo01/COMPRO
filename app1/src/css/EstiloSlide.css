@@ -25,9 +25,9 @@
     padding-left: 20px;
     box-sizing: border-box;
     text-align: left;
-    font-weight: bold;
+    font-weight: 900;
     color: var(--corTexto);
-    font-size: 40px;
+    font-size: 3vw;
 }
 #conjuntoSlide {
     margin-top:180px;
@@ -59,12 +59,25 @@
 }
 .conjunto {
     margin: 10px;
-    padding: 3px;
+    padding: 1em;
     border-radius: 5px;
-    border: 1px solid #303030;
+    border: 1px solid #ebebeb;
+    box-shadow: 0px 0px 20px #ebebeb;
     border-top-left-radius: 25px;
     user-select: none;
     height: auto;
+}
+.dado-supermercado > input {
+    background-color: var(--corBtn);
+    padding-top: 10px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size:15px;
+    margin:20px 20px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 15px;
     cursor: pointer;
 }
 .Supermercado-img {
@@ -78,21 +91,25 @@
     width: 100%;
     height: auto;
 }
-.nome-supermercado {
+.dado-supermercado {
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
+    color: rgb(85, 85, 85);
 }
-.nome-supermercado > h1 {
-    font-size: 25px;
+.dado-supermercado > p {
+    padding-top: 10px;
+    font-size: 17px;
     text-align: center;
 }
-.nome-supermercado > h2 {
-    font-weight: 500;
-    font-size: 17px;
-    text-align: left;
+.dado{
+    font-weight: 900;
+    font-size:19px;
 }
 @media screen and (max-width:950px) {
+    .corpoSlide::-webkit-scrollbar{
+        height: 7px;
+    }
     #conjuntoSlide {
         padding: 2px;
     }
@@ -108,10 +125,13 @@
     .corpoSlide > .conjunto {
         padding: 5px;
     }
-    .nome-supermercado > h1 {
+    .dado-supermercado > h1 {
         font-size: 17px;
     }
-    .nome-supermercado > h2 {
+    .dado-supermercado > p {
         font-size: 15px;
+    }
+    .dado-supermercado > input {
+        margin:5px 5px;
     }
 }

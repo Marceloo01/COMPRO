@@ -11,9 +11,9 @@ export default function superMercados() {
         <div className="titulo">
             <h1>Veja os Supermercados</h1>
         </div>
-        <Pesquisa/>
+        <Pesquisa hint="Procure por supermercados"/>
 
-        <div className="subititulo">supermercados em destaque</div>
+        <div className="subititulo">Supermercados Em Destaque</div>
 
         <div className="conjunto-supermercados">
             <div className="Supermercado-img-supermercados">
