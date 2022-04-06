@@ -17,7 +17,7 @@ export default function bloco() {
                 <p><span className="dado">Localização:</span> Avenida Baden Powell - Jardim Nova Europa, Campinas - SP</p>
 
                 <input 
-                    type="buttom"
+                    type="button"
                     value="MAIS INFORMAÇÕES"
                     onClick={ ()=>abriTela(1) }    
                 />

@@ -13,20 +13,12 @@ export default function superMercados() {
         </div>
         <Pesquisa hint="Procure por supermercados"/>
 
-        <div className="subititulo">Supermercados Em Destaque</div>
-
-        <div className="conjunto-supermercados">
-            <div className="Supermercado-img-supermercados">
-                <img src={Supermercado}/>
-            </div>
-            <div className="nome-supermercado-supermercados">
-                <h1>Senhor dos pasteis</h1>
-                <h2>Localização: Avenida Baden Powell - Jardim Nova Europa, Campinas - SP</h2>
-            </div>
-        </div>
-
         <Slid  titulo="Supermercados em destaque" />
         <Slid  titulo="Supermercados com maior avaliação" />
+
+        <div className="supermercados-all">
+            <button>Veja a Lista completa dos supermercados</button>
+        </div>
 
         </>
     )
