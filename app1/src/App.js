@@ -19,9 +19,7 @@ import Pesquisa from './componentes/pesquisa.js';
 //Nunito font
 //id projeto: compro-94dcf
 function App() {
-
   
-
   const [sel,setSel]=useState(1);
   var clicks=0;
   const [logou,setLogou]=useState(0);
