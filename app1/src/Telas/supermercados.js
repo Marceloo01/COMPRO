@@ -11,7 +11,7 @@ export default function superMercados() {
         <div className="titulo">
             <h1>Veja os Supermercados</h1>
         </div>
-        <Pesquisa hint="Procure por supermercados"/>
+        <Pesquisa hint=" Procure por supermercados"/>
 
         <Slid  titulo="Supermercados em destaque" />
         <Slid  titulo="Supermercados com maior avaliação" />

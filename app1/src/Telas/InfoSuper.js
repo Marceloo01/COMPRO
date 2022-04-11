@@ -27,7 +27,7 @@ export default function InfoSupermercados () {
             <input 
                     type="button"
                     value="VER PRODUTOS"
-                    // onClick={ ()=>abriTelaProdutos()}    
+                    // onClick={ ()=>abriTelaProdutos()}
                 />
         </div>
         </> 
