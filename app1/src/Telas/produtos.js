@@ -13,7 +13,7 @@ export default function Produtos() {
             </div>
             <Pesquisa hint=" Procure por produtos"/>
             
-            <div className="subititulo">Tipos De Produtos</div>
+            <div className="subititulo">Filtro De Produtos</div>
 
 
             <div className="tipos-produtos">
@@ -23,6 +23,8 @@ export default function Produtos() {
                 <div className="tipos"><p>notebooks/celulares</p></div>
                 <div className="tipos"><p>processados</p></div>
             </div>
+
+            <div className="subititulo">Mais procurados</div>
 
 
             <div className="grid-prod">

@@ -86,10 +86,19 @@
     border-top-left-radius: 20px;
     overflow: hidden;
     height: auto;
+    position: relative;
 }
 .Supermercado-img > img {
     width: 100%;
     height: auto;
+}
+.Supermercado-img > h2{
+    position: absolute;
+    top:90%;
+    transform: translateY(-100%);
+    background-color:white;
+    padding:10px;
+    border-left-color: transparent;
 }
 .dado-supermercado {
     height: auto;
@@ -97,10 +106,15 @@
     grid-template-columns: 1fr;
     color: rgb(85, 85, 85);
 }
+
 .dado-supermercado > p {
-    padding-top: 10px;
-    font-size: 17px;
-    text-align: center;
+    font-size: 16px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding:0px;
+    margin-bottom: 10px;
 }
 .dado{
     font-weight: 900;
@@ -119,14 +133,15 @@
     .Supermercado-img {
         width: 35vh;
     }
+    .Supermercado-img > h2 {
+        font-size: 20px;
+        padding: 3px;
+    }
     .conjuntoSlide {
         overflow: hidden;
     }
     .corpoSlide > .conjunto {
         padding: 5px;
-    }
-    .dado-supermercado > h1 {
-        font-size: 17px;
     }
     .dado-supermercado > p {
         font-size: 15px;

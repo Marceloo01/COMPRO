@@ -10,12 +10,12 @@ export default function bloco() {
         
         <div className="conjunto">
             <div className="Supermercado-img">
+                <h2>Senhor dos pasteis</h2>
                 <img src={Supermercado}/>
             </div>
             <div className="dado-supermercado">
-                <h2>Senhor dos pasteis</h2>
-                <p><span className="dado">Localização:</span> Avenida Baden Powell - Jardim Nova Europa, Campinas - SP</p>
-
+                <span className="dado">Localização</span><p>&nbsp;&nbsp; Avenida Baden Powell - Jardim Nova Europa, Campinas - SP, Taubate Feirinha</p>
+                <span className="dado">Horário de atendimento</span><p>&nbsp;&nbsp; 10h - 22h</p>
                 <input 
                     type="button"
                     value="MAIS INFORMAÇÕES"

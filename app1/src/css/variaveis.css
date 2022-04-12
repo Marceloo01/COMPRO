@@ -21,14 +21,16 @@
     color: #505050;
 }
 .titulo {
-    height: var(--tamanhoFundo);
     background-color: var(--corFundoAzulClaro);
+    margin-top: 25px;;
 }
 .titulo > h1 {
     width: 100%;
     height: auto;
     text-align: center;
     font-size: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     line-height: var(--Titulo);
     color: var(--corTexto);
 }
@@ -48,7 +50,6 @@ main {
         padding:2px;
     }
     .titulo > h1 {
-        padding-top:50px;
         box-sizing: border-box;
         font-size: 30px;
         line-height:normal;

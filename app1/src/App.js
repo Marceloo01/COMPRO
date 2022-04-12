@@ -47,7 +47,7 @@ function App() {
     else
       setSel(-1)
   }
-  const abrirMenu=(urlPagina)=>{
+  const abrirMenu=()=>{
     
     var menu = document.getElementById('nav');
     if(menu.style.height==heightMenu+'px'){
@@ -116,11 +116,35 @@ function App() {
             </div>
 
             <nav id="nav">
-              <Link  onClick={()=>setSel(1)} className={sel==1?'':"selecionado"} to='/'>Home</Link>
-              <Link  onClick={()=>setSel(2)} className={sel==2?'':"selecionado"} to='/Supermercado'>Supermercado</Link>
-              <Link  onClick={()=>setSel(3)} className={sel==3?'':"selecionado"} to='/Produtos'>Produtos</Link>
-              <Link  onClick={()=>setSel(4)} className={sel==4?'':"selecionado"} to='/Contato'>Contato</Link>
-              <Link  onClick={()=>setSel(5)} className={sel==5?'':"selecionado"} to='/Ajuda'>Ajuda</Link>
+              <Link  
+                onClick={()=>{ setSel(1); abrirMenu() }} 
+                className={sel==1?'':"selecionado"} 
+                to='/' >Home
+              </Link>
+                
+              <Link  
+                onClick={()=>{ setSel(2); abrirMenu() }}
+                className={sel==2?'':"selecionado"}
+                to='/Supermercado'>Supermercado
+              </Link>
+              
+              <Link  
+                onClick={()=>{ setSel(3); abrirMenu() }}
+                className={sel==3?'':"selecionado"}
+                to='/Produtos'>Produtos
+              </Link>
+              
+              <Link  
+                onClick={()=>{ setSel(4); abrirMenu() }}
+                className={sel==4?'':"selecionado"} 
+                to='/Contato'>Contato
+              </Link>
+
+              <Link  
+                onClick={()=>{ setSel(5); abrirMenu() }} 
+                className={sel==5?'':"selecionado"} 
+                to='/Ajuda'>Ajuda
+              </Link>
               
               
             </nav>
