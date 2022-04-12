@@ -8,18 +8,21 @@
     width: 250px;
     height: 40px;
     display: flex;
+    justify-content: space-between;
     float: right;
 }
 .pesquisa > input {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    width: 90%;
+    width: 85%;
     height: 38px;
     border-right: 1px solid #000000;
     border-left: none;
     border-top: none;
     border-bottom: none;
     word-spacing: normal;
+    margin-left: 10px;
+    padding-right: 10px;
 }
 .pesquisa > img {
     float: right;

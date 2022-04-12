@@ -47,3 +47,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     box-sizing: border-box;
 }
+@media screen and (max-width:950px) {
+    .tipos-produtos {
+        grid-template-columns: 1fr;
+    }
+    .grid-prod {
+        grid-template-columns: 1fr;
+    }
+}
