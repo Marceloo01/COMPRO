@@ -1,7 +1,7 @@
 .rodape {
     margin-top:200px;
     width: 100%;
-    height: 400px;
+    height: auto;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
@@ -11,23 +11,27 @@
     transform: translateX(-50%);
     max-width: 2000px;
     padding-top:30px;
+    padding-bottom:40px;
     box-sizing: border-box;
+    padding-left: 20px;
 }
 .rodape > *{
     text-align: center;
-    padding-top: 20px;
 }
 .rodtxt {
     cursor: default;
+    padding-left: 20px;
 }
 .rodLogo {
     cursor: default;
 }
 .rodLogo img{
-    height: 100px;
+    height: 150px;
 }
 .rod-titulo {
     cursor: default;
+    text-align: left;
+    margin-top: 30px;
 }
 .rodRedes img {
     margin-left: 15px;
@@ -36,14 +40,15 @@
     width: 50px;
     border: solid 1px black;
     border-radius: 50%;
+    
 }
 #redeS {
     position: relative;
     display: flex;
     left:50%;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: row;
     transform: translateX(-50%);
+    margin-top:10px;
 }
 .cop {
     width: 100%;
@@ -53,29 +58,30 @@
     font-size: 10px;
     
 }
-
+.text{
+    margin-top:20px;
+    text-align: left;
+    padding-left: 20px;
+}
 @media screen and (max-width:950px) {
     .rodLogo img {
         padding-top:60px;
-        height: 100px;
     }
     .texto1 {
         padding-top: 60px;
     }
     .rodape{
-        height:650px;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        text-align: left;
     }
     .rodape > *{        
         width: 100%;
         height: 100%;
         font-size:14px;
+        text-align: left;
     }
     .cop {
         font-size: 9px;
-    }
-    #redeS{
-        flex-direction:column;
     }
     .rodRedes img {
         width:40px;

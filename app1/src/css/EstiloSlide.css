@@ -16,9 +16,6 @@
     margin-top: 100px;
     padding: 10px;
 }
-.corpoSlide > img {
-    padding: 10px;
-}
 .titulo-slide {
     width: 100%;
     height: 20px;
@@ -27,7 +24,8 @@
     text-align: left;
     font-weight: 900;
     color: var(--corTexto);
-    font-size: 3vw;
+    font-size: 40px;
+    
 }
 #conjuntoSlide {
     margin-top:180px;
@@ -65,7 +63,10 @@
     box-shadow: 0px 0px 20px #ebebeb;
     border-top-left-radius: 25px;
     user-select: none;
+    width:25vw;
     height: auto;
+    min-width: 300px;
+    max-width: 440px;
 }
 .dado-supermercado > input {
     background-color: var(--corBtn);
@@ -82,7 +83,7 @@
 }
 .Supermercado-img {
     padding: 0;
-    width: 25vw;
+    width: 100%;
     border-top-left-radius: 20px;
     overflow: hidden;
     height: auto;
@@ -102,9 +103,14 @@
 }
 .dado-supermercado {
     height: auto;
+    width: 90%;
+    margin-top:20px;
     display: grid;
     grid-template-columns: 1fr;
     color: rgb(85, 85, 85);
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .dado-supermercado > p {
@@ -129,9 +135,6 @@
     }
     .titulo-slide{
         font-size: 30px;
-    }
-    .Supermercado-img {
-        width: 35vh;
     }
     .Supermercado-img > h2 {
         font-size: 20px;

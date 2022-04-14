@@ -6,7 +6,6 @@
     border-top-left-radius: 10px;
     user-select: none;
     height: auto;
-    cursor: pointer;
     position: relative;
     left: 50%;
     transform: translate(-50%);
