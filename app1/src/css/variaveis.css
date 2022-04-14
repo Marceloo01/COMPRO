@@ -22,7 +22,8 @@
 }
 .titulo {
     background-color: var(--corFundoAzulClaro);
-    margin-top: 25px;;
+    margin-top: 25px;
+    background: url("../img//fundo-site-5.jpg") 1401px 35px;
 }
 .titulo > h1 {
     width: 100%;

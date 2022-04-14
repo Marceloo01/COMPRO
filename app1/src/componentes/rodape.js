@@ -38,7 +38,7 @@ export default function Rodape() {
 
         </div>
         <div className="rodRedes"> 
-        <h3>Redes Sociais</h3>       
+        <div className="rod-titulo"><b>Redes Sociais</b></div>
             <div id="redeS">
                 <img src={zap}/>
                 <img src={inst}/>

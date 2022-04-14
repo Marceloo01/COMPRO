@@ -2,7 +2,7 @@ import React from "react";
 import Supermercado from '../img/SupermercadoSlide.jpg';
 
 
-export default function bloco() {
+export default function bloco(props) {
     function abriTela(id){
         window.location.href = `Supermercado/informacoes?id=${id}`;
     }
@@ -10,16 +10,16 @@ export default function bloco() {
         
         <div className="conjunto">
             <div className="Supermercado-img">
-                <h2>Senhor dos pasteis</h2>
+                <h2>{props.nome}</h2>
                 <img src={Supermercado}/>
             </div>
             <div className="dado-supermercado">
-                <span className="dado">Localização</span><p>&nbsp;&nbsp; Avenida Baden Powell - Jardim Nova Europa, Campinas - SP, Taubate Feirinha</p>
+                <span className="dado">Localização</span><p>&nbsp;&nbsp; {props.rua} - {props.bairro} - {props.cidade} - {props.estado}</p>
                 <span className="dado">Horário de atendimento</span><p>&nbsp;&nbsp; 10h - 22h</p>
                 <input 
                     type="button"
                     value="MAIS INFORMAÇÕES"
-                    onClick={ ()=>abriTela(1) }    
+                    onClick={ ()=>abriTela(props._id) }    
                 />
             </div>
         </div>
