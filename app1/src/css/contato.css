@@ -1,9 +1,41 @@
-.fromas-contato {
-    padding: 20px;
-    padding-top: 50px;
-    font-size: 30px;
-    text-align: left;
+#contato {
+    margin-top: 100px;
     width: 100%;
     height: auto;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+.integrante {
+    width: 400px;
+    border-radius: 5px;
+    height: 500px;
+    margin: 10px;
+    box-sizing: border-box;
+    padding:10px;
+}
+.nome-integrante {
+    width: 100%;
+    height: auto;
+}
+.foto-integrante{
+    width: 100%;
+    height:300px;
+    overflow: hidden;
+}
+.foto-integrante  > img {
+    width: 100%;
+    position:relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.nome-integrante > p{
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size:17px;
 }
