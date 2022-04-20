@@ -22,7 +22,7 @@ function App() {
   
   const [sel,setSel]=useState(1);
   var clicks=0;
-  const [logou,setLogou]=useState(0);
+  const [logou,setLogou]=useState(null);
   const heightMenu=270
   const verificarLogin = async (u)=>{
     let newUser={

@@ -36,6 +36,7 @@
     color: var(--corTexto);
 }
 main {
+    overflow: hidden;
     height:auto;
     width: 100%;
     padding:80px;
