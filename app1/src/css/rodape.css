@@ -14,8 +14,10 @@
     padding-bottom:40px;
     box-sizing: border-box;
     padding-left: 20px;
+    background-color: #6257b1;
 }
 .rodape > *{
+    color: white;
     text-align: center;
 }
 .rodtxt {
@@ -51,12 +53,16 @@
     margin-top:10px;
 }
 .cop {
+    border-top: 1px solid #594fa1;
+    background-color: #6257b1;
     width: 100%;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
-    font-size: 10px;
-    
+    font-size: 12px;
+}
+.cop > p {
+    color: #ffffff;
 }
 .text{
     margin-top:20px;

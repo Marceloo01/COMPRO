@@ -29,30 +29,30 @@ export default function InfoSupermercados () {
             <div className="supermercado-info">
                 <table>
                     <tr>
-                        <td><span className="dado">Localização:</span></td>
+                        <td><span className="dado">Localização</span></td>
                         <td><p> {supermercado.rua} - {supermercado.bairro}, {supermercado.cidade} - {supermercado.estado}</p></td>
                     </tr>
 
                     <tr>
-                        <td><span className="dado">Estado:</span></td>
+                        <td><span className="dado">Estado</span></td>
                         <td><p> {supermercado.estado}</p></td>
                     </tr>
 
                     <tr>
-                        <td><span className="dado">Cidade:</span></td>
+                        <td><span className="dado">Cidade</span></td>
                         <td><p> {supermercado.cidade}</p></td>
                     </tr>
 
                     <tr>
-                        <td><span className="dado">e-mail:</span></td>
+                        <td><span className="dado">e-mail</span></td>
                         <td><p> {supermercado.email}</p></td>
                     </tr>
                     <tr>
-                        <td><span className="dado">nota:</span></td>
+                        <td><span className="dado">nota</span></td>
                         <td><p> 7.1</p></td>
                     </tr>
                     <tr>
-                        <td><span className="dado">ano:</span></td>
+                        <td><span className="dado">ano</span></td>
                         <td><p> 1959</p></td>
                     </tr>
                 

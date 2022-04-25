@@ -10,14 +10,19 @@
 .integrante {
     width: 400px;
     border-radius: 5px;
-    height: 500px;
+    height: 300px;
+    margin-bottom: 200px !important;
     margin: 10px;
     box-sizing: border-box;
-    padding:10px;
+    overflow: hidden;
+    transition: all 2s;
 }
 .nome-integrante {
     width: 100%;
     height: auto;
+}
+.nome-integrante > p {
+    padding: 5px;
 }
 .foto-integrante{
     width: 100%;
@@ -25,14 +30,22 @@
     overflow: hidden;
 }
 .foto-integrante  > img {
-    width: 100%;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
     position:relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 }
+.integrante:hover {
+    width: 400px;
+    height: 500px;
+    overflow: visible;
+    margin-bottom: 0px !important;
+}
 .nome-integrante > p{
-    margin-left: 10px;
+    padding-left: 50px;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 5px;

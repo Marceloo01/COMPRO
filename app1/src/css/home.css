@@ -14,6 +14,8 @@ body::-webkit-scrollbar-thumb:hover {
     to {opacity: 100%;}
   }
 body {
+    background-color: white;
+    /* rgb(27, 27, 27) black */
     margin: 0 auto;
     overflow-x: hidden;
     /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
@@ -66,11 +68,11 @@ body {
     padding-bottom:10px;
     font-size:20px;
     color: white;
-    background-color: #7cd5f0;
+    background-color: #7168b1;
     border-radius: 5px;
 }
 .destaque{
-    color: #02c4ff;
+    color: #6d64b3;
     font-size: 50px;
     font-weight: bold;
     display: block;
@@ -84,7 +86,7 @@ body {
     border-top-left-radius: 10%;
 }
 .texto button:hover {
-    background-color: #77cae4;
+    background-color: #6257b1;
 }
 
 @media screen and (max-width:850px) {

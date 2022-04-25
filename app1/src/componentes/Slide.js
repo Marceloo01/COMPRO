@@ -9,7 +9,7 @@ export default function Slid(props){
           .get("/supermercado")
           .then((response) => {
             setSuper(response.data)
-            console.log(supermercados);})
+        })
 
           .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
@@ -25,8 +25,8 @@ export default function Slid(props){
             </div>
             <div className="corpoSlide">
                 {supermercados.map((value) =>{
-                    console.log("oi")
                     return (<Bloco 
+                        key={value._id} 
                         _id={value._id} 
                         urlImg={value.urlImg}
                         nome={value.nome} 

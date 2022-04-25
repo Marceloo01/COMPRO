@@ -1,12 +1,14 @@
 .tipos-produtos {
-    margin-top: 50px;
+    margin-top: 200px;
     background-color: #ffffff;
     width: 100%;
-    height: auto;
+    height:auto;
+    overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     box-sizing: border-box;
     box-shadow: 0px 0px 10px #dadada;
+    transition: height 2s;
 }
 .tipos {
     text-align: center;
@@ -47,9 +49,42 @@
     grid-template-columns: 1fr 1fr 1fr;
     box-sizing: border-box;
 }
+.filtro {
+    display: none;
+}
+.filtro > p {
+    margin-top: 20px;margin-bottom: 20px;
+}
+button > p {
+    font-weight: 600;
+    color: #ffffff;
+}
 @media screen and (max-width:950px) {
+    .filtro {
+        background-color: #203030;
+        border-radius: 3px;
+        border: 1px solid #203030;
+        margin-top: 200px;
+        display: none;
+        width: 200px;
+        text-align: center;
+        height: 100%;
+        text-align: center;
+        color: var(--corTexto);
+        cursor: pointer;
+    }
+    .filtro {
+        
+        display: block;
+    }
     .tipos-produtos {
+        position: absolute;
+        margin-top: 20px;
+        height:350px;
         grid-template-columns: 1fr;
+    }
+    .tipos-produtos.aberto{
+        height: 0px;
     }
     .grid-prod {
         grid-template-columns: 1fr;
