@@ -13,10 +13,17 @@ export default function Produtos() {
             </div>
             <Pesquisa hint=" Procure por produtos"/>
             
-            <div className="subititulo">Filtro De Produtos</div>
 
+                <center><button className="filtro"
+                onClick={()=> {
+                    var tiposGrid = document.getElementsByClassName('tipos-produtos')[0];
+                    console.log('oi');
+                    tiposGrid.classList.toggle("aberto");
+                    
+                }}><p>Filtro</p></button></center>
+            <div className="tipos-produtos aberto">
+                
 
-            <div className="tipos-produtos">
                 <div className="tipos"><p>brinquedos</p></div>
                 <div className="tipos"><p>frutas/verduras</p></div>
                 <div className="tipos"><p>eletrodomesticos</p></div>
@@ -24,10 +31,11 @@ export default function Produtos() {
                 <div className="tipos"><p>processados</p></div>
             </div>
 
-            <div className="subititulo">Mais procurados</div>
+            <div className="titulo-slide" style={{marginTop: '100px'}}>Produtos mais procurados</div>
 
 
             <div className="grid-prod">
+                
                 <ConjuntoProd/>
                 <ConjuntoProd/>
                 <ConjuntoProd/>
@@ -35,7 +43,7 @@ export default function Produtos() {
             
 
             <div className="supermercados-all">
-                <button>Veja a Lista completa dos Produtos</button>
+                <button><p>Todos os Produtos</p></button>
             </div>
 
 

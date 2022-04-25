@@ -1,6 +1,6 @@
 :root{
     --corTexto:#2bc2bd;
-    --corBtn:#7cd5f0;
+    --corBtn:#6257b1;
     --corFundoAzulClaro:#e9f3f7;
     --tamanhoFundo:200px;
     --Titulo: 160px;
@@ -26,6 +26,7 @@
     background: url("../img//fundo-site-5.jpg") 1401px 35px;
 }
 .titulo > h1 {
+    padding: 1em;
     width: 100%;
     height: auto;
     text-align: center;

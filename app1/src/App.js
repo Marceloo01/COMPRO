@@ -21,7 +21,6 @@ import Pesquisa from './componentes/pesquisa.js';
 function App() {
   
   const [sel,setSel]=useState(1);
-  var clicks=0;
   const [logou,setLogou]=useState(0);
   const heightMenu=270
   const verificarLogin = async (u)=>{
@@ -48,33 +47,16 @@ function App() {
       setSel(-1)
   }
   const abrirMenu=()=>{
-    
+    if(window.innerWidth>950)  return;
     var menu = document.getElementById('nav');
-    if(menu.style.height==heightMenu+'px'){
-      menu.style.height='0px';
-
-    }else{
-      menu.style.height=heightMenu+'px';
-    }
+    menu.classList.toggle('MenuAbre')
   }
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
     var fundo=document.getElementById('fundoMenu');
-    clicks++;
-    if(clicks%2!=0) {
-      fundo.style.display="block"
-      carrinho.style.opacity="1"
-      carrinho.style.transform="translateX(-100%)"
-      document.body.style.overflow='hidden';
-      
-    } else {
-      fundo.style.display="none"
-      carrinho.style.opacity="0"
-      carrinho.style.transform="translateX(0%)"
-      document.body.style.overflow='scroll';
 
-      
-    }
+    carrinho.classList.toggle('carrinhoAbre');
+    fundo.classList.toggle('fundoCarrinho');
   }
 
     if(logou!=null){

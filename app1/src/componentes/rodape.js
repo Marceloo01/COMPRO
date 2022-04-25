@@ -48,9 +48,9 @@ export default function Rodape() {
         
     </footer>
         <div className="cop">
-            Copyright 2022 &copy; Todos os direitos reservados.
+            <p>Copyright 2022 &copy; Todos os direitos reservados.</p>
             <br/>
-            O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização do SENAI-SP.
+            <p>O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização da startup NYRMT.</p>
         </div>
     </>
     
