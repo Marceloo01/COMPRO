@@ -3,16 +3,22 @@ import '../css/produtos.css';
 
 export default function blocoProd() {
     return(
-        <center>
-            <div className="conjunto-prod">
-                <div className="prod-img"><img src={banana}/></div>
-                <div className="prod-info">
-                    
-                    <div className="texto-prod">
-                        <p>Banana</p><p>R$50 unidade</p>
-                    </div>
+        <div className='produto'>
+            <div className='img-produto'>
+                <img src={banana}/>
+            </div>
+            <div className='nome-produto'>
+                <span>Banana-nanica da china japonesa 1 kg</span>
+            </div>
+            <div className='informacao-produto'>
+                <p>Encontrado em 7 supermercados</p>
+            </div>
+            <div className='btns-produto'>
+                <div className='diferenca-preco-produto'>
+                    <p><s>90 R$</s> 30 R$</p>
+                    <button><p>Adicionar ao carrinho</p></button>
                 </div>
             </div>
-        </center>
+        </div>
     )
 }

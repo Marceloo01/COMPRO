@@ -60,7 +60,6 @@ function App() {
   }
 
     if(logou!=null){
-      {document.title="Home"}
       return(
         
         
@@ -153,7 +152,6 @@ function App() {
       </div>
       )
     }else{
-      {document.title="Login"}
       return <Login verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />
     }
 

@@ -5,7 +5,7 @@ import Slid from '../componentes/Slide.js';
 import Pesquisa from '../componentes/pesquisa.js';
 
 export default function superMercados() {
-
+    document.title = "Supermercados";
     return (
         <>
         <div className="titulo">

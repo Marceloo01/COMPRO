@@ -5,7 +5,7 @@ import Corpo2 from '../img/banana.jpg';
 import Slid from '../componentes/Slide.js';
 
 export default function Home() {
-  
+  document.title = "Home";
   var imag = [Corpo1,Corpo2,Corpo1];
   var count = -1;
 

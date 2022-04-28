@@ -5,6 +5,7 @@ import api from '../service/api_compro'
 
 
 export default function InfoSupermercados () {
+    document.title = "Informações";
     const [supermercado,setSupermercado] = useState({});
     
     useEffect (() => {
