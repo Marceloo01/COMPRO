@@ -4,7 +4,7 @@ import AjudaIMG1 from '../img/AjudaIMG-1.png';
 
 
 export default function Ajuda() {
-
+    document.title = "Ajuda";
     return(
         <>
             <div className="titulo">

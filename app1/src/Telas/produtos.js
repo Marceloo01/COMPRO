@@ -5,7 +5,7 @@ import '../css/produtos.css';
 import ConjuntoProd from '../componentes/blocoProd.js';
 
 export default function Produtos() {
-
+    document.title = "Produtos";
     return(
         <>
             <div className="titulo">
@@ -33,14 +33,18 @@ export default function Produtos() {
 
             <div className="titulo-slide" style={{marginTop: '100px'}}>Produtos mais procurados</div>
 
-
-            <div className="grid-prod">
+            <div className='Slide-produto'>
+                {/* <div className='botao-slide-produto'> &lt; &gt;</div> */}
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
+                    <ConjuntoProd/>
                 
-                <ConjuntoProd/>
-                <ConjuntoProd/>
-                <ConjuntoProd/>
             </div>
-            
 
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button>

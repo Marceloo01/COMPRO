@@ -5,6 +5,7 @@ import { ImFacebook } from "react-icons/im";
 import API from '../service/firebase'
 
 export default function Login(props) {
+    document.title = "Login";
     const handleClickButtonLogin = async ()=>{
         const result= await API.googleLogar();
         if(result){
