@@ -56,6 +56,10 @@
     margin-top:10px;
 }
 .cop {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 2000px;
     background-color: #5b52a5;
     width: 100%;
     text-align: center;
