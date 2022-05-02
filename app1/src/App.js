@@ -99,31 +99,31 @@ function App() {
             <nav id="nav">
               <Link  
                 onClick={()=>{ setSel(1); abrirMenu() }} 
-                className={sel==1?'':"selecionado"} 
+                className={sel==1?"selecionado":""} 
                 to='/' >Home
               </Link>
                 
               <Link  
                 onClick={()=>{ setSel(2); abrirMenu() }}
-                className={sel==2?'':"selecionado"}
+                className={sel==2?"selecionado":""}
                 to='/Supermercado'>Supermercado
               </Link>
               
               <Link  
                 onClick={()=>{ setSel(3); abrirMenu() }}
-                className={sel==3?'':"selecionado"}
+                className={sel==3?"selecionado":""}
                 to='/Produtos'>Produtos
               </Link>
               
               <Link  
                 onClick={()=>{ setSel(4); abrirMenu() }}
-                className={sel==4?'':"selecionado"} 
+                className={sel==4?"selecionado":""} 
                 to='/Contato'>Contato
               </Link>
 
               <Link  
                 onClick={()=>{ setSel(5); abrirMenu() }} 
-                className={sel==5?'':"selecionado"} 
+                className={sel==5?"selecionado":""} 
                 to='/Ajuda'>Ajuda
               </Link>
               

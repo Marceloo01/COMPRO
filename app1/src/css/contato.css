@@ -1,54 +1,112 @@
 #contato {
-    margin-top: 100px;
+    margin-top: 200px;
     width: 100%;
-    height: auto;
+    box-sizing: content-box;
+    height:auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
-.integrante {
-    width: 400px;
-    border-radius: 5px;
-    height: 300px;
-    margin-bottom: 200px !important;
-    margin: 10px;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: all 2s;
+.card {
+    margin: 50px;
+    margin-bottom: 210px;
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgb(190, 190, 190);
+    transition: .5s;
 }
-.nome-integrante {
-    width: 100%;
-    height: auto;
+
+
+.data {
+    transition: .3s;
+    opacity: 0;
 }
-.nome-integrante > p {
-    padding: 5px;
-}
-.foto-integrante{
-    width: 100%;
-    height:300px;
-    overflow: hidden;
-}
-.foto-integrante  > img {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    position:relative;
+.img {
+    position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
-.integrante:hover {
-    width: 400px;
-    height: 500px;
-    overflow: visible;
-    margin-bottom: 0px !important;
-}
-.nome-integrante > p{
-    padding-left: 50px;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgb(190, 190, 190);
     overflow: hidden;
-    text-overflow: ellipsis;
-    margin-top: 5px;
-    font-weight: 500;
-    font-size:17px;
+    transition: .5s;
+}
+.img > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card .content {
+    overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card .content .details {
+    transform: translateY(70px);
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    transition: .5s;
+}
+
+.details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+@media screen and (min-width:951px) {
+    .card:hover {
+        height: 350px;
+        margin-bottom: 50px;
+    }
+    .card:hover .img {
+        width: 220px;
+        height: 220px;
+    }
+    .card:hover .content .details {
+        transform: translateY(0px);
+        /* overflow: visible; */
+    }
+    .card:hover .data {
+        opacity: 100%;
+        transition: 1s;
+    }
+}
+@media screen and (max-width:950px) {
+    .card {
+        height: 350px;
+        width: 300px;
+        min-width: 250px;
+        margin-bottom: 50px;
+    }
+    .card .img {
+        width: 220px;
+        height: 220px;
+    }
+    .card .content .details {
+        transform: translateY(0px);
+        padding: 10px;
+        padding-bottom: 20px;
+        /* overflow: visible; */
+    }
+    
+    .card .data {
+        opacity: 100%;
+        transition: 1s;
+    }
 }

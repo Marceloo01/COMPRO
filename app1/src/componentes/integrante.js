@@ -3,17 +3,21 @@ import '../css/contato.css';
 export default function Integrantes(props) {
 
     return (
-        
-            <div className="integrante">
-                <div className="foto-integrante">
-                    <img src={props.img}></img>
-                </div>
-                <div className="nome-integrante">
-                    <p>{props.nome}</p>
-                    <p>{props.email}@gmail.com</p>
-                    <p>{props.cargo}</p>
+       
+        <div className="card">
+            <div className="img">
+                <img src={props.img}/>
+            </div>
+            <div className='content'>
+                <div className='details'>
+                    <h2>{props.nome}</h2><br/>
+                    <div className='data'>
+                        <div>{props.cargo}</div>
+                        <span>{props.email}@gmail.com<br/>12991747752</span>
+                    </div>
                 </div>
             </div>
+        </div>
         
     )
 }
