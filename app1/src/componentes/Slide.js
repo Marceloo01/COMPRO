@@ -24,7 +24,20 @@ export default function Slid(props){
                 {props.titulo}  
             </div>
             <div className="corpoSlide">
-                {supermercados.map((value) =>{
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                <Bloco/>
+                
+                {/* {supermercados.map((value) =>{
                     return (<Bloco 
                         key={value._id} 
                         _id={value._id} 
@@ -37,7 +50,7 @@ export default function Slid(props){
                     />)
                    
                 }
-            )}
+             )} */}
             </div>
         </div>
     )

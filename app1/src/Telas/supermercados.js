@@ -17,7 +17,7 @@ export default function superMercados() {
         <Slid  titulo="Supermercados com maior avaliação" />
 
         <div className="supermercados-all">
-            <button><p>Veja a Lista completa dos supermercados</p></button>
+            <button><p>Mais supermercados</p></button>
         </div>
 
         </>

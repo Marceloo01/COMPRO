@@ -20,7 +20,6 @@
 .rodape > *:not(:last-child){
     border-right: 1px solid #8b84be;
     color: white;
-    text-align: center;
 }
 .rodtxt {
     cursor: default;

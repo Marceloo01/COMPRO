@@ -26,38 +26,28 @@ export default function InfoSupermercados () {
             <div className="Supermercado-img-info">
                 <img src={Supermercado}/>
             </div>
-            <h1>{supermercado.nome}</h1>
+            
             <div className="supermercado-info">
-                <table>
-                    <tr>
-                        <td><span className="dado">Localização</span></td>
-                        <td><p> {supermercado.rua} - {supermercado.bairro}, {supermercado.cidade} - {supermercado.estado}</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><span className="dado">Estado</span></td>
-                        <td><p> {supermercado.estado}</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><span className="dado">Cidade</span></td>
-                        <td><p> {supermercado.cidade}</p></td>
-                    </tr>
-
-                    <tr>
-                        <td><span className="dado">e-mail</span></td>
-                        <td><p> {supermercado.email}</p></td>
-                    </tr>
-                    <tr>
-                        <td><span className="dado">nota</span></td>
-                        <td><p> 7.1</p></td>
-                    </tr>
-                    <tr>
-                        <td><span className="dado">ano</span></td>
-                        <td><p> 1959</p></td>
-                    </tr>
+                <h1>{supermercado.nome}</h1> <br />
                 
-                </table>
+                    <span className="dado">Localização</span>
+                    <p> Av. Charles Schnneider, 1201 - Barranco, Taubaté - SP, 12040-000
+                        {/* {supermercado.rua} - {supermercado.bairro}, {supermercado.cidade} - {supermercado.estado} */}
+                    </p>
+                
+                    <span className="dado">Estado</span>
+                    <p> SP {supermercado.estado}</p>
+                
+                    <span className="dado">Cidade</span>
+                    <p> Taubaté {supermercado.cidade}</p>
+                
+                    <span className="dado">e-mail</span>
+                    <p> carrefour@gmail.com {supermercado.email}</p>
+                
+                    <span className="dado">avaliação</span>
+                    <p> 7.1</p>
+
+                    
             </div>
 
             <input 

@@ -3,6 +3,7 @@ import '../css/produtos.css';
 
 export default function blocoProd() {
     return(
+        
         <div className='produto'>
             <div className='img-produto'>
                 <img src={banana}/>
