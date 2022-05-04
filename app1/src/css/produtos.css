@@ -1,5 +1,6 @@
 
 .tipos-produtos {
+    z-index: 100;
     margin-top: 200px;
     background-color: #ffffff;
     width: 100%;
@@ -16,13 +17,14 @@
     height: 100%;
     text-align: center;
     color: #49b5d6;
-    transition: background-color .5s;
+    transition: background-color 1s;
     cursor: pointer;
 }
 .tipos > p {
     margin-top: 20px;margin-bottom: 20px;
 }
 .tipos:hover {
+    transition: background-color .2s;
     background-color: #203030;
 }
 .filtro {
@@ -41,12 +43,18 @@ button > p {
     height: 0px;
     border-radius: 0px;
 }
+.base-slide-produto {
+    position: relative;
+    width: 100%;
+    
+}
 .Slide-produto {
-    margin-top: 50px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 85%;
+    margin:0 auto;
+    margin-top: 50px;
     height: auto;
     padding: 10px;
     box-sizing: border-box;
@@ -119,17 +127,25 @@ button > p {
 }
 .botao-slide-produto {
     position: absolute;
-    margin-top: 200px;
-    background-color: #00ffff;
-    font-size: 20px;
-    text-align: center;
-    transform: translateX(-100%);
-    border: 1px solid #203030;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
-
+.botao-slide-produto.left {
+    background-image: url("../img/seta-para-a-esquerda.png");
+    background-size: cover;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+}
+.botao-slide-produto.right {
+    background-image: url("../img/seta-para-a-esquerda.png");
+    background-size: cover;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%,-50%) rotate(180deg);
+}
 @media screen and (max-width:950px) {
     .filtro {
         background-color: #203030;

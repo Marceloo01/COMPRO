@@ -33,19 +33,22 @@ export default function Produtos() {
 
             <div className="titulo-slide" style={{marginTop: '100px'}}>Produtos mais procurados</div>
 
-            <div className='Slide-produto'>
-                {/* <div className='botao-slide-produto'> &lt; &gt;</div> */}
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
-                    <ConjuntoProd/>
+            <div className='base-slide-produto'>
+
+                <div className='botao-slide-produto left'></div>
+                <div className='Slide-produto'>  
+                        <ConjuntoProd/>
+                        <ConjuntoProd/> 
+                        <ConjuntoProd/>
+                        <ConjuntoProd/>
+                        <ConjuntoProd/>
+                        <ConjuntoProd/>
+                        <ConjuntoProd/>
+                        <ConjuntoProd/>
+                </div>
+                <div className='botao-slide-produto right'></div>
                 
             </div>
-
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button>
             </div>
