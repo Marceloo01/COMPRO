@@ -6,6 +6,25 @@ import ConjuntoProd from '../componentes/blocoProd.js';
 
 export default function Produtos() {
     document.title = "Produtos";
+    var contador = 0;
+    function slideToRight(e) {
+        if (contador-5<document.getElementsByClassName("Slide-produto")[0].children.length*-1) return
+        contador--;
+        console.log(document.getElementsByClassName("Slide-produto")[0].children.length);
+        e.style.marginLeft = `calc(var(--j) * ${contador})`
+        console.log(`var(--i * ${contador}px)`)
+        
+    }
+
+    function slideToLeft(e) {
+        if (contador+1>0) return
+        contador++;
+        console.log(contador);
+        e.style.marginLeft = `calc(var(--j) * ${contador})`
+        console.log(`var(--i * ${contador}px)`)
+        
+    }
+
     return(
         <>
             <div className="titulo">
@@ -35,10 +54,10 @@ export default function Produtos() {
 
             <div className='base-slide-produto'>
 
-                <div className='botao-slide-produto left'></div>
+                <div onClick={()=>slideToLeft(document.getElementsByClassName("Slide-produto")[0].firstChild)} className='botao-slide-produto left'></div>
                 <div className='Slide-produto'>  
                         <ConjuntoProd/>
-                        <ConjuntoProd/> 
+                        <ConjuntoProd/>  
                         <ConjuntoProd/>
                         <ConjuntoProd/>
                         <ConjuntoProd/>
@@ -46,11 +65,11 @@ export default function Produtos() {
                         <ConjuntoProd/>
                         <ConjuntoProd/>
                 </div>
-                <div className='botao-slide-produto right'></div>
+                <div onClick={()=>slideToRight(document.getElementsByClassName("Slide-produto")[0].firstChild)} className='botao-slide-produto right'></div>
                 
             </div>
             <div className="supermercados-all">
-                <button><p>Todos os Produtos</p></button>
+                <button><p>Todos os Produtos</p></button> 
             </div>
 
 
