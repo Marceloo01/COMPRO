@@ -19,7 +19,7 @@ export default function blocoProd() {
                     <p><s>90 R$</s> 30 R$</p>
                     <button><p>Adicionar ao carrinho</p></button>
                 </div>
-            </div>
+            </div> 
         </div>
     )
 }

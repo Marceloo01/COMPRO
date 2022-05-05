@@ -28,7 +28,7 @@ export default function InfoSupermercados () {
             </div>
             
             <div className="supermercado-info">
-                <h1>{supermercado.nome}</h1> <br />
+                <h1> Cxarrefour{supermercado.nome}</h1> <br />
                 
                     <span className="dado">Localização</span>
                     <p> Av. Charles Schnneider, 1201 - Barranco, Taubaté - SP, 12040-000

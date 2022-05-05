@@ -64,9 +64,13 @@ button > p {
     overflow: hidden;
     border-radius: 5px;
     border: 1px solid #e2e2e2;
-    width: 500px;
-    min-width: 250px;
     height: 500px;
+    --i: calc(20% - 16px);
+    min-width: var(--i);
+    max-width: var(--i);
+    --j: calc(25% + 7.5px);
+    --qt:5;
+    transition: margin 1s;
 }
 .produto:not(:last-child){
     margin-right: 20px;
@@ -108,7 +112,7 @@ button > p {
 }
 .diferenca-preco-produto > p {
     border-radius: 3px;
-    background-color: #e6e6e6;
+    background-color: #e6e6e6; 
 }
 .diferenca-preco-produto > button {
     height: auto;
@@ -145,6 +149,29 @@ button > p {
     top: 50%;
     left: 100%;
     transform: translate(-100%,-50%) rotate(180deg);
+
+}
+@media screen and (max-width:1550px) {
+    .produto{
+        --i: calc(25% - 15px);
+        --j: calc(25% + 7.5px);
+        min-width: var(--i);
+        --qt:4;
+    }
+}
+@media screen and (max-width:1250px) {
+    .produto{
+        --i: calc(33% - 12px);
+        min-width: var(--i);
+        --qt:3;
+    }
+}
+@media screen and (max-width:1000px) {
+    .produto{
+        --i: calc(50% - 12px);
+        min-width: var(--i);
+        --qt:2;
+    }
 }
 @media screen and (max-width:950px) {
     .filtro {
@@ -174,4 +201,19 @@ button > p {
         height: 0px;
     }
 
+}
+@media screen and (max-width:600px) {
+    .Slide-produto{
+        padding: 40px;
+        width: 100%;
+    }
+    .produto{
+        --i: calc(100%);
+        min-width: var(--i);
+        --qt:1;
+        
+    }
+    .produto:not(:last-child){
+        margin-right: 40px;
+    }
 }
