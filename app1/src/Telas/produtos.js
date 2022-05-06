@@ -8,20 +8,17 @@ export default function Produtos() {
     document.title = "Produtos";
     var contador = 0;
     function slideToRight(e) {
-        if (contador-5<document.getElementsByClassName("Slide-produto")[0].children.length*-1) return
+        const value = getComputedStyle(e).getPropertyValue('--qt');
+        if( contador-value-1 < document.getElementsByClassName("Slide-produto")[0].children.length*-1 ) return
         contador--;
-        console.log(document.getElementsByClassName("Slide-produto")[0].children.length);
-        e.style.marginLeft = `calc(var(--j) * ${contador})`
-        console.log(`var(--i * ${contador}px)`)
+        e.style = `--espaco:${contador}`
         
     }
 
     function slideToLeft(e) {
-        if (contador+1>0) return
+        if( contador+1 > 0 ) return
         contador++;
-        console.log(contador);
-        e.style.marginLeft = `calc(var(--j) * ${contador})`
-        console.log(`var(--i * ${contador}px)`)
+        e.style = `--espaco:${contador}`
         
     }
 

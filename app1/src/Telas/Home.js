@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import '../css/home.css';
 import Corpo1 from '../img/corpo1.jpg';
 import Corpo2 from '../img/banana.jpg';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   document.title = "Home";
@@ -15,7 +16,7 @@ export default function Home() {
             <div className="texto">
               <span className="destaque">Precisa de ajuda</span>
               <p>Temos um site de apoio para nosso clientes, para aprender a mexer no site clique logo em baixo nesse botão</p><br/>
-              <button>Clique aqui</button>
+              <Link class="btn-ajuda" to={'/Ajuda'}>Clique aqui</Link>
             </div>
         
       </div>

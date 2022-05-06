@@ -18,6 +18,7 @@ export default function blocoProd() {
                 <div className='diferenca-preco-produto'>
                     <p><s>90 R$</s> 30 R$</p>
                     <button><p>Adicionar ao carrinho</p></button>
+                    <button onClick={()=>{window.location.href='/Produtos/informacoes/1000'}}><p>Informações</p></button>
                 </div>
             </div> 
         </div>
