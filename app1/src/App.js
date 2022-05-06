@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Home from './Telas/Home.js';
 import menuLateral from './img/menu-lateral.png';
 import carrinho from './img/carrinho1.png';
@@ -13,8 +13,8 @@ import Ajuda from './Telas/ajuda.js';
 import './css/variaveis.css';
 import Contato from './Telas/contato.js';
 import Produtos from './Telas/produtos.js';
-import Supers from './Telas/InfoSuper.js'
-import Pesquisa from './componentes/pesquisa.js';
+import Supers from './Telas/InfoSuper.js';
+import InfoProd from './Telas/infoProd';
 
 //Nunito font
 //id projeto: compro-94dcf
@@ -31,21 +31,23 @@ function App() {
     }
     setLogou(newUser);
   }
-  document.body.onload=()=>{
+  useEffect(()=>{
+    console.log("foi")
     let urlPagina=window.location.pathname;
     if(urlPagina=='/')
       setSel(1)
-    else if(urlPagina=='/Supermercado')
+    else if(urlPagina.toUpperCase()=='/SUPERMERCADO')
       setSel(2)
-    else if(urlPagina=='/Produtos')
+    else if(urlPagina.toUpperCase()=='/PRODUTOS')
       setSel(3)
-    else if(urlPagina=='/Contato')
+    else if(urlPagina.toUpperCase()=='/CONTATO')
       setSel(4)
-    else if(urlPagina=='/Ajuda')
+    else if(urlPagina.toUpperCase()=='/AJUDA')
       setSel(5)
     else
       setSel(-1)
-  }
+  },[window.location.href]);
+
   const abrirMenu=()=>{
     if(window.innerWidth>950)  return;
     var menu = document.getElementById('nav');
@@ -53,7 +55,7 @@ function App() {
   }
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
-    var fundo=document.getElementById('fundoMenu');
+    var fundo=document.getElementsByClassName('fundoMenu')[0];
 
     carrinho.classList.toggle('carrinhoAbre');
     fundo.classList.toggle('fundoCarrinho');
@@ -64,21 +66,17 @@ function App() {
         
         
       <div className="App">
-        <div id="fundoMenu">
-          
-        </div>
+        <div className="fundoMenu"></div>
         <div id="menuCarrinho">
             <div className="headerCarrinho">
               
               <div className="tituloCarrinho">
-                Carrinho de produtos
+                Seu carrinho
               </div>
-              <button id="x"onClick={abrirCarrinho}>X</button>
               </div>
               <div className="bodyCarrinho">
                 <div className="semProdutos">
-                  <p>Clique aqui para adicionar produtos no carrinho</p>
-                  <button>Adicionar</button>
+                  <button>+ Produtos</button>
                 </div>
               </div>
         </div>
@@ -122,20 +120,17 @@ function App() {
               </Link>
 
               <Link  
-                onClick={()=>{ setSel(5); abrirMenu() }} 
+                onClick={()=>{ setSel(5); abrirMenu();}} 
                 className={sel==5?"selecionado":""} 
                 to='/Ajuda'>Ajuda
               </Link>
               
               
             </nav>
-            
-            <div id="carrinho" onClick={abrirCarrinho}>
-              <img src={carrinho}/>
-            </div>
           </div>
         </div>
-      </header> 
+        </header>
+        <div id="carrinho" onClick={abrirCarrinho}></div>
         <main>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
@@ -144,6 +139,8 @@ function App() {
           <Route path='/Supermercado' element={ <Supermercados/>}></Route>
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
           <Route path='/Supermercado/informacoes' element={<Supers/>}></Route>
+          <Route path='/Produtos/informacoes/:id' element={<InfoProd/>}></Route>
+          <Route path="/*" element={<p>Página não encontrada</p>}></Route> 
         </Routes>
         </main>
         
