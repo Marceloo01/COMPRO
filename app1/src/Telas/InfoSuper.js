@@ -28,21 +28,21 @@ export default function InfoSupermercados () {
             </div>
             
             <div className="supermercado-info">
-                <h1> Carrefour{supermercado.nome}</h1> <br />
+                <h1> {supermercado.nome}</h1> <br />
                 
                     <span className="dado">Localização</span>
-                    <p> Av. Charles Schnneider, 1201 - Barranco, Taubaté - SP, 12040-000
-                        {/* {supermercado.rua} - {supermercado.bairro}, {supermercado.cidade} - {supermercado.estado} */}
+                    <p> 
+                        {supermercado.rua} - {supermercado.bairro}, {supermercado.cidade} - {supermercado.estado}
                     </p>
                 
                     <span className="dado">Estado</span>
-                    <p> SP {supermercado.estado}</p>
+                    <p>  {supermercado.estado}</p>
                 
                     <span className="dado">Cidade</span>
-                    <p> Taubaté {supermercado.cidade}</p>
+                    <p>  {supermercado.cidade}</p>
                 
                     <span className="dado">e-mail</span>
-                    <p> carrefour@gmail.com {supermercado.email}</p>
+                    <p>  {supermercado.email}</p>
                 
                     <span className="dado">avaliação</span>
                     <p> 7.1</p>

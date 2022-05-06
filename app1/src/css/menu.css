@@ -177,7 +177,9 @@ nav > * {
     display: block !important;
 }
 @media screen and (max-width:950px) {
-    
+    .MenuAbre {
+        height: 300px;
+    }
     #menuCarrinho{
         width:100%;
         min-width:250px;
