@@ -37,7 +37,7 @@ export default function Slid(props){
                 <Bloco/>
                 <Bloco/>
                 
-                {/* {supermercados.map((value) =>{
+                {supermercados.map((value) =>{
                     return (<Bloco 
                         key={value._id} 
                         _id={value._id} 
@@ -50,7 +50,7 @@ export default function Slid(props){
                     />)
                    
                 }
-             )} */}
+             )}
             </div>
         </div>
     )
