@@ -6,17 +6,6 @@
     background-color: #303030;
     border-radius:5px;
 }
-.corpoSlide {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    margin-top: 100px;
-    padding: 10px;
-}
 .titulo-slide {
     width: 100%;
     height: auto;
@@ -26,7 +15,17 @@
     font-weight: 900;
     color: #49b5d6;
     font-size: 40px;
-    
+}
+.corpoSlide {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding: 10px;
 }
 #conjuntoSlide {
     margin-top:180px;

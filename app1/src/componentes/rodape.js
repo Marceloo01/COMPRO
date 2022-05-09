@@ -5,11 +5,7 @@ import zap from '../img/zap.png'
 import inst from '../img/inst.png'
 import facebook from '../img/facebook.png'
 
-
 export default function Rodape() {
-  
-  
-  
   return (
     <>
     <footer className="rodape">
@@ -17,41 +13,19 @@ export default function Rodape() {
             <img src={logo}/>
             <h2>ComPro</h2>            
         </div>
-        <div className="rodtxt">
-            <div className="rod-titulo">
-                <b>Patrocinadores</b>
-            </div>
-            <p className="text">Ferrari</p>
-            <p className="text">Hannesey</p>
-            <p className="text">Nike</p>
-            <p className="text">Grávida de Taubaté</p>
-        </div>
         
-        <div className="rodtxt">
-            <div className="rod-titulo">
-                <b>Contato</b>
-            </div>
-            <p className="text">knoob077@gmail.com</p>
-            <p className="text">12991747752</p>
-            <p className="text">Taubaté,Rua Euclides da Cunha</p>
-            <p className="text">Piscininha</p>
-
-        </div>
-        <div className="rodRedes"> 
-        <div className="rod-titulo"><b>Redes Sociais</b></div>
+        <div className="rodRedes">
             <div id="redeS">
                 <img src={zap}/>
                 <img src={inst}/>
                 <img src={facebook}/>
             </div>
         </div>
+        <div className="cop">
+            <p>&copy;2022 Todos os direitos reservados NYRMT.</p>
+        </div>
         
     </footer>
-        <div className="cop">
-            <p>Copyright 2022 &copy; Todos os direitos reservados.</p>
-            <br/>
-            <p>O conteúdo do site não pode ser editado, copiado ou distribuído sem expressa autorização da startup NYRMT.</p>
-        </div>
     </>
     
   );

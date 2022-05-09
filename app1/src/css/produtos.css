@@ -79,10 +79,13 @@ button > p {
 .img-produto {
     padding: 2px;
     box-sizing: border-box;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 200px;
 }
 .img-produto > img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     height: 200px;
 }
@@ -215,7 +218,6 @@ button > p {
         --j: calc(100% + 40px) ;
         min-width: var(--i);
         --qt:1;
-        
     }
     .produto:not(:last-child){
         margin-right: 40px;

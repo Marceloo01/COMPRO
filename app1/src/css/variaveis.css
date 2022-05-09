@@ -21,9 +21,9 @@
     color: #505050;
 }
 .titulo {
-    background-color: var(--corFundoAzulClaro);
+    background-color: #ffffff;
     margin-top: 25px;
-    background: url("../img//fundo-site-5.jpg") 1401px 35px;
+    
 }
 .titulo > h1 {
     padding: 1em;
@@ -34,7 +34,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     line-height: var(--Titulo);
-    color: var(--corTexto);
+    color: #505050;
 }
 main {
     overflow: hidden;
@@ -50,7 +50,7 @@ main {
 }
 @media screen and (max-width:950px) {
     main {
-        padding:100px 2px;
+        padding:0px 2px;
     }
     .titulo > h1 {
         box-sizing: border-box;

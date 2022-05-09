@@ -1,16 +1,17 @@
 import React, { useEffect , useState} from "react";
+import { useParams } from 'react-router-dom';
 import Supermercado from "../img/SupermercadoSlide.jpg";
-import "../css/infoSuper.css"
-import api from '../service/api_compro'
+import "../css/infoSuper.css";
+import api from '../service/api_compro';
 
 
-export default function InfoSupermercados () {
+export default function InfoSupermercados (props) {
     document.title = "Informações";
     const [supermercado,setSupermercado] = useState({});
-    
+    const { id } = useParams();
     useEffect (() => {
-        var id= window.location.href.split('=')[1]
-        console.log(id)
+        
+        console.log(id);
         api
             .get(`/supermercado/exibir/${id}`)
             .then((response) => {

@@ -13,7 +13,7 @@ export default function Integrantes(props) {
                     <h2>{props.nome}</h2><br/>
                     <div className='data'>
                         <div>{props.cargo}</div>
-                        <span>{props.email}@gmail.com<br/>12991747752</span>
+                        <span>{props.email}@gmail.com<br/>{props.numero}</span>
                     </div>
                 </div>
             </div>

@@ -8,10 +8,9 @@ export default function superMercados() {
     document.title = "Supermercados";
     return (
         <>
-        <div className="titulo">
+        {/* <div className="titulo">
             <h1>Veja os Supermercados</h1>
-        </div>
-        <Pesquisa hint=" Procure por supermercados"/>
+        </div> */}
 
         <Slid  titulo="Supermercados em destaque" />
         <Slid  titulo="Supermercados com maior avaliação" />
