@@ -4,7 +4,7 @@ import Supermercado from '../img/SupermercadoSlide.jpg';
 
 export default function bloco(props) {
     function abriTela(id){
-        window.location.href = `Supermercado/informacoes?id=${id}`;
+        window.location.href = `Supermercado/informacoes/${id}`;
     }
     return (
         

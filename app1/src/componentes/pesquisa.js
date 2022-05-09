@@ -5,9 +5,10 @@ export default function pesquisa(props) {
 
     return (
         <>
-        <div className="pesquisa"> 
-            <input type="text" placeholder={props.hint}/>
+        <div className="pesquisa">
             <img src={Img}/>
+            <input type="text" placeholder={props.hint}/>
+            
         </div>
         </>
     )

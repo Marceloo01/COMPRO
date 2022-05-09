@@ -24,6 +24,20 @@ export default function Slid(props){
                 {props.titulo}  
             </div>
             <div className="corpoSlide">
+                {supermercados.map((value) =>{
+                    return (<Bloco 
+                        key={value._id} 
+                        _id={value._id} 
+                        urlImg={value.urlImg}
+                        nome={value.nome} 
+                        cidade={value.cidade} 
+                        rua={value.rua} 
+                        bairro={value.bairro} 
+                        estado={value.estado}
+                    />)
+                   
+                    }
+                 )}
                 <Bloco/>
                 <Bloco/>
                 <Bloco/>
@@ -37,20 +51,7 @@ export default function Slid(props){
                 <Bloco/>
                 <Bloco/>
                 
-                {supermercados.map((value) =>{
-                    return (<Bloco 
-                        key={value._id} 
-                        _id={value._id} 
-                        urlImg={value.urlImg}
-                        nome={value.nome} 
-                        cidade={value.cidade} 
-                        rua={value.rua} 
-                        bairro={value.bairro} 
-                        estado={value.estado}
-                    />)
-                   
-                }
-             )}
+                
             </div>
         </div>
     )

@@ -16,7 +16,7 @@ export default function Home() {
             <div className="texto">
               <span className="destaque">Precisa de ajuda</span>
               <p>Temos um site de apoio para nosso clientes, para aprender a mexer no site clique logo em baixo nesse botão</p><br/>
-              <Link class="btn-ajuda" to={'/Ajuda'}>Clique aqui</Link>
+              <Link className="btn-ajuda" to={'/Ajuda'}>Clique aqui</Link>
             </div>
         
       </div>

@@ -1,39 +1,45 @@
 .pesquisa {
-    border: 1px solid #303030;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: #ffffff;
+    padding-left: 5px;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 0px 0px 20px #4c4488;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: white;
     box-sizing: border-box;
-    margin-top: 50px;
-    width: 250px;
+    width: auto;
     height: 40px;
     display: flex;
-    justify-content: space-between;
-    float: right;
+    top: 33px;
+    right: 40px;
 }
 .pesquisa > input {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 200px;
-    height: 38px;
-    border-right: 1px solid #000000;
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
+    transition: width .5s;
+    width: 0px;
+    height: auto;
+    border: none;
     word-spacing: normal;
-    margin-left: 10px;
     padding-right: 10px;
 }
 .pesquisa > img {
-    float: right;
+    object-fit: cover;
     width: 40px;
 }
 .pesquisa > input:focus {
     box-shadow: 0 0 0 1;
     outline: 0;
 }
+.pesquisa:hover input {
+    margin-left: 10px;
+    width: 200px;
+}
 @media screen and (max-width:950px) {
     .pesquisa {
-        padding-left: 5px;
+        right: 30px;
+    }
+}
+@media screen and (max-width:650px) {
+    .pesquisa:hover input {
+        width: 100px;
     }
 }
