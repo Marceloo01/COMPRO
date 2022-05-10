@@ -12,10 +12,11 @@
     display: flex;
     top: 33px;
     right: 40px;
+    z-index: 1000;
 }
 .pesquisa > input {
     transition: width .5s;
-    width: 0px;
+    width: 0px; 
     height: auto;
     border: none;
     word-spacing: normal;
@@ -29,17 +30,36 @@
     box-shadow: 0 0 0 1;
     outline: 0;
 }
-.pesquisa:hover input {
+.pesquisa:hover input, .pesquisa img:hover ~ input {
     margin-left: 10px;
-    width: 200px;
+    width: 250px;
+}
+@media screen and (max-width:1180px) and (min-width: 1050px) {
+    .pesquisa:hover input, .pesquisa img:hover ~ input {
+        margin-left: 10px;
+        width: 180px;
+    }
+}
+@media screen and (max-width:1050px) and (min-width: 950px) {
+    .pesquisa:hover input, .pesquisa img:hover ~ input {
+        margin-left: 10px;
+        width: 130px;
+    }
 }
 @media screen and (max-width:950px) {
     .pesquisa {
         right: 30px;
     }
 }
-@media screen and (max-width:650px) {
-    .pesquisa:hover input {
+@media screen and (max-width:400px) {
+    .pesquisa:hover input, .pesquisa img:hover ~ input {
+        margin-left: 10px;
+        width: 160px;
+    }
+}
+@media screen and (max-width:320px) {
+    .pesquisa:hover input, .pesquisa img:hover ~ input {
+        margin-left: 10px;
         width: 100px;
     }
 }
