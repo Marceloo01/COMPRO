@@ -16,6 +16,7 @@ import Produtos from './Telas/produtos.js';
 import Supers from './Telas/InfoSuper.js';
 import InfoProd from './Telas/infoProd';
 import Pesquisa from './componentes/pesquisa.js';
+import NaoEncontrado from './Telas/naoEncontrado';
 
 //Nunito font
 //id projeto: compro-94dcf
@@ -143,7 +144,7 @@ function App() {
           <Route path='/Ajuda' element={<Ajuda/>}></Route>
           <Route path='/Supermercado/informacoes/:id' element={<Supers/>}></Route>
           <Route path='/Produtos/informacoes/:id' element={<InfoProd/>}></Route>
-          <Route path="/*" element={<p>Página não encontrada</p>}></Route> 
+          <Route path="/*" element={<NaoEncontrado/>}></Route> 
         </Routes>
         </main>
         

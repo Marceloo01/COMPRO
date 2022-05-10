@@ -1,0 +1,29 @@
+.Nao-Encontrado {
+    margin-top: 200px;
+    margin-bottom: 40px;
+    width: 90%;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #6257b1;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom: 1px solid #5b539c;
+    border-right: 1px solid #5b539c;
+    box-shadow: 15px 40px 5px #6257b1;
+}
+.Nao-Encontrado > p {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    font-size: 50px;
+    font-weight: 800;
+}
+@media screen and (max-width:730px) {
+    .Nao-Encontrado {
+        width: 100%;
+    }
+    .Nao-Encontrado > p {
+        font-size: 30px;
+    }
+}

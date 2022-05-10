@@ -10,15 +10,15 @@ export default function Rodape() {
     <>
     <footer className="rodape">
         <div className="rodLogo">
-            <img src={logo}/>
+            <img draggable="false" src={logo}/>
             <h2>ComPro</h2>            
         </div>
         
         <div className="rodRedes">
             <div id="redeS">
-                <img src={zap}/>
-                <img src={inst}/>
-                <img src={facebook}/>
+                <img draggable="false" src={zap}/>
+                <img draggable="false" src={inst}/>
+                <img draggable="false" src={facebook}/>
             </div>
         </div>
         <div className="cop">

@@ -22,6 +22,7 @@
 
 
 .data {
+    overflow: hidden;
     transition: .3s;
     opacity: 0;
 }
@@ -59,7 +60,7 @@
     transform: translateY(70px);
     padding: 40px;
     text-align: center;
-    width: 100%;
+    width: 100%; 
     transition: .5s;
 }
 

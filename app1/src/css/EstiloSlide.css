@@ -28,15 +28,16 @@
     padding: 10px;
 }
 #conjuntoSlide {
-    margin-top:180px;
     height: auto;
-    padding: 50px;
     border: 1px solid #ffffff;
     box-sizing: border-box;
     max-width:2000px;
     position: relative;
     left: 50%;
     transform:translateX(-50%);
+}
+#conjuntoSlide:not(:first-child) {
+    margin-top: 180px;
 }
 .botoes-slide{
     padding-top: 50px;

@@ -1,7 +1,6 @@
 
 .tipos-produtos {
     z-index: 100;
-    margin-top: 200px;
     background-color: #ffffff;
     width: 100%;
     height:auto;
@@ -9,8 +8,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     box-sizing: border-box;
-    box-shadow: 0px 0px 10px #dadada;
-    transition: height 2s;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    transition: height .7s;
 }
 .tipos {
     text-align: center;
@@ -24,7 +23,7 @@
     margin-top: 20px;margin-bottom: 20px;
 }
 .tipos:hover {
-    transition: background-color .2s;
+    transition: background-color .1s;
     background-color: #203030;
 }
 .filtro {
@@ -70,7 +69,7 @@ button > p {
     max-width: var(--i);
     --j: calc(20% + 5px);
     --qt:5;
-    transition: margin 1s;
+    transition: margin .5s;
 }
 .produto:not(:last-child){
     margin-right: 20px;
@@ -184,7 +183,6 @@ button > p {
         background-color: #203030;
         border-radius: 3px;
         border: 1px solid #203030;
-        margin-top: 200px;
         display: none;
         width: 200px;
         text-align: center;
@@ -199,8 +197,7 @@ button > p {
     }
     .tipos-produtos {
         position: absolute;
-        margin-top: 20px;
-        height:350px;
+        height:310px;
         grid-template-columns: 1fr;
     }
     .tipos-produtos.aberto{
