@@ -84,9 +84,9 @@ button > p {
 }
 .img-produto > img {
     position: relative;
+    object-fit: contain;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
     height: 200px;
 }
 .nome-produto {
