@@ -11,7 +11,7 @@ export default function bloco(props) {
         <div className="conjunto">
             <div className="Supermercado-img">
                 <h2>{props.nome}</h2>
-                <img src={Supermercado}/>
+                <img draggable="false" src={Supermercado}/>
             </div>
             <div className="dado-supermercado">
                 <span className="dado">Localização</span><p>&nbsp;&nbsp; {props.rua} - {props.bairro} - {props.cidade} - {props.estado}</p>

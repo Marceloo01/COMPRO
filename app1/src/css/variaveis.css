@@ -50,7 +50,7 @@ main {
 }
 @media screen and (max-width:950px) {
     main {
-        padding:0px 2px;
+        padding:50px 2px;
     }
     .titulo > h1 {
         box-sizing: border-box;

@@ -1,4 +1,4 @@
-import banana from '../img/banana.jpg';
+import banana from '../img/banana.png';
 import '../css/produtos.css';
 
 export default function blocoProd() {
@@ -6,7 +6,7 @@ export default function blocoProd() {
         
         <div className='produto'>
             <div className='img-produto'>
-                <img src={banana}/>
+                <img draggable="false" src={banana}/>
             </div>
             <div className='nome-produto'>
                 <span>Banana-nanica da china japonesa 1 kg</span>
