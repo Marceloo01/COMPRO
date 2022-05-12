@@ -21,10 +21,10 @@ import NaoEncontrado from './Telas/naoEncontrado';
 //Nunito font
 //id projeto: compro-94dcf
 function App() {
-  
+  const namePage = ["Home","Supermercado","Produto","Contato","Ajuda"];
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(0);
-  const heightMenu=270
+  const heightMenu=270;
   const verificarLogin = async (u)=>{
     let newUser={
       id:u.uid,
@@ -34,26 +34,25 @@ function App() {
     setLogou(newUser);
   }
   useEffect(()=>{
-    console.log("foi")
     let urlPagina=window.location.pathname;
     if(urlPagina=='/')
-      setSel(1)
+      setSel(1);
     else if(urlPagina.toUpperCase()=='/SUPERMERCADO')
-      setSel(2)
+      setSel(2);
     else if(urlPagina.toUpperCase()=='/PRODUTOS')
-      setSel(3)
+      setSel(3);
     else if(urlPagina.toUpperCase()=='/CONTATO')
-      setSel(4)
+      setSel(4);
     else if(urlPagina.toUpperCase()=='/AJUDA')
-      setSel(5)
+      setSel(5);
     else
-      setSel(-1)
+      setSel(-1);
   },[window.location.href]);
 
   const abrirMenu=()=>{
     if(window.innerWidth>950)  return;
     var menu = document.getElementById('nav');
-    menu.classList.toggle('MenuAbre')
+    menu.classList.toggle('MenuAbre');
   }
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
@@ -83,10 +82,9 @@ function App() {
               </div>
         </div>
         <header>
-        
+        <div className={`imagem-background sel${sel}`}>
         <div className="cab">
           <img src={COMPRO}/>
-          {/* <div className="inicioTxt">Compre fácil com COMPRO</div> */}
         </div>
         
         <div className="menu">
@@ -132,7 +130,10 @@ function App() {
             
           </div>
           <Pesquisa hint="Buscar..."/>
+          
         </div>
+        <div className="texto-pagina">{namePage[sel-1]}</div>
+      </div>
         </header>
         <div id="carrinho" onClick={abrirCarrinho}></div>
         <main>

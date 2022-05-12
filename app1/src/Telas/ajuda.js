@@ -8,7 +8,7 @@ export default function Ajuda() {
     return(
         <>
             <div className="titulo">
-                <h1>Precisa de Ajuda</h1>
+                <h1>Página em construção</h1>
             </div>
         </>
     )
