@@ -2,7 +2,6 @@
     padding-left: 5px;
     overflow: hidden;
     position: absolute;
-    box-shadow: 0px 0px 20px #4c4488;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     background-color: white;
@@ -26,13 +25,11 @@
     object-fit: cover;
     width: 40px;
 }
-.pesquisa > input:focus {
-    box-shadow: 0 0 0 1;
-    outline: 0;
-}
-.pesquisa:hover input, .pesquisa img:hover ~ input {
+.pesquisa:hover input, .pesquisa img:hover ~ input, .pesquisa > input:focus {
     margin-left: 10px;
     width: 250px;
+    box-shadow: 0 0 0 1;
+    outline: 0;
 }
 @media screen and (max-width:1180px) and (min-width: 1050px) {
     .pesquisa:hover input, .pesquisa img:hover ~ input {

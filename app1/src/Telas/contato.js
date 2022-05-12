@@ -1,4 +1,3 @@
-import react from 'react';
 import '../css/contato.css';
 import Integrantes from '../componentes/integrante.js';
 import Yulian from '../img/integrantes/Yulian.jpg'
