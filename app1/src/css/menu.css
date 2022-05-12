@@ -24,7 +24,7 @@
     height: auto;
     padding-top: 20px;
     padding-bottom: 50px;
-    z-index: 100000;
+    z-index: 1000;
 }
 .sub {
     width:  auto;
