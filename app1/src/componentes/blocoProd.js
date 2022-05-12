@@ -2,9 +2,6 @@ import banana from '../img/banana.png';
 import '../css/produtos.css';
 
 export default function blocoProd() {
-    function a() {
-        alert("teste");
-    }
     return(
         
         <div className='produto'>
