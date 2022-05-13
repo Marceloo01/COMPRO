@@ -45,7 +45,6 @@ button > p {
 .base-slide-produto {
     position: relative;
     width: 100%;
-    
 }
 .Slide-produto {
     overflow: hidden;
@@ -53,7 +52,7 @@ button > p {
     flex-direction: row;
     width: 85%;
     margin:0 auto;
-    margin-top: 50px;
+    margin-top: 0px;
     height: auto;
     padding: 10px;
     box-sizing: border-box;
@@ -74,7 +73,6 @@ button > p {
 .produto:not(:last-child){
     margin-right: 20px;
 }
-
 .img-produto {
     padding: 2px;
     box-sizing: border-box;

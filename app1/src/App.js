@@ -22,6 +22,11 @@ import NaoEncontrado from './Telas/naoEncontrado';
 //id projeto: compro-94dcf
 function App() {
   const namePage = ["Home","Supermercado","Produto","Contato","Ajuda"];
+  const descPage = ["Navegue por nosso menu para achar o que está procurando, ou veja um pouco dos nossos objetivos abaixo",
+                    "Procure seus supermercados favoritos e mais próximo de você, veja alguns dados deles ou procure outros supermercados",
+                    "Adicione produtos ao seu carrinho para comparar preços em varios supermercados da sua cidade",
+                    "Entre em contato com nossa equipe",
+                    "Procure tópicos que responderam suas duvidas sobre nosso site"];
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(0);
   const heightMenu=270;
@@ -82,7 +87,7 @@ function App() {
               </div>
         </div>
         <header>
-        <div className={`imagem-background sel${sel}`}>
+        <div className={`imagem-background ${ sel== -1 ? "" :"sel"+sel }`}>
         <div className="cab">
           <img src={COMPRO}/>
         </div>
@@ -132,7 +137,7 @@ function App() {
           <Pesquisa hint="Buscar..."/>
           
         </div>
-        <div className="texto-pagina">{namePage[sel-1]}</div>
+        <div className="texto-pagina">{namePage[sel-1]}<div className="descricao-pagina">{descPage[sel-1]}</div></div>
       </div>
         </header>
         <div id="carrinho" onClick={abrirCarrinho}></div>
