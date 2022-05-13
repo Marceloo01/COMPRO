@@ -193,47 +193,73 @@ nav a:hover::after {
     transition: background .2s;
     width: 100%;
     max-width: 2000px;
-    height: 80vh;
+    height: auto;
     margin: 0 auto;
 }
 .imagem-background.sel1 {
-    background: url("../img/home.jpg") center center;
+    height: 80vh;
+    min-height: 500px;
+    background: url("../img/Tela-home.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .imagem-background.sel2 {
-    background: url("../img/Tela-Produto.jpg") center center;
+    height: 80vh;
+    min-height: 500px;
+    background: url("../img/Tela-Supermercado.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .imagem-background.sel3 {
+    height: 80vh;
+    min-height: 500px;
     background: url("../img/Tela-Produto.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .imagem-background.sel4 {
-    background: url("../img/Tela-Produto.jpg") center center;
+    height: 80vh;
+    min-height: 500px;
+    background: url("../img/Tela-Contato.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .imagem-background.sel5 {
-    background: url("../img/Tela-Produto.jpg") center center;
+    height: 80vh;
+    min-height: 500px;
+    background: url("../img/Tela-Ajuda.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .texto-pagina {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    font-size: 8vw;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    font-size: 70px;
     text-align: center;
     font-weight: 700;
     color: #ffffff;
     text-shadow: 0px 0px 20px black;
     text-transform: uppercase;
 }
+.descricao-pagina{
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+    position: relative;
+    color: #afafaf;
+    left: 50%;
+    transform: translateX(-50%);
+}
 @media screen and (max-width:950px) {
+    .texto-pagina {
+        font-size: 30px;
+    }
+    .descricao-pagina {
+        font-size: 15px;
+    }
     .MenuAbre {
         height: 300px;
     }

@@ -1,26 +1,11 @@
-import react from 'react';
+import React from 'react';
 import '../css/variaveis.css';
-import Pesquisa from '../componentes/pesquisa.js';
 import '../css/produtos.css';
-import ConjuntoProd from '../componentes/blocoProd.js';
+import SlideProduto from '../componentes/SlideProduto';
 
 export default function Produtos() {
     document.title = "Produtos";
     var contador = 0;
-    function slideToRight(e) {
-        const value = getComputedStyle(e).getPropertyValue('--qt');
-        if( contador-value-1 < document.getElementsByClassName("Slide-produto")[0].children.length*-1 ) return
-        contador--;
-        e.style = `--espaco:${contador}`
-        
-    }
-
-    function slideToLeft(e) {
-        if( contador+1 > 0 ) return
-        contador++;
-        e.style = `--espaco:${contador}`
-        
-    }
 
     return(
         <>
@@ -34,8 +19,6 @@ export default function Produtos() {
                     
                 }}><p>Filtro</p></button></center>
             <div className="tipos-produtos aberto">
-                
-
                 <div className="tipos"><p>brinquedos</p></div>
                 <div className="tipos"><p>frutas/verduras</p></div>
                 <div className="tipos"><p>eletrodomesticos</p></div>
@@ -43,24 +26,9 @@ export default function Produtos() {
                 <div className="tipos"><p>processados</p></div>
             </div>
 
-            <div className="titulo-slide" style={{marginTop: '100px'}}>Produtos mais procurados</div>
+            <SlideProduto titulo="Produtos mais procurados" indice={0}/>
+            <SlideProduto titulo="Mais Baratos" indice={1}/>
 
-            <div className='base-slide-produto'>
-
-                <div onClick={()=>slideToLeft(document.getElementsByClassName("Slide-produto")[0].firstChild)} className='botao-slide-produto left'></div>
-                <div className='Slide-produto'>  
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>  
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                </div>
-                <div onClick={()=>slideToRight(document.getElementsByClassName("Slide-produto")[0].firstChild)} className='botao-slide-produto right'></div>
-                
-            </div>
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 
             </div>

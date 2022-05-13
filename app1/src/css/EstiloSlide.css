@@ -92,7 +92,8 @@
 }
 .Supermercado-img > img {
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
 }
 .Supermercado-img > h2{
     position: absolute;

@@ -25,7 +25,7 @@ export default function InfoSupermercados (props) {
         <>
         <div className="conjunto-info">
             <div className="Supermercado-img-info">
-                <img src={Supermercado}/>
+                <img src={supermercado.urlImg || Supermercado}/>
             </div>
             
             <div className="supermercado-info">
@@ -41,12 +41,12 @@ export default function InfoSupermercados (props) {
                 
                     <span className="dado">Cidade</span>
                     <p>  {supermercado.cidade}</p>
-                
+                 
                     <span className="dado">e-mail</span>
                     <p>  {supermercado.email}</p>
                 
                     <span className="dado">avaliação</span>
-                    <p> 7.1</p>
+                    <p> {supermercado.avaliacao}</p>
 
                     
             </div>
