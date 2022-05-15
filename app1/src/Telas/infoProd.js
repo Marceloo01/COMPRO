@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/infoProduto.css';
 import Banana from '../img/banana.png';
 

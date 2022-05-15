@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react';
 import '../css/login.css'
 import { BsGoogle} from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";

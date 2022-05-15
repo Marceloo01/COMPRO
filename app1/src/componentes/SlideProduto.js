@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/produtos.css';
 import ConjuntoProd from './blocoProd.js';
 

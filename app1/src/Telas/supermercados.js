@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import Supermercado from "../img/SupermercadoSlide.jpg";
 import '../css/supermercados.css';
 import Slid from '../componentes/Slide.js';
