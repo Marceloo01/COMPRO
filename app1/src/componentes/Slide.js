@@ -51,7 +51,6 @@ export default function Slid(props){
                 <Bloco/>
                 <Bloco/>
                 
-                
             </div>
         </div>
     )

@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/pesquisa.css';
 import Img from '../img/lupa.png';
 

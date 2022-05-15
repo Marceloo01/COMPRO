@@ -32,13 +32,13 @@
     outline: 0;
 }
 @media screen and (max-width:1180px) and (min-width: 1050px) {
-    .pesquisa:hover input, .pesquisa img:hover ~ input {
+    .pesquisa:hover input, .pesquisa img:hover ~ input, .pesquisa > input:focus {
         margin-left: 10px;
         width: 180px;
     }
 }
 @media screen and (max-width:1050px) and (min-width: 950px) {
-    .pesquisa:hover input, .pesquisa img:hover ~ input {
+    .pesquisa:hover input, .pesquisa img:hover ~ input, .pesquisa > input:focus {
         margin-left: 10px;
         width: 130px;
     }
@@ -49,13 +49,13 @@
     }
 }
 @media screen and (max-width:400px) {
-    .pesquisa:hover input, .pesquisa img:hover ~ input {
+    .pesquisa:hover input, .pesquisa img:hover ~ input, .pesquisa > input:focus {
         margin-left: 10px;
         width: 160px;
     }
 }
 @media screen and (max-width:320px) {
-    .pesquisa:hover input, .pesquisa img:hover ~ input {
+    .pesquisa:hover input, .pesquisa img:hover ~ input, .pesquisa > input:focus {
         margin-left: 10px;
         width: 100px;
     }

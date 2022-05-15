@@ -1,3 +1,4 @@
+import React from 'react';
 import '../css/contato.css';
 
 export default function Integrantes(props) {

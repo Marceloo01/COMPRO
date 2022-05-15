@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect,} from 'react';
 import Home from './Telas/Home.js';
 import menuLateral from './img/menu-lateral.png';
 import carrinho from './img/carrinho1.png';
