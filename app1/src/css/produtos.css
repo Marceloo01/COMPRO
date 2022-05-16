@@ -38,10 +38,6 @@ button > p {
     color: #ffffff;
 }
 /* slide */
-.Slide-produto::-webkit-scrollbar {
-    height: 0px;
-    border-radius: 0px;
-}
 .base-slide-produto {
     position: relative;
     width: 100%;

@@ -28,8 +28,7 @@ function App() {
                     "Entre em contato com nossa equipe",
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   const [sel,setSel]=useState(1);
-  const [logou,setLogou]=useState(0);
-  const heightMenu=270;
+  const [logou,setLogou]=useState(null);
   const verificarLogin = async (u)=>{
     let newUser={
       id:u.uid,
@@ -72,13 +71,14 @@ function App() {
         
         
       <div className="App">
-        <div className="fundoMenu"></div>
+        <div className="fundoMenu" onClick={abrirCarrinho}></div>
         <div id="menuCarrinho">
             <div className="headerCarrinho">
               
               <div className="tituloCarrinho">
                 Seu carrinho
               </div>
+              
               </div>
               <div className="bodyCarrinho">
                 <div className="semProdutos">
@@ -130,7 +130,7 @@ function App() {
                 to='/Ajuda'>Ajuda
               </Link>
               
-              
+
             </nav>
             
           </div>

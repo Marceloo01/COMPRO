@@ -90,7 +90,7 @@ nav a::after {
     background-color: white;
     width: 0px;
     bottom: 5px;
-    transition: width .5s;
+    transition: width .3s;
 }
 nav a:hover::after {
     width: 100%;
@@ -116,6 +116,7 @@ nav a:hover::after {
     padding-top:1px;
     height: 20px;
 }
+/* carrinho */
 .fundoMenu {
     width: 0px;
     height: 0px;
@@ -188,6 +189,7 @@ nav a:hover::after {
 .fundoCarrinho {
     display: block !important;
 }
+/**/
 .imagem-background{
     position: relative;
     transition: background .2s;
@@ -254,6 +256,10 @@ nav a:hover::after {
     transform: translateX(-50%);
 }
 @media screen and (max-width:950px) {
+    nav a::after {
+        background-color: transparent;
+        transform: 0s;
+    }
     .texto-pagina {
         font-size: 30px;
     }
