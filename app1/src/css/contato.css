@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
+/* elemento onde fica a foto dos integrantes */
 .card {
     margin: 50px;
     margin-bottom: 210px;
@@ -19,8 +20,6 @@
     box-shadow: 0 30px 50px rgb(190, 190, 190);
     transition: .5s;
 }
-
-
 .data {
     overflow: hidden;
     transition: .3s;
@@ -63,7 +62,6 @@
     width: 100%; 
     transition: .5s;
 }
-
 .details h2 {
     font-size: 1.25em;
     font-weight: 600;
@@ -103,9 +101,7 @@
         transform: translateY(0px);
         padding: 10px;
         padding-bottom: 20px;
-        /* overflow: visible; */
     }
-    
     .card .data {
         opacity: 100%;
         transition: 1s;

@@ -1,38 +1,39 @@
 import React from 'react';
 import '../css/login.css'
-import { BsGoogle} from "react-icons/bs";
+import { BsGoogle, BsLayoutThreeColumns} from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
 import API from '../service/firebase'
 
 export default function Login(props) {
     document.title = "Login";
-    const handleClickButtonLogin = async ()=>{
-        const result= await API.googleLogar();
-        if(result){
-            props.verificarLogin(result.user);
-        }else{
-            alert("erro")
-            props.setLogou(null);
+    
+
+    function mover() {
+        var formula = document.getElementsByClassName('formulario-login')[0];
+        formula.classList.toggle('para-direita')
+        
+        const handleClickButtonLogin = async ()=>{
+            const result= await API.googleLogar();
+            if(result){
+                props.verificarLogin(result.user);
+            }else{
+                alert("erro")
+                props.setLogou(null);
+            }
         }
+        handleClickButtonLogin();
     }
+
     return (
         <>
         <div className="Login">
-            <div className="formulario">
-                <div id="botoes">
-
-                    <button onClick={()=>handleClickButtonLogin()}>
-                        <BsGoogle/>&emsp;Login Google
-                    </button>
-                    <button onClick={()=>handleClickButtonLogin()}>
-                        <ImFacebook/>&emsp;Login Facebook
-                    </button>
-                    
-                </div>
-                <div id="termo">Termos de uso Conta Google</div>
-                <div className="separator">Ou</div>
-                
+            <div className='formulario-login'>
+                    <div className='para-preencher'>Login google</div>
+                    <button onClick={mover}><BsGoogle /></button>
+                    <div className='para-preencher'>Login Facebook</div>
+                    <button onClick={mover}><ImFacebook /></button>
             </div>
+            
         </div>
         
         </>

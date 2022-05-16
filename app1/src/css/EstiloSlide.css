@@ -55,6 +55,7 @@
     border-radius: 50%;
     background-color: transparent;
 }
+/* elemento do slide */
 .conjunto {
     padding: 1em;
     border-radius: 5px;
@@ -114,7 +115,6 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
 .dado-supermercado > p {
     font-size: 16px;
     text-align: left;
