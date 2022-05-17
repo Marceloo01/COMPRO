@@ -1,0 +1,17 @@
+.Informacoes-supermercado-produto {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 200px;
+}
+.Informacoes-supermercado-produto:not(:last-child) {
+    margin-bottom: 10px;
+}
+.supermercado-produto-img {
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 950px) {
+    
+}

@@ -195,6 +195,7 @@ nav a:hover::after {
     transition: background .2s;
     width: 100%;
     max-width: 2000px;
+    max-height: 800px;
     height: auto;
     margin: 0 auto;
 }

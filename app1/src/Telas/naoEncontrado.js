@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/NaoEncontrado.css';
 
 export default function NaoEncontrado() {
     return(
