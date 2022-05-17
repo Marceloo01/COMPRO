@@ -1,8 +1,9 @@
 import React from 'react';
 import '../css/infoProduto.css';
 import Banana from '../img/banana.png';
+import SupermercadoProduto from '../componentes/Supermercado_produto';
 
-export default function InformacaoProduto() {
+export default function InformacaoProduto(props) {
     return(
         <>
             <div className="conjunto-info-produto">
@@ -14,6 +15,14 @@ export default function InformacaoProduto() {
                     <p>encontrado em 7 supermercados</p>
                     <p>diferença de preço <span> R$90 </span> <span>R$30</span> por 1kg</p>
                 </div>
+            </div>
+
+            <div className='supermercado-produto'>
+                {/* <SupermercadoProduto img={Banana} />
+                <SupermercadoProduto img={Banana} />
+                <SupermercadoProduto img={Banana} />
+                <SupermercadoProduto img={Banana} />
+                <SupermercadoProduto img={Banana} /> */}
 
             </div>
         </>

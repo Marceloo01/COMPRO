@@ -29,6 +29,10 @@ export default function Produtos() {
             <SlideProduto titulo="Produtos mais procurados" indice={0}/>
             <SlideProduto titulo="Mais Baratos" indice={1}/>
 
+            <div className=''>
+                
+            </div>
+
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 
             </div>

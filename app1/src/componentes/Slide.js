@@ -15,7 +15,24 @@ export default function Slid(props){
             console.error("ops! ocorreu um erro" + err);
           });
       }, []);
-
+    
+    function rederizarSuper(){
+        if(supermercados)
+            return( supermercados.map((value) =>{
+                return (<Bloco 
+                    key={value._id} 
+                    _id={value._id} 
+                    urlImg={value.urlImg}
+                    nome={value.nome} 
+                    cidade={value.cidade} 
+                    rua={value.rua} 
+                    bairro={value.bairro} 
+                    estado={value.estado}
+                />)
+            }))
+        else
+        return(<><Bloco/> <Bloco/> <Bloco/> <Bloco/> <Bloco/> <Bloco/></>);
+    }
     
 
     return (
@@ -24,33 +41,8 @@ export default function Slid(props){
                 {props.titulo}  
             </div>
             <div className="corpoSlide">
-                {supermercados.map((value) =>{
-                    return (<Bloco 
-                        key={value._id} 
-                        _id={value._id} 
-                        urlImg={value.urlImg}
-                        nome={value.nome} 
-                        cidade={value.cidade} 
-                        rua={value.rua} 
-                        bairro={value.bairro} 
-                        estado={value.estado}
-                    />)
-                   
-                    }
-                 )}
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
-                <Bloco/>
                 
+                {rederizarSuper()}
             </div>
         </div>
     )

@@ -65,7 +65,7 @@
     width:25vw;
     height: auto;
     min-width: 400px;
-    max-width: 440px;
+    max-width: 450px;
 }
 .conjunto:not(:first-child){
     margin-left: 10px;
@@ -129,9 +129,6 @@
     font-size:19px;
 }
 @media screen and (max-width:950px) {
-    .conjunto {
-        min-width: 250px;
-    }
     .corpoSlide::-webkit-scrollbar{
         height: 7px;
     }
@@ -156,5 +153,15 @@
     }
     .dado-supermercado > input {
         margin:5px 5px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .conjunto {
+        min-width: 300px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .conjunto {
+        min-width: 250px;
     }
 }
