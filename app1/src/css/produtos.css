@@ -57,7 +57,7 @@ button > p {
 .produto {
     overflow: hidden;
     border-radius: 5px;
-    border: 1px solid #e2e2e2;
+    box-shadow: 0px 0px 10px #b9b9b9;
     height: 500px;
     --i: calc(20% - 16px);
     min-width: var(--i);

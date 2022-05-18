@@ -7,7 +7,7 @@ export default function pesquisa(props) {
     return (
         <>
         <div className="pesquisa">
-            <img src={Img}/>
+            <img src={Img} alt="Pesquisar"/>
             <input type="text" placeholder={props.hint}/>
             
         </div>

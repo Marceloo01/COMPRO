@@ -1,17 +1,75 @@
-.Informacoes-supermercado-produto {
+.supermercado-produto {
+    padding: 10px;
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 850px;
+    min-width: 250px;
+    height: auto;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    width: 100%;
-    height: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
 }
-.Informacoes-supermercado-produto:not(:last-child) {
-    margin-bottom: 10px;
+.supermercado-produto:first-child {
+    margin-top: 100px;
 }
-.supermercado-produto-img {
-    width: 100%;
+.img-supermercado-produto {
+    width: 30%;
+    height: auto;
+}
+.img-supermercado-produto > img {
     object-fit: cover;
+    width: 100%;
+    height: auto;
 }
-@media screen and (max-width: 950px) {
-    
+.descricao-supermercado-produto {
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap;
+}
+.descricao-supermercado-produto > h3 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    background-color: #a1a1a1;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.descricao-supermercado-produto > p {
+    text-align: center;
+    padding: 10px;
+}
+.descricao-supermercado-produto > button {
+    color: white;
+    float: right;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #77cae4;
+    font-weight: 700;
+    font-size: 15px;
+    border: none;
+}
+@media screen and (max-width: 800px) {
+    .img-supermercado-produto {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 651px) {
+    .supermercado-produto {
+        display: inline-block;
+    }
+    .img-supermercado-produto {
+        width: 100%;
+        text-align: center;
+    }
+    .img-supermercado-produto > img {
+        width: 60%;
+    }
 }

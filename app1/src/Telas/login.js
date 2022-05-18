@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/login.css'
-import { BsGoogle, BsLayoutThreeColumns} from "react-icons/bs";
+import '../css/login.css';
+import { BsGoogle } from "react-icons/bs";
 import { ImFacebook } from "react-icons/im";
-import API from '../service/firebase'
+import API from '../service/firebase';
 
 export default function Login(props) {
     document.title = "Login";

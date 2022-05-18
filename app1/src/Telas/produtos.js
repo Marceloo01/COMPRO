@@ -5,7 +5,6 @@ import SlideProduto from '../componentes/SlideProduto';
 
 export default function Produtos() {
     document.title = "Produtos";
-    var contador = 0;
 
     return(
         <>

@@ -1,8 +1,6 @@
 import React from "react";
-import Supermercado from "../img/SupermercadoSlide.jpg";
 import '../css/supermercados.css';
 import Slid from '../componentes/Slide.js';
-import Pesquisa from '../componentes/pesquisa.js';
 
 export default function superMercados() {
     document.title = "Supermercados";

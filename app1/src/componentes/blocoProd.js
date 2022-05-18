@@ -7,7 +7,7 @@ export default function blocoProd() {
         
         <div className='produto'>
             <div className='img-produto'>
-                <img draggable="false" src={banana}/>
+                <img draggable="false" src={banana} alt="produto"/>
             </div>
             <div className='nome-produto'>
                 <span>Banana-nanica da china japonesa 1 kg</span>

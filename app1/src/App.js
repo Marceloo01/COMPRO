@@ -1,14 +1,12 @@
 import React,{useState, useEffect,} from 'react';
 import Home from './Telas/Home.js';
 import menuLateral from './img/menu-lateral.png';
-import carrinho from './img/carrinho1.png';
 import COMPRO from './img/COMPRO_Linha.png';
 import './css/menu.css';
 import {Routes,Route,Link} from 'react-router-dom';
 import Rodape from './componentes/rodape.js';
 import Login from './Telas/login.js';
 import Supermercados from './Telas/supermercados.js';
-import { click } from '@testing-library/user-event/dist/click';
 import Ajuda from './Telas/ajuda.js';
 import './css/variaveis.css';
 import Contato from './Telas/contato.js';
@@ -39,15 +37,15 @@ function App() {
   }
   useEffect(()=>{
     let urlPagina=window.location.pathname;
-    if(urlPagina=='/')
+    if(urlPagina==='/')
       setSel(1);
-    else if(urlPagina.toUpperCase()=='/SUPERMERCADO')
+    else if(urlPagina.toUpperCase()==='/SUPERMERCADO')
       setSel(2);
-    else if(urlPagina.toUpperCase()=='/PRODUTOS')
+    else if(urlPagina.toUpperCase()==='/PRODUTOS')
       setSel(3);
-    else if(urlPagina.toUpperCase()=='/CONTATO')
+    else if(urlPagina.toUpperCase()==='/CONTATO')
       setSel(4);
-    else if(urlPagina.toUpperCase()=='/AJUDA')
+    else if(urlPagina.toUpperCase()==='/AJUDA')
       setSel(5);
     else
       setSel(-1);
@@ -87,46 +85,46 @@ function App() {
               </div>
         </div>
         <header>
-        <div className={`imagem-background ${ sel== -1 ? "" :"sel"+sel }`}>
+        <div className={`imagem-background ${ sel=== -1 ? "" :"sel"+sel }`}>
         <div className="cab">
-          <img src={COMPRO}/>
+          <img src={COMPRO} alt="logo Compro"/>
         </div>
         
         <div className="menu">
           <div className="sub">
 
             <div id="icone">
-              <img src={menuLateral} onClick={abrirMenu}/>
+              <img src={menuLateral} onClick={abrirMenu} alt="iconeMenu"/>
             </div>
 
             <nav id="nav">
               <Link  
                 onClick={()=>{ setSel(1); abrirMenu() }} 
-                className={sel==1?"selecionado":""} 
+                className={sel===1?"selecionado":""} 
                 to='/' >Home
               </Link>
                 
               <Link  
                 onClick={()=>{ setSel(2); abrirMenu() }}
-                className={sel==2?"selecionado":""}
+                className={sel===2?"selecionado":""}
                 to='/Supermercado'>Supermercado
               </Link>
               
               <Link  
                 onClick={()=>{ setSel(3); abrirMenu() }}
-                className={sel==3?"selecionado":""}
+                className={sel===3?"selecionado":""}
                 to='/Produtos'>Produtos
               </Link>
               
               <Link  
                 onClick={()=>{ setSel(4); abrirMenu() }}
-                className={sel==4?"selecionado":""} 
+                className={sel===4?"selecionado":""} 
                 to='/Contato'>Contato
               </Link>
 
               <Link  
                 onClick={()=>{ setSel(5); abrirMenu();}} 
-                className={sel==5?"selecionado":""} 
+                className={sel===5?"selecionado":""} 
                 to='/Ajuda'>Ajuda
               </Link>
               
@@ -162,11 +160,11 @@ function App() {
       return <Login verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />
     }
 
-  return (
-    <>
-      {verificarLogin()}
-    </>
-  );
+  // return (
+  //   <>
+  //     {verificarLogin()}
+  //   </>
+  // );
 }
 
 export default App;
