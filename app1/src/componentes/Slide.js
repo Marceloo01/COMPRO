@@ -1,24 +1,32 @@
 import React, { useEffect , useState} from "react";
 import Bloco from "./blocoSupermercado.js";
 import '../css/EstiloSlide.css';
-import api from '../service/api_compro'
+import api from '../service/api_compro';
+
 export default function Slid(props){
     const [supermercados,setSuper] = useState([]);
+    const [htmlS,setHtmlS] = useState(null);
+    
     useEffect(() => {
         api
-          .get("/supermercado")
-          .then((response) => {
+            .get("/supermercado")
+            .then((response) => {
             setSuper(response.data)
         })
 
-          .catch((err) => {
+            .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
-          });
-      }, []);
-    
+            });
+    }, []);
+
+    useEffect(()=>{
+        setTimeout(rederizarSuper,1500);
+    },[supermercados])
+
     function rederizarSuper(){
-        if(supermercados)
-            return( supermercados.map((value) =>{
+        if(supermercados){
+            console.log(supermercados)
+            let Testehtml = (supermercados.map((value) =>{
                 return (<Bloco 
                     key={value._id} 
                     _id={value._id} 
@@ -28,10 +36,14 @@ export default function Slid(props){
                     rua={value.rua} 
                     bairro={value.bairro} 
                     estado={value.estado}
-                />)
-            }))
-        else
-        return(<><Bloco/> <Bloco/> <Bloco/> <Bloco/> <Bloco/> <Bloco/></>);
+                    abertura={value.abertura}
+                />);
+            }));
+            setHtmlS([Testehtml]);
+            console.log(...Testehtml);
+            return;
+        }
+        
     }
     
 
@@ -41,8 +53,7 @@ export default function Slid(props){
                 {props.titulo}  
             </div>
             <div className="corpoSlide">
-                
-                {rederizarSuper()}
+                { htmlS || <><Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/></>}
             </div>
         </div>
     )

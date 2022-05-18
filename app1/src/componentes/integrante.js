@@ -7,7 +7,7 @@ export default function Integrantes(props) {
        
         <div className="card">
             <div className="img">
-                <img src={props.img}/>
+                <img src={props.img} alt={props.nome}/>
             </div>
             <div className='content'>
                 <div className='details'>

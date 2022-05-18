@@ -1,10 +1,10 @@
-import menuLateral from '.././img/menu-lateral.png'
-import carrinho from '.././img/carrinho.png'
-import COMPRO from '.././img/COMPRO.png'
+import menuLateral from '.././img/menu-lateral.png';
+import carrinho from '.././img/carrinho.png';
+import COMPRO from '.././img/COMPRO.png';
 import React from 'react';
 import '../css/menu.css';
-import {Routes,Route,Link} from 'react-router-dom'
-import Home from '../Telas/Home'
+import {Routes,Route,Link} from 'react-router-dom';
+import Home from '../Telas/Home';
 
 export default function menu(props){
     const abrirMenu=()=>{ 

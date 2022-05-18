@@ -7,11 +7,10 @@
     border-radius:5px;
 }
 .titulo-slide {
+    text-align: center;
     width: 100%;
     height: auto;
-    padding-left: 20px;
     box-sizing: border-box;
-    text-align: left;
     font-weight: 900;
     color: #49b5d6;
     font-size: 40px;
@@ -28,7 +27,7 @@
     padding: 10px;
 }
 #conjuntoSlide {
-    height: auto;
+    height: 742px;
     border: 1px solid #ffffff;
     box-sizing: border-box;
     max-width:2000px;
