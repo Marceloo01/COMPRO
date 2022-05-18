@@ -15,7 +15,7 @@ export default function bloco(props) {
             </div>
             <div className="dado-supermercado">
                 <span className="dado">Localização</span><p>&nbsp;&nbsp; {props.rua} - {props.bairro} - {props.cidade} - {props.estado}</p>
-                <span className="dado">Horário de atendimento</span><p>&nbsp;&nbsp; 10h - 22h</p>
+                <span className="dado">Horário de atendimento</span><p>&nbsp;&nbsp; {props.abertura} - {props.fechamento}</p>
                 <input 
                     type="button"
                     value="MAIS INFORMAÇÕES"
