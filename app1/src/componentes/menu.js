@@ -12,7 +12,7 @@ export default function menu(props){
         if(menu.style.height=='230px'){
           menu.style.height='0px';
         }else{
-          menu.style.height='230px';
+          menu.style.height='230px'; 
         }
       }
 

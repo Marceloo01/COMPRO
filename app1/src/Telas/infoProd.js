@@ -25,4 +25,4 @@ export default function InformacaoProduto() {
             <SupermercadoProduto img={Banana}/>
         </>
     )
-}
+} 

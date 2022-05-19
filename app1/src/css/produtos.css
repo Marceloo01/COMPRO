@@ -20,7 +20,9 @@
     cursor: pointer;
 }
 .tipos > p {
-    margin-top: 20px;margin-bottom: 20px;
+    text-transform: capitalize;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .tipos:hover {
     transition: background-color .1s;
@@ -58,7 +60,7 @@ button > p {
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #b9b9b9;
-    height: 500px;
+    height: auto;
     --i: calc(20% - 16px);
     min-width: var(--i);
     max-width: var(--i);
@@ -76,6 +78,7 @@ button > p {
     height: 200px;
 }
 .img-produto > img {
+    padding-top: 10px;
     position: relative;
     object-fit: contain;
     left: 50%;
@@ -109,22 +112,28 @@ button > p {
 }
 .diferenca-preco-produto > p {
     border-radius: 3px;
-    background-color: #e6e6e6; 
+    padding: 3px;
+    background-color: #363636;
+    margin-bottom: 20px;
 }
 .diferenca-preco-produto > button {
     height: auto;
     border-radius: 3px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #77cae4;
+    background-color: #0dddec;
     font-weight: 700;
     font-size: 15px;
     width: 100%;
     border: none;
 }
+.diferenca-preco-produto > button:last-child {
+    margin-bottom: 20px;
+}
 .diferenca-preco-produto > button > p {
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #3f5557;
 }
 .botao-slide-produto {
     position: absolute;
@@ -146,7 +155,14 @@ button > p {
     top: 50%;
     left: 100%;
     transform: translate(-100%,-50%) rotate(180deg);
-
+}
+.maiorPreco {
+    margin-right: 10px;
+    color: #ff0000;
+}
+.menorPreco {
+    margin-left: 10px;
+    color: #00ce4f;
 }
 @media screen and (max-width:1550px) {
     .produto{
@@ -177,7 +193,7 @@ button > p {
         background-color: #203030;
         border-radius: 3px;
         border: 1px solid #203030;
-        display: none;
+        display: block;
         width: 200px;
         text-align: center;
         height: 100%;
@@ -185,13 +201,9 @@ button > p {
         color: var(--corTexto);
         cursor: pointer;
     }
-    .filtro {
-        
-        display: block;
-    }
     .tipos-produtos {
         position: absolute;
-        height:310px;
+        height:372px;
         grid-template-columns: 1fr;
     }
     .tipos-produtos.aberto{
