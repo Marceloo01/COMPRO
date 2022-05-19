@@ -8,8 +8,6 @@ export default function Produtos() {
 
     return(
         <>
-            
-
                 <center><button className="filtro"
                 onClick={()=> {
                     var tiposGrid = document.getElementsByClassName('tipos-produtos')[0];
@@ -21,16 +19,13 @@ export default function Produtos() {
                 <div className="tipos"><p>brinquedos</p></div>
                 <div className="tipos"><p>frutas/verduras</p></div>
                 <div className="tipos"><p>eletrodomesticos</p></div>
-                <div className="tipos"><p>notebooks/celulares</p></div>
+                <div className="tipos"><p>eletrônicos</p></div>
                 <div className="tipos"><p>processados</p></div>
+                <div className="tipos"><p>bebidas</p></div>
             </div>
 
             <SlideProduto titulo="Produtos mais procurados" indice={0}/>
             <SlideProduto titulo="Mais Baratos" indice={1}/>
-
-            <div className=''>
-                
-            </div>
 
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 

@@ -97,7 +97,7 @@ nav a:hover::after {
 }
 .selecionado {
     text-shadow: 0px 0px 5px #64627c;
-    color: #000000;
+    color: #ffffff;
 }
 #icone {
     display: none;

@@ -37,8 +37,9 @@ function App() {
   }
   useEffect(()=>{
     let urlPagina=window.location.pathname;
-    if(urlPagina==='/')
+    if(urlPagina==='/') {
       setSel(1);
+    }
     else if(urlPagina.toUpperCase()==='/SUPERMERCADO')
       setSel(2);
     else if(urlPagina.toUpperCase()==='/PRODUTOS')
@@ -128,12 +129,10 @@ function App() {
                 to='/Ajuda'>Ajuda
               </Link>
               
-
             </nav>
             
           </div>
           <Pesquisa hint="Buscar..."/>
-          
         </div>
         <div className="texto-pagina">{namePage[sel-1]}<div className="descricao-pagina">{descPage[sel-1]}</div></div>
       </div>

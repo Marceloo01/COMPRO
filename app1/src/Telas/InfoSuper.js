@@ -6,6 +6,8 @@ import api from '../service/api_compro';
 
 
 export default function InfoSupermercados (props) {
+    
+
     document.title = "Informações";
     const [supermercado,setSupermercado] = useState({});
     const { id } = useParams();
@@ -47,10 +49,8 @@ export default function InfoSupermercados (props) {
                 
                     <span className="dado">avaliação</span>
                     <p> {supermercado.avaliacao}</p>
-
-                    
+                     
             </div>
-
             <input 
                     type="button"
                     value="VER PRODUTOS"

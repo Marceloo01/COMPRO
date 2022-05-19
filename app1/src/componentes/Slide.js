@@ -20,7 +20,7 @@ export default function Slid(props){
     }, []);
 
     useEffect(()=>{
-        setTimeout(rederizarSuper,1500);
+        rederizarSuper();
     },[supermercados])
 
     function rederizarSuper(){
@@ -44,14 +44,13 @@ export default function Slid(props){
             console.log(...Testehtml);
             return;
         }
-        
     }
     
 
     return (
         <div id="conjuntoSlide">
             <div className="titulo-slide">
-                {props.titulo}  
+                {props.titulo}
             </div>
             <div className="corpoSlide">
                 { htmlS || <><Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/> <Bloco _id="625728a34767438f62f04b08"/></>}
