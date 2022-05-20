@@ -167,7 +167,7 @@ button > p {
 @media screen and (max-width:1550px) {
     .produto{
         --i: calc(25% - 15px) ;
-        --j: calc(25% + 7.5px) ;
+        --j: calc(25% + 4.5px) ;
         min-width: var(--i);
         --qt:4;
     }
