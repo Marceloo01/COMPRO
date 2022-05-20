@@ -29,11 +29,11 @@
     box-shadow: inset 0px 5px 5px -5px #303030, inset 0px -5px 5px -5px #303030;
 }
 #conjuntoSlide {
-
     height: 742px;
     border: 1px solid #ffffff;
     box-sizing: border-box;
     max-width:2000px;
+    max-height: fit-content;
     position: relative;
     left: 50%;
     transform:translateX(-50%);
@@ -59,7 +59,7 @@
 }
 /* elemento do slide */
 .conjunto {
-    padding: 1em;
+    padding: 5px;
     border-radius: 5px;
     border: 1px solid #ebebeb;
     box-shadow: 0px 0px 20px #ebebeb;
@@ -68,14 +68,12 @@
     height: auto;
     min-width: 400px;
     max-width: 450px;
-    z-index: 1;
 }
 .conjunto:not(:first-child){
     margin-left: 10px;
 }
 .dado-supermercado > input {
     background-color: var(--corBtn);
-    padding-top: 10px;
     border: none;
     color: white;
     font-weight: 700;
@@ -83,7 +81,7 @@
     margin:20px 20px;
     padding: 15px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 .Supermercado-img {
@@ -99,18 +97,10 @@
     height: 300px;
     object-fit: cover;
 }
-.Supermercado-img > h2{
-    position: absolute;
-    top:90%;
-    transform: translateY(-100%);
-    background-color:white;
-    padding:10px;
-    border-left-color: transparent;
-}
 .dado-supermercado {
     height: auto;
     width: 90%;
-    margin-top:20px;
+    margin-top:10px;
     display: grid;
     grid-template-columns: 1fr;
     color: rgb(85, 85, 85);
@@ -124,7 +114,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding:0px;
     margin-bottom: 10px;
 }
 .dado-supermercado.dado{
@@ -163,8 +152,8 @@
         min-width: 300px;
     }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
     .conjunto {
-        min-width: 250px;
+        min-width: 230px;
     }
 }

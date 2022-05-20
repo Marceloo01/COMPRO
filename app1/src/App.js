@@ -37,9 +37,8 @@ function App() {
   }
   useEffect(()=>{
     let urlPagina=window.location.pathname;
-    if(urlPagina==='/') {
+    if(urlPagina==='/')
       setSel(1);
-    }
     else if(urlPagina.toUpperCase()==='/SUPERMERCADO')
       setSel(2);
     else if(urlPagina.toUpperCase()==='/PRODUTOS')
@@ -67,7 +66,6 @@ function App() {
 
     if(logou!=null){
       return(
-        
         
       <div className="App">
         <div className="fundoMenu" onClick={abrirCarrinho}></div>
