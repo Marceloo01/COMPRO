@@ -9,9 +9,9 @@ export default function SupermercadoProduto(props) {
                     <img src={props.img} alt="produto"/>
                 </div>
                 <div className="descricao-supermercado-produto">
-                    <h3>nome supermercado</h3>
-                    <p>R$50</p>
-                    <button>Ver Supermercado</button>
+                    <h3>{props._idSuper}</h3> 
+                    <p>R${props.preco}</p>
+                    <button onClick={()=>{window.location.pathname = `Supermercado/informacoes/${props._idSuper}`}}>Ver Supermercado</button>
                 </div>
             </div>  
         </>
