@@ -11,7 +11,6 @@ export default function Produtos() {
                 <center><button className="filtro"
                 onClick={()=> {
                     var tiposGrid = document.getElementsByClassName('tipos-produtos')[0];
-                    console.log('oi');
                     tiposGrid.classList.toggle("aberto");
                     
                 }}><p>Filtro</p></button></center>

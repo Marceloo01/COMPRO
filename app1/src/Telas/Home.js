@@ -12,7 +12,7 @@ export default function Home() {
           <p>Sua procura termina aqui!</p>
           <p>em nosso site você pode achar os seus supermercados favoritos e ver quais produtos estão mais em conta</p>
         </div>
-        <div className='img-imagem-home'><img src={ImagemEntrada}/></div>
+        <div className='img-imagem-home'><img src={ImagemEntrada} alt="primeira-imagem"/></div>
       </div>
     </>
   );

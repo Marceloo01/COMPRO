@@ -64,7 +64,7 @@ button > p {
     --i: calc(20% - 16px);
     min-width: var(--i);
     max-width: var(--i);
-    --j: calc(20% + 5px);
+    --j: calc(20% + 4px);
     --qt:5;
     transition: margin .5s;
 }
@@ -167,7 +167,7 @@ button > p {
 @media screen and (max-width:1550px) {
     .produto{
         --i: calc(25% - 15px) ;
-        --j: calc(25% + 4.5px) ;
+        --j: calc(25% + 4.8px) ;
         min-width: var(--i);
         --qt:4;
     }

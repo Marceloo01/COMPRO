@@ -18,7 +18,7 @@ export default function InfoSupermercados (props) {
             .get(`/supermercado/exibir/${id}`)
             .then((response) => {
                 setSupermercado(response.data)
-                console.log(supermercado);})
+            ;})
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
             });

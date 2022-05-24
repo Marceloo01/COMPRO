@@ -25,7 +25,6 @@ export default function Slid(props){
 
     function rederizarSuper(){
         if(supermercados){
-            console.log(supermercados)
             let Testehtml = (supermercados.map((value) =>{
                 return (<Bloco 
                     key={value._id} 
@@ -41,7 +40,6 @@ export default function Slid(props){
                 />);
             }));
             setHtmlS([Testehtml]);
-            console.log(...Testehtml);
             return;
         }
     }
