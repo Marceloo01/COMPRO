@@ -19,7 +19,7 @@ export default function bloco(props) {
                 <input 
                     type="button"
                     value="MAIS INFORMAÇÕES"
-                    onClick={ ()=>abriTela(props._id) }    
+                    onClick={ ()=>abriTela(props._id) }
                 />
             </div>
         </div>

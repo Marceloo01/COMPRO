@@ -1,40 +1,62 @@
 import React,{useState, useEffect,} from 'react';
-import Home from './Telas/Home.js';
+import {Routes,Route,Link} from 'react-router-dom';
+import './css/menu.css';
+import './css/variaveis.css';
 import menuLateral from './img/menu-lateral.png';
 import COMPRO from './img/COMPRO_Linha.png';
-import './css/menu.css';
-import {Routes,Route,Link} from 'react-router-dom';
 import Rodape from './componentes/rodape.js';
+import Pesquisa from './componentes/pesquisa.js';
+import Home from './Telas/Home.js';
 import Login from './Telas/login.js';
 import Supermercados from './Telas/supermercados.js';
 import Ajuda from './Telas/ajuda.js';
-import './css/variaveis.css';
 import Contato from './Telas/contato.js';
 import Produtos from './Telas/produtos.js';
 import Supers from './Telas/InfoSuper.js';
 import InfoProd from './Telas/infoProd';
-import Pesquisa from './componentes/pesquisa.js';
 import NaoEncontrado from './Telas/naoEncontrado';
+import SupermercadoProduto from './Telas/ProdutosSupermercado.js';
+import ProdutosClasse from './Telas/ProdutosClasse';
 
 //Nunito font
 //id projeto: compro-94dcf
 function App() {
+  // subtitulos das telas
   const namePage = ["Home","Supermercado","Produto","Contato","Ajuda"];
   const descPage = ["Navegue por nosso menu para achar o que está procurando, ou veja um pouco dos nossos objetivos abaixo",
                     "Procure seus supermercados favoritos e mais próximo de você, veja alguns dados deles ou procure outros supermercados",
                     "Adicione produtos ao seu carrinho para comparar preços em varios supermercados da sua cidade",
                     "Entre em contato com nossa equipe",
-                    "Procure tópicos que responderam suas duvidas sobre nosso site"]; 
+                    "Procure tópicos que responderam suas duvidas sobre nosso site"];
+              
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(null); 
+
   const verificarLogin = async (u)=>{
     let newUser={
-      id:u.uid,
-      name:u.displayName,
-      avatar:u.photoURL
+      id:     u.uid,
+      name:   u.displayName,
+      avatar: u.photoURL
     }
+
+    sessionStorage.setItem("loginId",u.uid);
+    sessionStorage.setItem("loginNome",u.displayName);
+    sessionStorage.setItem("loginFoto",u.photoURL);
+
     setLogou(newUser);
   }
+
+  if(sessionStorage.getItem("loginId") && sessionStorage.getItem("loginNome") && sessionStorage.getItem("loginFoto") && (!logou)){
+    
+    verificarLogin(
+      {
+        uid: sessionStorage.getItem("loginId"),
+        displayName: sessionStorage.getItem("loginNome"),
+        photoURL: sessionStorage.getItem("loginFoto")
+      }
+    )}
+
+  
   useEffect(()=>{
     let urlPagina=window.location.pathname;
     if(urlPagina==='/')
@@ -137,31 +159,29 @@ function App() {
         </header>
         <div id="carrinho" onClick={abrirCarrinho}></div>
         <main>
+          {/* todas as rotas do site */}
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/Contato' element={<Contato/>}></Route>
-          <Route path='/Produtos' element={<Produtos/>}></Route>
-          <Route path='/Supermercado' element={ <Supermercados/>}></Route>
-          <Route path='/Ajuda' element={<Ajuda/>}></Route>
-          <Route path='/Supermercado/informacoes/:id' element={<Supers/>}></Route>
-          <Route path='/Produtos/informacoes/:id' element={<InfoProd/>}></Route>
+          <Route path='/'                             element={<Home/>}>                               </Route>
+          <Route path='/Contato'                      element={<Contato/>}>                            </Route>
+          <Route path='/Produtos'                     element={<Produtos/>}>                           </Route>
+          <Route path='/Supermercado'                 element={ <Supermercados/>}>                     </Route>
+          <Route path='/Ajuda'                        element={<Ajuda/>}>                                  </Route>
+          <Route path='/Supermercado/informacoes/:id' element={<Supers/>}>          </Route>
+          <Route path='/Produtos/informacoes/:id'     element={<InfoProd/>}>            </Route>
+          <Route path='/Supermercado/:id/Produtos'    element={<SupermercadoProduto/>}></Route>
+          <Route path="/Produtos/:classe"             element={<ProdutosClasse/>}>              </Route>
+          
+
           <Route path="/*" element={<NaoEncontrado/>}></Route> 
         </Routes>
         </main>
         
-  
         <Rodape/>
       </div>
       )
     }else{
       return <Login verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />
     }
-
-  // return (
-  //   <>
-  //     {verificarLogin()}
-  //   </>
-  // );
 }
 
 export default App;

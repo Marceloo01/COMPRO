@@ -17,7 +17,7 @@ export default function Login(props) {
             if(result){
                 props.verificarLogin(result.user);
             }else{
-                alert("erro")
+                console.error("erro");
                 props.setLogou(null);
             }
         }
