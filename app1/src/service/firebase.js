@@ -25,7 +25,12 @@ const firebaseConfig = {
   export default{
     googleLogar: async()=>{
       const provider = new firebase.auth.GoogleAuthProvider();
-      const result = await auth.signInWithPopup(provider);
+      var result
+      try{
+        result = await auth.signInWithPopup(provider);
+      }catch(e){
+        console.error(e);
+      }
       return result;
     }
   }

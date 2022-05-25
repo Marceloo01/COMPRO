@@ -54,7 +54,9 @@ export default function InfoSupermercados (props) {
             <input 
                     type="button"
                     value="VER PRODUTOS"
-                    // onClick={ ()=>abriTelaProdutos()}
+                    onClick={ ()=>{
+                        window.location.pathname = `/Supermercado/${supermercado._id}/Produtos`
+                    }}
                 />
         </div>
         </> 

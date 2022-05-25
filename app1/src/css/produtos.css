@@ -203,7 +203,7 @@ button > p {
     }
     .tipos-produtos {
         position: absolute;
-        height:372px;
+        height:435px;
         grid-template-columns: 1fr;
     }
     .tipos-produtos.aberto{

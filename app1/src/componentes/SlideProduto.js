@@ -9,14 +9,10 @@ export default function SlideProduto(props) {
     const [produtos,setProd] = useState([]);
 
     useEffect(() => {
-        api
-            .get("/produto")
-            .then((response) => {
-            setProd(response.data);
-        })
-            .catch((err) => {
-            console.error("ops! ocorreu um erro" + err);
-            });
+        console.log(props.array_prod)
+        setProd(props.array_prod);
+            
+        
     }, []);
 
     function slideToRight(e) {
@@ -51,16 +47,8 @@ export default function SlideProduto(props) {
                         preco_medida={value.preco_medida}
                         classeProduto={value.classeProduto}
 
-                    />);
-                })}
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>  
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
-                        <ConjuntoProd/>
+                        />);
+                    })}
                 </div>
                 <div onClick={()=>slideToRight(document.getElementsByClassName("Slide-produto")[props.indice].firstChild)} className='botao-slide-produto right'></div> 
             </div>
