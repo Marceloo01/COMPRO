@@ -1,29 +1,30 @@
-import React, { useEffect , useState} from "react";
+import React, { useEffect, useState } from 'react';
+import '../css/variaveis.css';
+import '../css/produtos.css';
 import SlideProduto from '../componentes/SlideProduto';
 import api from '../service/api_compro';
 import { useParams } from 'react-router-dom';
 
-export default function ProdutosSupermercado(props) {
+export default function Produtos(props) {
     props.AlterarTela(window.location.pathname);
+    const [produtos,setProd] = useState(null);
+    const { classe, id } = useParams()
+    document.title = "Produtos";
 
-    document.title = "Informações";
-    const [Prod_Super,setProdSuper] = useState(null);
-    const { id } = useParams();
-    useEffect (() => {
+    function mostrarProdClasses(classe) {
+        window.location.pathname = `/Supermercado/${id}/Produtos/${classe}`;
+    }
+    
+    useEffect(() => {
         api
-            .get(`/supermercado/produto/${id}`)
-            .then((response) => {
-                setProdSuper(response.data)
-            ;})
+        .get(`supermercado/produto/${id}/${classe}`)
+        .then((response) => {
+            setProd(response.data);
+        })
             .catch((err) => {
-                console.error("ops! ocorreu um erro" + err);
-            });
-        },[])
-
-        function mostrarProdClasses(classe) {
-            window.location.pathname = `/Supermercado/${id}/Produtos/${classe}`;
-        }
-
+            console.error("ops! ocorreu um erro" + err);
+            });        
+    }, []);
     return(
         <>
             <center><button className="filtro"
@@ -41,17 +42,19 @@ export default function ProdutosSupermercado(props) {
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
             </div>
-            {   Prod_Super?
+
+            {  produtos?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" Many={false} indice={0} array_prod = {Prod_Super}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} Many={false} array_prod = {Prod_Super}/>
+                    <SlideProduto titulo="Produtos mais procurados" Many={false} indice={0} array_prod = {produtos}/>
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={false} array_prod = {produtos}/>
                 </>
-                : <p>"Esperando"</p>
+                : <p>Esperando</p>
             }
+
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 
             </div>
-            
+
         </>
     )
 }

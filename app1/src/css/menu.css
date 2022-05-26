@@ -12,7 +12,10 @@
     justify-content:center;
     align-items: center;
     transform: translateX(-50%);
-    
+}
+.cab  img {
+    height: 40px;
+    padding: 2px;
 }
 .menu {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2), inset 0px 4px 4px rgba(0, 0, 0, 0.2);
@@ -38,11 +41,6 @@
     transform: translateX(-50%);
     display:flex;
 }
-.cab > img {
-    height: 40px;
-    padding: 3px;
-    margin-left: 10px;
-}
 #carrinho{
     background-image: url(../img/carrinho1.png);
     background-position: center center ;
@@ -63,6 +61,17 @@
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.2);
     opacity: 1;
     transform: translate(-100%);
+}
+.animar {
+    animation: animacao .5s linear 5;
+}
+@keyframes animacao {
+    0%,100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
 }
 nav {
     position: relative;

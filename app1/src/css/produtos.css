@@ -103,12 +103,11 @@ button > p {
 }
 .diferenca-preco-produto {
     padding: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     font-size: 15px;
     height: auto;
     margin-top:5px;
     text-align: center;
+    background-color: #363636;
 }
 .diferenca-preco-produto > p {
     border-radius: 3px;
@@ -121,7 +120,7 @@ button > p {
     border-radius: 3px;
     cursor: pointer;
     margin-top: 10px;
-    background-color: #0dddec;
+    background-color: #464646;
     font-weight: 700;
     font-size: 15px;
     width: 100%;
@@ -133,7 +132,7 @@ button > p {
 .diferenca-preco-produto > button > p {
     margin-bottom: 10px;
     margin-top: 10px;
-    color: #3f5557;
+    color: #b1b1b1;
 }
 .botao-slide-produto {
     position: absolute;

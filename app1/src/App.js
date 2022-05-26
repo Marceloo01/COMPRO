@@ -1,4 +1,4 @@
-import React,{useState, useEffect,} from 'react';
+import React,{useState} from 'react';
 import {Routes,Route,Link} from 'react-router-dom';
 import './css/menu.css';
 import './css/variaveis.css';
@@ -17,6 +17,7 @@ import InfoProd from './Telas/infoProd';
 import NaoEncontrado from './Telas/naoEncontrado';
 import SupermercadoProduto from './Telas/ProdutosSupermercado.js';
 import ProdutosClasse from './Telas/ProdutosClasse';
+import ProdutoClasseSuper from './Telas/ProdutoClasseSuper.js';
 
 //Nunito font
 //id projeto: compro-94dcf
@@ -57,27 +58,28 @@ function App() {
     )}
 
   
-  useEffect(()=>{
-    let urlPagina=window.location.pathname;
-    if(urlPagina==='/')
+  const AlterarTela = (v)=>{
+
+    if(v==='/')
       setSel(1);
-    else if(urlPagina.toUpperCase()==='/SUPERMERCADO')
+    else if(v.toUpperCase()==='/SUPERMERCADO')
       setSel(2);
-    else if(urlPagina.toUpperCase()==='/PRODUTOS')
+    else if(v.toUpperCase()==='/PRODUTOS')
       setSel(3);
-    else if(urlPagina.toUpperCase()==='/CONTATO')
+    else if(v.toUpperCase()==='/CONTATO')
       setSel(4);
-    else if(urlPagina.toUpperCase()==='/AJUDA')
+    else if(v.toUpperCase()==='/AJUDA')
       setSel(5);
     else
       setSel(-1);
-  },[window.location.href]);
+  }
 
   const abrirMenu=()=>{
     if(window.innerWidth>950)  return;
     var menu = document.getElementById('nav');
     menu.classList.toggle('MenuAbre');
   }
+
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
     var fundo=document.getElementsByClassName('fundoMenu')[0];
@@ -107,8 +109,9 @@ function App() {
         </div>
         <header>
         <div className={`imagem-background ${ sel=== -1 ? "" :"sel"+sel }`}>
+          
         <div className="cab">
-          <img src={COMPRO} alt="logo Compro"/>
+          <Link to='/'><img src={COMPRO} alt="logo Compro"/></Link>
         </div>
         
         <div className="menu">
@@ -161,17 +164,16 @@ function App() {
         <main>
           {/* todas as rotas do site */}
         <Routes>
-          <Route path='/'                             element={<Home/>}>                               </Route>
-          <Route path='/Contato'                      element={<Contato/>}>                            </Route>
-          <Route path='/Produtos'                     element={<Produtos/>}>                           </Route>
-          <Route path='/Supermercado'                 element={ <Supermercados/>}>                     </Route>
-          <Route path='/Ajuda'                        element={<Ajuda/>}>                                  </Route>
-          <Route path='/Supermercado/informacoes/:id' element={<Supers/>}>          </Route>
-          <Route path='/Produtos/informacoes/:id'     element={<InfoProd/>}>            </Route>
-          <Route path='/Supermercado/:id/Produtos'    element={<SupermercadoProduto/>}></Route>
-          <Route path="/Produtos/:classe"             element={<ProdutosClasse/>}>              </Route>
-          
-
+          <Route path='/'                             element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
+          <Route path='/Contato'                      element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
+          <Route path='/Produtos'                     element={<Produtos AlterarTela={AlterarTela}/>}>                           </Route>
+          <Route path='/Supermercado'                 element={ <Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path='/Ajuda'                        element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
+          <Route path='/Supermercado/informacoes/:id' element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
+          <Route path='/Produtos/informacoes/:id'     element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
+          <Route path='/Supermercado/:id/Produtos'    element={<SupermercadoProduto AlterarTela={AlterarTela}/>}>                </Route>
+          <Route path="/Produtos/:classe"             element={<ProdutosClasse AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path="/Supermercado/:id/Produtos/:classe"             element={<ProdutoClasseSuper AlterarTela={AlterarTela}/>}>                     </Route>
           <Route path="/*" element={<NaoEncontrado/>}></Route> 
         </Routes>
         </main>
@@ -180,7 +182,7 @@ function App() {
       </div>
       )
     }else{
-      return <Login verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />
+      return <Login AlterarTela={AlterarTela} verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />
     }
 }
 

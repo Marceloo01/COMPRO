@@ -18,6 +18,7 @@ export default function SlideProduto(props) {
     function slideToRight(e) {
         const value = getComputedStyle(e).getPropertyValue('--qt');
         if( contador-value-1 < document.getElementsByClassName("Slide-produto")[0].children.length*-1 ) return
+        
         contador--;
         e.style = `--espaco:${contador}`
         
@@ -43,10 +44,11 @@ export default function SlideProduto(props) {
                         urlImgLocal={value.urlImgLocal}
                         nome={value.nome} 
                         marca={value.marca} 
-                        preco={value.preco}
+                        MinPreco={value.preco}
+                        MaxPreco={props.Many ?value.preco+90: ""}
                         preco_medida={value.preco_medida}
                         classeProduto={value.classeProduto}
-
+                        carrinho={props.carrinho} setCarrinho={props.setCarrinho}
                         />);
                     })}
                 </div>

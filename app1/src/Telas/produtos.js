@@ -3,10 +3,12 @@ import '../css/variaveis.css';
 import '../css/produtos.css';
 import SlideProduto from '../componentes/SlideProduto';
 import api from '../service/api_compro';
-import { useParams } from 'react-router-dom';
 
 export default function Produtos(props) {
+    props.AlterarTela(window.location.pathname);
     const [produtos,setProd] = useState(null);
+
+    const [carrinho,setCarrinho] = useState([]);
 
     document.title = "Produtos";
 
@@ -24,6 +26,9 @@ export default function Produtos(props) {
             console.error("ops! ocorreu um erro" + err);
             });        
     }, []);
+    useEffect(() => {
+        console.log(carrinho)       
+    }, [carrinho]);
     return(
         <>
             <center><button className="filtro"
@@ -44,8 +49,8 @@ export default function Produtos(props) {
 
             {  produtos?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" indice={0} array_prod = {produtos}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} array_prod = {produtos}/>
+                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod = {produtos} carrinho={carrinho} setCarrinho={setCarrinho}/>
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod = {produtos} carrinho={carrinho} setCarrinho={setCarrinho}/>
                 </>
                 : <p>Esperando</p>
             }
