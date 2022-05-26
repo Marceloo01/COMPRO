@@ -2,7 +2,8 @@ import React from "react";
 import '../css/supermercados.css';
 import Slid from '../componentes/Slide.js';
 
-export default function superMercados() {
+export default function superMercados(props) {
+    props.AlterarTela(window.location.pathname);
     document.title = "Supermercados";
     return (
         <>

@@ -7,8 +7,9 @@ import Nat from '../img/integrantes/IMG_1788.jpg';
 import Thaissa from '../img/integrantes/Thaissa.jpg';
 import Renato from '../img/integrantes/Renato.jpg';
 
-export default function Contato (){
+export default function Contato (props){
     document.title = "Contato"; 
+    props.AlterarTela(window.location.pathname);
     return (
         <>
             <div id="contato">
@@ -18,6 +19,7 @@ export default function Contato (){
                 <Integrantes nome="Thaissa" img={Thaissa} email="ThaisaSenai" cargo="Marketing" numero="12 99139-9087"/>
                 <Integrantes nome="Renato" img={Renato} email="renatoribeiro.256991" cargo="Marketing" numero="12 99112-9009"/>
             </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.6408421519327!2d-45.58215248441616!3d-23.036955848321703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccf8ed628b4757%3A0x65641c38ea0424cc!2sEscola%20SENAI%20F%C3%A9lix%20Guisard!5e0!3m2!1spt-BR!2sbr!4v1653594397538!5m2!1spt-BR!2sbr" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </>
     )
 }

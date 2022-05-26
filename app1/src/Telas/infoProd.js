@@ -3,8 +3,10 @@ import '../css/infoProduto.css';
 import SupermercadoProduto from '../componentes/Supermercado_produto';
 import api from '../service/api_compro';
 import { useParams } from 'react-router-dom';
+import '../css/variaveis.css';
 
-export default function InformacaoProduto() {
+export default function InformacaoProduto(props) {
+    props.AlterarTela(window.location.pathname);
     const [produto,setProd] = useState({});
     const [produtos,setProds] = useState([]);
     const { id } = useParams();
@@ -16,7 +18,6 @@ export default function InformacaoProduto() {
             api
                 .get(`/produto/barato/${response.data.nome}`)
                 .then((response) => {
-                    console.log(response)
                     setProds(response.data);
             })
             .catch((err) => {
@@ -50,11 +51,12 @@ export default function InformacaoProduto() {
                     <p><button className='adicionar'>Adicionar ao carrinho</button></p>
                 </div>
             </div>
+            <div className='subititulo'>Supermercados com este produto</div>
 
             {
                 produtos.map( v => {
                     return(
-                        <SupermercadoProduto key={v._id} img={v.urlImg} _idSuper={v._idSupermercado} preco={v.preco.toString().replace(".",",")}/>
+                        <SupermercadoProduto key={v._id} _idSuper={v._idSupermercado} preco={v.preco.toString().replace(".",",")}/>
                     )
                 })
             }

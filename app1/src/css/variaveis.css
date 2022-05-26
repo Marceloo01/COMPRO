@@ -13,10 +13,13 @@
     box-sizing: border-box;
 }
 .subititulo {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
     width: auto; 
     margin-top: 100px;
     height: auto;
-    text-align: left;
+    text-align: center;
     font-size: 30px;
     padding: 20px;
     color: #505050;

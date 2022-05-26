@@ -6,14 +6,13 @@ import api from '../service/api_compro';
 
 
 export default function InfoSupermercados (props) {
+    props.AlterarTela(window.location.pathname);
     
 
     document.title = "Informações";
     const [supermercado,setSupermercado] = useState({});
     const { id } = useParams();
     useEffect (() => {
-        
-        console.log(id);
         api
             .get(`/supermercado/exibir/${id}`)
             .then((response) => {

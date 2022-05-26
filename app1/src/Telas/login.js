@@ -5,6 +5,7 @@ import { ImFacebook } from "react-icons/im";
 import API from '../service/firebase';
 
 export default function Login(props) {
+    props.AlterarTela(window.location.pathname);
     document.title = "Login";
     
 

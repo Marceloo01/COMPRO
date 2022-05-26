@@ -1,6 +1,7 @@
 import React from 'react';
 
-export default function NaoEncontrado() {
+export default function NaoEncontrado(props) {
+    props.AlterarTela(window.location.pathname);
     return(
         <>
             <div className="titulo">

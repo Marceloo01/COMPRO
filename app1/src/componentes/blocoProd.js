@@ -17,9 +17,20 @@ export default function blocoProd(props) {
             </div>
             <div className='btns-produto'>
                 <div className='diferenca-preco-produto'>
-                    <p><span className='maiorPreco'>R$ {props.preco+90} </span> <span className='menorPreco'> R$ {props.preco}</span></p>
-                    <button onClick={()=>{alert("Produto adicionado ao carrinho")}}><p>Adicionar ao carrinho</p></button>
-                    <button onClick={()=>{window.location.href=`/Produtos/informacoes/${props._id}`}}><p>Informações</p></button>
+                    <p><span className='maiorPreco'>{props.MaxPreco?"R$ "+props.MaxPreco:""} </span> <span className='menorPreco'> {"R$ "+props.MinPreco}</span></p>
+                    <button onClick={()=>{
+                        if(!props.carrinho.includes(props._id))
+                            props.setCarrinho([...props.carrinho,props._id]);
+
+                        let carrinho = document.getElementById('carrinho');
+                        
+                        if(carrinho.classList.value == "animar") return
+                        
+                        carrinho.classList.toggle('animar');
+                        setTimeout(()=>{carrinho.classList.toggle('animar')},2500);
+
+                    }}><p>Adicionar ao carrinho</p></button>
+                    <button onClick={()=>{window.location.href=`/Produtos/informacoes/${props._id}` }}><p>Informações</p></button>
                 </div>
             </div> 
         </div>
