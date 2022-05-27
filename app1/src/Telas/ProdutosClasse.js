@@ -36,7 +36,7 @@ export default function ProdutosClasse(props) {
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("brinquedos") }}><p>brinquedos</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("frutas") }}><p>frutas/verduras</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrodomesticos") }}><p>eletrodomesticos</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrônicos") }}><p>eletrônicos</p></div>
+                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletronicos") }}><p>eletrônicos</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("processados") }}><p>processados</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
@@ -47,7 +47,11 @@ export default function ProdutosClasse(props) {
                     <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod = {produtos}/>
                     <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod = {produtos}/>
                 </>
-                : <p>Esperando</p>
+                : <div className="carregando">
+                    <div className="quadrado" style={{animationDelay : "-.1s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.2s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.4s"}}></div>
+                </div>
             }
 
             <div className="supermercados-all">

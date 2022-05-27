@@ -1,7 +1,6 @@
 import React from 'react';
 import '../css/home.css';
 import ImagemEntrada from '../img/primeira-imagem-home(1).jpg';
-import ProdutosSupermercado from './ProdutosSupermercado';
 
 export default function Home(props) {
   document.title = "Home";

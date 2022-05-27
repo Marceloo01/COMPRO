@@ -1,8 +1,6 @@
 import React ,{ useEffect, useState } from 'react';
 import '../css/Supermercado_produto.css';
 import api from "../service/api_compro";
-import { useParams } from 'react-router-dom';
-
 
 export default function SupermercadoProduto(props) {
     const [supermercado,setSupermercado] = useState({});

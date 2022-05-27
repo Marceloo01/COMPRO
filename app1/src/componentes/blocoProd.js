@@ -20,11 +20,11 @@ export default function blocoProd(props) {
                     <p><span className='maiorPreco'>{props.MaxPreco?"R$ "+props.MaxPreco:""} </span> <span className='menorPreco'> {"R$ "+props.MinPreco}</span></p>
                     <button onClick={()=>{
                         if(!props.carrinho.includes(props._id))
-                            props.setCarrinho([...props.carrinho,props._id]);
+                            props.setCarrinho([props.carrinho ?props.carrinho+ " "+ props._id: props._id]);
 
                         let carrinho = document.getElementById('carrinho');
                         
-                        if(carrinho.classList.value == "animar") return
+                        if(carrinho.classList.value === "animar") return
                         
                         carrinho.classList.toggle('animar');
                         setTimeout(()=>{carrinho.classList.toggle('animar')},2500);

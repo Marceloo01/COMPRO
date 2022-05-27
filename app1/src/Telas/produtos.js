@@ -8,8 +8,6 @@ export default function Produtos(props) {
     props.AlterarTela(window.location.pathname);
     const [produtos,setProd] = useState(null);
 
-    const [carrinho,setCarrinho] = useState([]);
-
     document.title = "Produtos";
 
     function mostrarProdClasses(classe) {
@@ -26,9 +24,7 @@ export default function Produtos(props) {
             console.error("ops! ocorreu um erro" + err);
             });        
     }, []);
-    useEffect(() => {
-        console.log(carrinho)       
-    }, [carrinho]);
+    
     return(
         <>
             <center><button className="filtro"
@@ -41,7 +37,7 @@ export default function Produtos(props) {
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("brinquedos") }}><p>brinquedos</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("frutas") }}><p>frutas/verduras</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrodomesticos") }}><p>eletrodomesticos</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrônicos") }}><p>eletrônicos</p></div>
+                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletronicos") }}><p>eletrônicos</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("processados") }}><p>processados</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
@@ -49,10 +45,14 @@ export default function Produtos(props) {
 
             {  produtos?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod = {produtos} carrinho={carrinho} setCarrinho={setCarrinho}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod = {produtos} carrinho={carrinho} setCarrinho={setCarrinho}/>
+                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod = {produtos} />
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod = {produtos} />
                 </>
-                : <p>Esperando</p>
+                : <div className="carregando">
+                    <div className="quadrado" style={{animationDelay : "-.1s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.2s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.4s"}}></div>
+                </div>
             }
 
             <div className="supermercados-all">

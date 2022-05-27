@@ -43,6 +43,7 @@
 main {
     overflow: hidden;
     height:auto;
+    min-height: 500px;
     width: 100%;
     padding:80px;
     box-sizing: border-box;

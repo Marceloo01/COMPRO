@@ -163,6 +163,38 @@ button > p {
     margin-left: 10px;
     color: #00ce4f;
 }
+/* animação de carregamento */
+.carregando {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    left: 50%;
+    margin-top: 200px;
+    transform: translate(-50%);
+    width: 100px;
+    height: 40px;
+}
+.quadrado {
+    width: 20px;
+    height: 20px;
+    background-color: #203030;
+    animation-name: carregar;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-delay: var(--sec);
+}
+@keyframes carregar {
+    0% {
+        margin-top: 10px;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
 @media screen and (max-width:1550px) {
     .produto{
         --i: calc(25% - 15px) ;
@@ -208,7 +240,6 @@ button > p {
     .tipos-produtos.aberto{
         height: 0px;
     }
-
 }
 @media screen and (max-width:600px) {
     .Slide-produto{
@@ -225,7 +256,6 @@ button > p {
         margin-right: 40px;
     }
 }
-
 .produto:first-child{
     --espaco:0;
     margin-left:calc(var(--j) * var(--espaco));;
