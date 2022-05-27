@@ -26,6 +26,7 @@ export default function Slid(props){
     function rederizarSuper(){
         if(supermercados){
             let Testehtml = (supermercados.map((value) =>{
+                if(value.nome==="base") return <></>
                 return (<Bloco 
                     key={value._id} 
                     _id={value._id} 

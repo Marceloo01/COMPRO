@@ -46,7 +46,11 @@ export default function ProdutosSupermercado(props) {
                     <SlideProduto titulo="Produtos mais procurados" Many={false} indice={0} array_prod = {Prod_Super}/>
                     <SlideProduto titulo="Mais Baratos" indice={1} Many={false} array_prod = {Prod_Super}/>
                 </>
-                : <p>"Esperando"</p>
+                : <div className="carregando">
+                    <div className="quadrado" style={{animationDelay : "-.1s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.2s"}}></div>
+                    <div className="quadrado" style={{animationDelay : "-.4s"}}></div>
+                </div>
             }
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 

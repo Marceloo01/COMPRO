@@ -1,19 +1,38 @@
 import React, {useEffect, useState} from 'react';
 import '../css/produtos.css';
 import ConjuntoProd from './blocoProd.js';
-import api from '../service/api_compro';
 
 export default function SlideProduto(props) {
     document.title = "Produtos";
     var contador = 0;
     const [produtos,setProd] = useState([]);
+    const [carrinho,setCarrinho] = useState("");
+    // const [quantidade,seQuantidade] = useState("");
 
     useEffect(() => {
-        console.log(props.array_prod)
         setProd(props.array_prod);
-            
-        
+
+        if(!localStorage.getItem("carrinho")) localStorage.setItem("carrinho",""); 
+
     }, []);
+
+    useEffect(()=>{
+        console.log(carrinho)
+        if(carrinho !== localStorage.getItem("carrinho"))
+            if(carrinho)
+                localStorage.setItem("carrinho", carrinho);
+            else
+                setCarrinho(localStorage.getItem("carrinho"));
+
+    },[carrinho])
+
+    useEffect(()=>{
+        console.log(carrinho)
+        if(carrinho !== localStorage.getItem("carrinho"))
+            setCarrinho(localStorage.getItem("carrinho"));
+
+    },[localStorage.getItem("carrinho")])
+
 
     function slideToRight(e) {
         const value = getComputedStyle(e).getPropertyValue('--qt');
@@ -25,7 +44,9 @@ export default function SlideProduto(props) {
     }
 
     function slideToLeft(e) {
-        if( contador+1 > 0 ) return
+        const value = getComputedStyle(e).getPropertyValue('--qt');
+        if( contador+value+1 > 0 ) return
+        
         contador++;
         e.style = `--espaco:${contador}`
         
@@ -48,7 +69,7 @@ export default function SlideProduto(props) {
                         MaxPreco={props.Many ?value.preco+90: ""}
                         preco_medida={value.preco_medida}
                         classeProduto={value.classeProduto}
-                        carrinho={props.carrinho} setCarrinho={props.setCarrinho}
+                        carrinho={carrinho} setCarrinho={setCarrinho}
                         />);
                     })}
                 </div>

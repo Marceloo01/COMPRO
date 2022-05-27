@@ -29,7 +29,7 @@ function App() {
                     "Adicione produtos ao seu carrinho para comparar preços em varios supermercados da sua cidade",
                     "Entre em contato com nossa equipe",
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
-              
+  // login
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(null); 
 
@@ -40,6 +40,7 @@ function App() {
       avatar: u.photoURL
     }
 
+    // armazena login
     sessionStorage.setItem("loginId",u.uid);
     sessionStorage.setItem("loginNome",u.displayName);
     sessionStorage.setItem("loginFoto",u.photoURL);
@@ -57,9 +58,8 @@ function App() {
       }
     )}
 
-  
+  // mudar imagem da tela por url
   const AlterarTela = (v)=>{
-
     if(v==='/')
       setSel(1);
     else if(v.toUpperCase()==='/SUPERMERCADO')
@@ -74,23 +74,29 @@ function App() {
       setSel(-1);
   }
 
+  // abre o menu no responsivo
   const abrirMenu=()=>{
     if(window.innerWidth>950)  return;
     var menu = document.getElementById('nav');
     menu.classList.toggle('MenuAbre');
   }
 
+  // abre a tela do carrinho
   const abrirCarrinho = ()=>{
     var carrinho = document.getElementById('menuCarrinho');
     var fundo=document.getElementsByClassName('fundoMenu')[0];
 
-    carrinho.classList.toggle('carrinhoAbre');
+    if(carrinho.classList.toggle('carrinhoAbre'))
+      console.log(localStorage.getItem("carrinho").split(" "))
     fundo.classList.toggle('fundoCarrinho');
+
+    
   }
 
+    // verifica se o logn não é nulo para carrregar o site
     if(logou!=null){
-      return(
-        
+
+      return(       
       <div className="App">
         <div className="fundoMenu" onClick={abrirCarrinho}></div>
         <div id="menuCarrinho">
@@ -114,13 +120,13 @@ function App() {
           <Link to='/'><img src={COMPRO} alt="logo Compro"/></Link>
         </div>
         
+        {/* menu das telas do site */}
         <div className="menu">
           <div className="sub">
 
             <div id="icone">
               <img src={menuLateral} onClick={abrirMenu} alt="iconeMenu"/>
             </div>
-
             <nav id="nav">
               <Link  
                 onClick={()=>{ setSel(1); abrirMenu() }} 
@@ -151,12 +157,12 @@ function App() {
                 className={sel===5?"selecionado":""} 
                 to='/Ajuda'>Ajuda
               </Link>
-              
             </nav>
-            
           </div>
+          {/* componente barra de pesquisa */}
           <Pesquisa hint="Buscar..."/>
         </div>
+      {/* carrega o texto e descrição da pagina por url */}
         <div className="texto-pagina">{namePage[sel-1]}<div className="descricao-pagina">{descPage[sel-1]}</div></div>
       </div>
         </header>
@@ -164,20 +170,21 @@ function App() {
         <main>
           {/* todas as rotas do site */}
         <Routes>
-          <Route path='/'                             element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
-          <Route path='/Contato'                      element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
-          <Route path='/Produtos'                     element={<Produtos AlterarTela={AlterarTela}/>}>                           </Route>
-          <Route path='/Supermercado'                 element={ <Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
-          <Route path='/Ajuda'                        element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
-          <Route path='/Supermercado/informacoes/:id' element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
-          <Route path='/Produtos/informacoes/:id'     element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
-          <Route path='/Supermercado/:id/Produtos'    element={<SupermercadoProduto AlterarTela={AlterarTela}/>}>                </Route>
-          <Route path="/Produtos/:classe"             element={<ProdutosClasse AlterarTela={AlterarTela}/>}>                     </Route>
-          <Route path="/Supermercado/:id/Produtos/:classe"             element={<ProdutoClasseSuper AlterarTela={AlterarTela}/>}>                     </Route>
-          <Route path="/*" element={<NaoEncontrado/>}></Route> 
+          <Route path='/'                                   element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
+          <Route path='/Contato'                            element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
+          <Route path='/Produtos'                           element={<Produtos AlterarTela={AlterarTela}/>}>                           </Route>
+          <Route path='/Supermercado'                       element={ <Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path='/Ajuda'                              element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
+          <Route path='/Supermercado/informacoes/:id'       element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
+          <Route path='/Produtos/informacoes/:id'           element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
+          <Route path='/Supermercado/:id/Produtos'          element={<SupermercadoProduto AlterarTela={AlterarTela}/>}>                </Route>
+          <Route path="/Produtos/:classe"                   element={<ProdutosClasse AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path="/Supermercado/:id/Produtos/:classe"  element={<ProdutoClasseSuper AlterarTela={AlterarTela}/>}>                 </Route>
+          <Route path="/*"                                  element={<NaoEncontrado AlterarTela={AlterarTela}/>}>                      </Route> 
         </Routes>
         </main>
         
+        {/* componente rodape */}
         <Rodape/>
       </div>
       )
