@@ -8,8 +8,6 @@ export default function ProdutoCarrinho(props) {
     const [temporario,setT] = useState(1);
     const [prodC,setProdC] = useState({});
 
-    // https://api-compro.herokuapp.com/produto/exibir/62854ea8118bdda0ff9e3e9d
-
     useEffect (() => {
         api
         .get(`/produto/exibir/${props.id}`)

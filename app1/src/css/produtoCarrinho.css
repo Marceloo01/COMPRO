@@ -7,9 +7,11 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
 }
+
 .componente-ProdCar:not(:first-child){
     margin-top: 30px;
 }
+
 .ProdCar-img{
     position: relative;
     background-color: rgb(0, 0, 0);

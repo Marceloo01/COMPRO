@@ -31,7 +31,7 @@ function App() {
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   // login
   const [sel,setSel]=useState(1);
-  const [logou,setLogou]=useState(1); 
+  const [logou,setLogou]=useState(null); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
 
   const verificarLogin = async (u)=>{
