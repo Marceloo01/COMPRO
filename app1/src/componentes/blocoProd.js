@@ -17,17 +17,25 @@ export default function blocoProd(props) {
             </div>
             <div className='btns-produto'>
                 <div className='diferenca-preco-produto'>
-                    <p><span className='maiorPreco'>{props.MaxPreco?"R$ "+props.MaxPreco:""} </span> <span className='menorPreco'> {"R$ "+props.MinPreco}</span></p>
+                    <p>
+                        <span className='maiorPreco'>{props.MaxPreco?"R$ "+ (Math.round(props.MaxPreco * 100) / 100).toFixed(2).toString().replace(".",","):""} </span> 
+                        <span className='menorPreco'> {"R$ "+(Math.round(props.MinPreco * 100) / 100).toFixed(2).toString().replace(".",",")}</span>
+                    </p>
                     <button onClick={()=>{
-                        if(!props.carrinho.includes(props._id))
-                            props.setCarrinho([props.carrinho ?props.carrinho+ " "+ props._id: props._id]);
+                        if(localStorage.getItem("carrinho")){ 
+                            if(!localStorage.getItem("carrinho").match(props._id)){
+                                localStorage.setItem("carrinho", localStorage.getItem("carrinho")+"-"+ props._id);
+                            }else{
+                                return
+                            }
+                        }else { localStorage.setItem("carrinho", props._id); return }
 
-                        let carrinho = document.getElementById('carrinho');
+                        let btn_carrinho = document.getElementById('carrinho');
                         
-                        if(carrinho.classList.value === "animar") return
+                        if(btn_carrinho.classList.value === "animar"){ return }
                         
-                        carrinho.classList.toggle('animar');
-                        setTimeout(()=>{carrinho.classList.toggle('animar')},2500);
+                        btn_carrinho.classList.toggle('animar');
+                        setTimeout(()=>{btn_carrinho.classList.toggle('animar')},2500);
 
                     }}><p>Adicionar ao carrinho</p></button>
                     <button onClick={()=>{window.location.href=`/Produtos/informacoes/${props._id}` }}><p>Informações</p></button>

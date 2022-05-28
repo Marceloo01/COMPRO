@@ -66,6 +66,7 @@ button > p {
     max-width: var(--i);
     --j: calc(20% + 4px);
     --qt:5;
+    --count:0;
     transition: margin .5s;
 }
 .produto:not(:last-child){

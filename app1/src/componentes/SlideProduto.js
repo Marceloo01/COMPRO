@@ -17,40 +17,37 @@ export default function SlideProduto(props) {
     }, []);
 
     useEffect(()=>{
-        console.log(carrinho)
+
         if(carrinho !== localStorage.getItem("carrinho"))
-            if(carrinho)
-                localStorage.setItem("carrinho", carrinho);
-            else
                 setCarrinho(localStorage.getItem("carrinho"));
 
     },[carrinho])
 
-    useEffect(()=>{
-        console.log(carrinho)
-        if(carrinho !== localStorage.getItem("carrinho"))
-            setCarrinho(localStorage.getItem("carrinho"));
-
-    },[localStorage.getItem("carrinho")])
 
 
-    function slideToRight(e) {
+    async function slideToRight(e) {
+        var contador = Number(getComputedStyle(e).getPropertyValue('--espaco'));
         const value = getComputedStyle(e).getPropertyValue('--qt');
-        if( contador-value-1 < document.getElementsByClassName("Slide-produto")[0].children.length*-1 ) return
+        
+        if( contador-value-1 < document.getElementsByClassName("Slide-produto")[props.indice].children.length*-1 ) {return}
         
         contador--;
+
         e.style = `--espaco:${contador}`
-        
     }
+    
 
     function slideToLeft(e) {
+        var contador = Number(getComputedStyle(e).getPropertyValue('--espaco'));
         const value = getComputedStyle(e).getPropertyValue('--qt');
-        if( contador+value+1 > 0 ) return
+
+        if( contador+value+1 > 0 ) {return}
         
         contador++;
         e.style = `--espaco:${contador}`
         
     }
+
     return(
         <>
         <div className="titulo-slide" style={{marginTop: '100px'}}>{props.titulo}</div>

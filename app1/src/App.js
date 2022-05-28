@@ -18,7 +18,7 @@ import NaoEncontrado from './Telas/naoEncontrado';
 import SupermercadoProduto from './Telas/ProdutosSupermercado.js';
 import ProdutosClasse from './Telas/ProdutosClasse';
 import ProdutoClasseSuper from './Telas/ProdutoClasseSuper.js';
-
+import ProdCar from './componentes/produtoCarrinho';
 //Nunito font
 //id projeto: compro-94dcf
 function App() {
@@ -31,7 +31,8 @@ function App() {
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   // login
   const [sel,setSel]=useState(1);
-  const [logou,setLogou]=useState(null); 
+  const [logou,setLogou]=useState(1); 
+  const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
 
   const verificarLogin = async (u)=>{
     let newUser={
@@ -87,10 +88,22 @@ function App() {
     var fundo=document.getElementsByClassName('fundoMenu')[0];
 
     if(carrinho.classList.toggle('carrinhoAbre'))
-      console.log(localStorage.getItem("carrinho").split(" "))
+      setCarrinho(localStorage.getItem("carrinho"));
     fundo.classList.toggle('fundoCarrinho');
-
-    
+  }
+  function renderCarrinho() {
+    if(carrinhoUser && carrinhoUser !== "-"){ 
+      console.log(carrinhoUser)
+      return( 
+      <div className='list-ProdCar'>
+        {carrinhoUser.split("-").map((v)=>{
+          return (<ProdCar key={v} id={v} setCar={setCarrinho} />)
+        })}
+      </div>
+      ) 
+    }
+    else
+      return (<div className="semProdutos"><button>+ Produtos</button></div>)
   }
 
     // verifica se o logn não é nulo para carrregar o site
@@ -108,9 +121,9 @@ function App() {
               
               </div>
               <div className="bodyCarrinho">
-                <div className="semProdutos">
-                  <button>+ Produtos</button>
-                </div>
+                
+                { renderCarrinho() }
+ 
               </div>
         </div>
         <header>
@@ -173,7 +186,7 @@ function App() {
           <Route path='/'                                   element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
           <Route path='/Contato'                            element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
           <Route path='/Produtos'                           element={<Produtos AlterarTela={AlterarTela}/>}>                           </Route>
-          <Route path='/Supermercado'                       element={ <Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path='/Supermercado'                       element={<Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
           <Route path='/Ajuda'                              element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
           <Route path='/Supermercado/informacoes/:id'       element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
           <Route path='/Produtos/informacoes/:id'           element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
