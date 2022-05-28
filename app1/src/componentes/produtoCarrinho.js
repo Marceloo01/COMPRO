@@ -3,7 +3,7 @@ import '../css/produtoCarrinho.css';
 import api from "../service/api_compro";
 
 export default function ProdutoCarrinho(props) {
-    let rId = new RegExp(`${props.id}\-{0,1}`, 'g');
+    let rId = new RegExp(`-{0,1}${props.id}`, 'g');
     
     const [temporario,setT] = useState(1);
     const [prodC,setProdC] = useState({});

@@ -31,7 +31,7 @@ function App() {
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   // login
   const [sel,setSel]=useState(1);
-  const [logou,setLogou]=useState(null); 
+  const [logou,setLogou]=useState(1); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
 
   const verificarLogin = async (u)=>{
@@ -97,6 +97,7 @@ function App() {
       return( 
       <div className='list-ProdCar'>
         {carrinhoUser.split("-").map((v)=>{
+          if(!v) return (<></>)
           return (<ProdCar key={v} id={v} setCar={setCarrinho} />)
         })}
       </div>
