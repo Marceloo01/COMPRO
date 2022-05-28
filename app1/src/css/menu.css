@@ -173,7 +173,7 @@ nav a:hover::after {
     flex-direction: column;
     padding: 10px 5px;
     width: 95%;
-    height: 95%;
+    height: 70%;
     overflow-y: scroll;
 }
 .list-ProdCar::-webkit-scrollbar {
