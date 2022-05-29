@@ -1,5 +1,6 @@
 import React, { useEffect , useState} from "react";
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+
 import Supermercado from "../img/SupermercadoSlide.jpg";
 import "../css/infoSuper.css";
 import api from '../service/api_compro';
@@ -50,13 +51,7 @@ export default function InfoSupermercados (props) {
                     <p> {supermercado.avaliacao}</p>
                      
             </div>
-            <input 
-                    type="button"
-                    value="VER PRODUTOS"
-                    onClick={ ()=>{
-                        window.location.pathname = `/Supermercado/${supermercado._id}/Produtos`
-                    }}
-                />
+            <Link to={`/Supermercado/${supermercado._id}/Produtos`}>VER PRODUTOS</Link>
         </div>
         </> 
     )

@@ -1,4 +1,5 @@
 import React ,{ useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Supermercado_produto.css';
 import api from "../service/api_compro";
 
@@ -25,7 +26,7 @@ export default function SupermercadoProduto(props) {
                 <div className="descricao-supermercado-produto">
                     <h3>{supermercado.nome}</h3> 
                     <p>Valor encontrado R${props.preco}</p>
-                    <button onClick={()=>{window.location.pathname = `Supermercado/informacoes/${props._idSuper}`}}>Ver Supermercado</button>
+                    <Link to={`/Supermercado/informacoes/${props._idSuper}`}>Ver Supermercado</Link>
                 </div>
             </div>  
         </>

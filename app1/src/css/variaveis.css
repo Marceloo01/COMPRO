@@ -6,6 +6,9 @@
     --Titulo: 160px;
     
 }
+a{
+    text-decoration: none;
+}
 *{
     user-select: none;
     padding: 0px;

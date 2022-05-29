@@ -5,7 +5,7 @@
     width: auto;
 }
 .supermercados-all > button { 
-    padding: 5px;
+    padding: 15px;
     box-sizing: border-box;
     cursor: pointer;
     height: 55px;
@@ -13,8 +13,10 @@
     width: 50%;
     border-radius: 10px;
     border-style:unset;
-    background-color: var(--corBtn);
+    background-color: black;
     font-size: 25px;
+    font-weight: 700;
+    color:white;
 }
 @media screen and (max-width:950px) {
     .supermercados-all > button {

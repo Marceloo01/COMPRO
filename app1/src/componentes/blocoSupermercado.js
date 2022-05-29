@@ -1,11 +1,10 @@
 import React from "react";
 import Supermercado from '../img/SupermercadoSlide.jpg';
+import { Link } from 'react-router-dom';
 
 
 export default function bloco(props) {
-    function abriTela(id){
-        window.location.href = `Supermercado/informacoes/${id}`;
-    }
+   
     return (
         
         <div className="conjunto">
@@ -16,11 +15,7 @@ export default function bloco(props) {
             <div className="dado-supermercado">
                 <span className="dado">Localização</span><p>&nbsp;&nbsp; {props.rua} - {props.bairro} - {props.cidade} - {props.estado}</p>
                 <span className="dado">Horário de atendimento</span><p>&nbsp;&nbsp; {props.abertura} - {props.fechamento}</p>
-                <input 
-                    type="button"
-                    value="MAIS INFORMAÇÕES"
-                    onClick={ ()=>abriTela(props._id) }
-                />
+                <Link to={`/Supermercado/informacoes/${props._id}`} >MAIS INFORMAÇÕES </Link>
             </div>
         </div>
         

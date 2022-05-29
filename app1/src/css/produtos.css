@@ -36,10 +36,6 @@
     margin-top: 20px;
     margin-bottom: 20px;
 }
-button > p {
-    font-weight: 600;
-    color: #ffffff;
-}
 /* slide */
 .base-slide-produto {
     position: relative;
@@ -111,14 +107,11 @@ button > p {
     text-align: center;
     background-color: #363636;
 }
-.diferenca-preco-produto > p {
-    border-radius: 3px;
-    padding: 3px;
-    background-color: #363636;
-    margin-bottom: 20px;
-}
-.diferenca-preco-produto > button {
-    height: auto;
+
+.diferenca-preco-produto > button, .diferenca-preco-produto > a {
+    display: block;
+    padding: 10px;
+    height: max-content;
     border-radius: 3px;
     cursor: pointer;
     margin-top: 10px;
@@ -128,13 +121,14 @@ button > p {
     width: 100%;
     border: none;
 }
-.diferenca-preco-produto > button:last-child {
+
+.diferenca-preco-produto > a{
     margin-bottom: 20px;
 }
-.diferenca-preco-produto > button > p {
-    margin-bottom: 10px;
-    margin-top: 10px;
+.diferenca-preco-produto > button > p , .diferenca-preco-produto > a > p  {
     color: #b1b1b1;
+    margin: 0px;
+    font-weight: 600;
 }
 .botao-slide-produto {
     position: absolute;

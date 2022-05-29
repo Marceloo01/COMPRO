@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import banana from '../img/banana.png';
 import '../css/produtos.css';
 
@@ -38,7 +39,7 @@ export default function blocoProd(props) {
                         setTimeout(()=>{btn_carrinho.classList.toggle('animar')},2500);
 
                     }}><p>Adicionar ao carrinho</p></button>
-                    <button onClick={()=>{window.location.href=`/Produtos/informacoes/${props._id}` }}><p>Informações</p></button>
+                    <Link to={`/Produtos/informacoes/${props._id}` }><p>Informações</p></Link>
                 </div>
             </div> 
         </div>

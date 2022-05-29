@@ -4,13 +4,15 @@ import api from "../service/api_compro";
 import '../css/variaveis.css';
 import '../css/produtos.css';
 import SlideProduto from '../componentes/SlideProduto';
+import Filtro from '../componentes/filtro';
 
 export default function ProdutosClasse(props) {
     props.AlterarTela(window.location.pathname);
     const { classe } = useParams()
     const [produtos,setProd] = useState(null);
-
+    
     useEffect(() => {
+        
         api
         .get(`produto/${classe}`)
         .then((response) => {
@@ -21,9 +23,6 @@ export default function ProdutosClasse(props) {
             });        
     }, []);
 
-    function mostrarProdClasses(classe) {
-        window.location.pathname = `/Produtos/${classe}`;
-    }
     return(
         <>
             <center><button className="filtro"
@@ -33,13 +32,7 @@ export default function ProdutosClasse(props) {
                     
                 }}><p>Filtro</p></button></center>
             <div className="tipos-produtos aberto">
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("brinquedos") }}><p>brinquedos</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("frutas") }}><p>frutas/verduras</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrodomesticos") }}><p>eletrodomesticos</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("eletronicos") }}><p>eletrônicos</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("processados") }}><p>processados</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
-                <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
+                <Filtro />
             </div>
 
             {  produtos?
