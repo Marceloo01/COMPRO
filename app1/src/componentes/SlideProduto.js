@@ -5,13 +5,11 @@ import ConjuntoProd from './blocoProd.js';
 export default function SlideProduto(props) {
     document.title = "Produtos";
     var contador = 0;
-    const [produtos,setProd] = useState([]);
     const [carrinho,setCarrinho] = useState("");
     // const [quantidade,seQuantidade] = useState("");
 
     useEffect(() => {
-        setProd(props.array_prod);
-
+        
         if(!localStorage.getItem("carrinho")) localStorage.setItem("carrinho",""); 
 
     }, []);
@@ -54,7 +52,8 @@ export default function SlideProduto(props) {
             <div className='base-slide-produto'>
                 <div onClick={()=>slideToLeft(document.getElementsByClassName("Slide-produto")[props.indice].firstChild)} className='botao-slide-produto left'></div>
                 <div className='Slide-produto'>  
-                {produtos.map((value) =>{
+
+                { props.array_prod.length > 0 ? props.array_prod.map((value) =>{
                     return (<ConjuntoProd 
                         key={value._id} 
                         _id={value._id} 
@@ -68,7 +67,7 @@ export default function SlideProduto(props) {
                         classeProduto={value.classeProduto}
                         carrinho={carrinho} setCarrinho={setCarrinho}
                         />);
-                    })}
+                    }) : <div className='naoEncontrado'>nenhum produto encontrado com este valor: {props.filtro}</div>}
                 </div>
                 <div onClick={()=>slideToRight(document.getElementsByClassName("Slide-produto")[props.indice].firstChild)} className='botao-slide-produto right'></div> 
             </div>

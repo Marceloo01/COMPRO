@@ -8,6 +8,7 @@ import { useParams } from 'react-router-dom';
 export default function Produtos(props) {
     props.AlterarTela(window.location.pathname);
     const [produtos,setProd] = useState(null);
+    const [produtosF,setProdF] = useState(null);
     const { classe, id } = useParams()
     document.title = "Produtos";
 
@@ -20,11 +21,31 @@ export default function Produtos(props) {
         .get(`supermercado/produto/${id}/${classe}`)
         .then((response) => {
             setProd(response.data);
+            setProdF(response.data);
         })
             .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
             });        
     }, []);
+
+    useEffect(() => {
+        
+        let filtroP = new RegExp(`(${props.filtro}){1,}`, 'gi');
+        console.log(filtroP)
+
+        if(!produtos) return;
+        setProdF(
+            produtos.filter( v =>{
+                return !!v.nome.match(filtroP);
+            })
+        );
+    },[props.filtro])
+    
+    useEffect(()=>{
+        console.log(produtosF);
+
+    },[produtosF])
+
     return(
         <>
             <center><button className="filtro"
@@ -43,10 +64,22 @@ export default function Produtos(props) {
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
             </div>
 
-            {  produtos?
+            {  produtosF?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" Many={false} indice={0} array_prod = {produtos}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} Many={false} array_prod = {produtos}/>
+                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod={
+                    produtosF.sort(function(a, b){
+                        if (a.preco > b.preco) return 1;
+                        if (a.preco < b.preco) return -1;
+                        return 0;
+                    })
+                    } filtro={props.filtro} />
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod={
+                        produtosF.sort(function(a, b){
+                            if (a.preco > b.preco) return -1;
+                            if (a.preco < b.preco) return 1;
+                            return 0;
+                        })
+                    } filtro={props.filtro} />
                 </>
                 : <div className="carregando">
                     <div className="quadrado" style={{animationDelay : "-.1s"}}></div>
@@ -54,7 +87,6 @@ export default function Produtos(props) {
                     <div className="quadrado" style={{animationDelay : "-.4s"}}></div>
                 </div>
             }
-
             <div className="supermercados-all">
                 <button><p>Todos os Produtos</p></button> 
             </div>

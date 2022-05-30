@@ -33,6 +33,7 @@ function App() {
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(1); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
+  const [filtro,setFiltro] = useState("");
 
   const verificarLogin = async (u)=>{
     let newUser={
@@ -59,6 +60,7 @@ function App() {
       }
     )}
 
+    
   // mudar imagem da tela por url
   const AlterarTela = (v)=>{
     if(v==='/')
@@ -104,7 +106,7 @@ function App() {
       ) 
     }
     else
-      return (<div className="semProdutos"><button>+ Produtos</button></div>)
+      return (<div className="semProdutos"><Link to="/Produtos" onClick={abrirCarrinho}>Ir para a página de produtos</Link></div>)
   }
 
     // verifica se o logn não é nulo para carrregar o site
@@ -174,7 +176,12 @@ function App() {
             </nav>
           </div>
           {/* componente barra de pesquisa */}
-          <Pesquisa hint="Buscar..."/>
+          
+          {
+            [2,3,-1].includes(sel)?
+            <Pesquisa hint="Buscar..." setFiltro={setFiltro} />
+            :<></>
+          }
         </div>
       {/* carrega o texto e descrição da pagina por url */}
         <div className="texto-pagina">{namePage[sel-1]}<div className="descricao-pagina">{descPage[sel-1]}</div></div>
@@ -186,14 +193,14 @@ function App() {
         <Routes>
           <Route path='/'                                   element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
           <Route path='/Contato'                            element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
-          <Route path='/Produtos'                           element={<Produtos AlterarTela={AlterarTela}/>}>                           </Route>
-          <Route path='/Supermercado'                       element={<Supermercados AlterarTela={AlterarTela}/>}>                     </Route>
+          <Route path='/Produtos'                           element={<Produtos AlterarTela={AlterarTela} filtro={filtro}/>}>           </Route>
+          <Route path='/Supermercado'                       element={<Supermercados AlterarTela={AlterarTela}/>}>                      </Route>
           <Route path='/Ajuda'                              element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
           <Route path='/Supermercado/informacoes/:id'       element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
           <Route path='/Produtos/informacoes/:id'           element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
-          <Route path='/Supermercado/:id/Produtos'          element={<SupermercadoProduto AlterarTela={AlterarTela}/>}>                </Route>
-          <Route path="/Produtos/:classe"                   element={<ProdutosClasse AlterarTela={AlterarTela}/>}>                     </Route>
-          <Route path="/Supermercado/:id/Produtos/:classe"  element={<ProdutoClasseSuper AlterarTela={AlterarTela}/>}>                 </Route>
+          <Route path='/Supermercado/:id/Produtos'          element={<SupermercadoProduto AlterarTela={AlterarTela} filtro={filtro}/>}></Route>
+          <Route path="/Produtos/:classe"                   element={<ProdutosClasse AlterarTela={AlterarTela} filtro={filtro}/>}>     </Route>
+          <Route path="/Supermercado/:id/Produtos/:classe"  element={<ProdutoClasseSuper AlterarTela={AlterarTela} filtro={filtro}/>}> </Route>
           <Route path="/*"                                  element={<NaoEncontrado AlterarTela={AlterarTela}/>}>                      </Route> 
         </Routes>
         </main>

@@ -8,8 +8,10 @@ export default function pesquisa(props) {
         <>
         <div className="pesquisa">
             <img src={Img} alt="Pesquisar"/>
-            <input type="text" placeholder={props.hint}/>
-            
+            <input type="text" placeholder={props.hint} 
+            onKeyUp={(event)=>{
+                props.setFiltro(event.target.value );
+            }}/>
         </div>
         </>
     )

@@ -201,22 +201,25 @@ nav a:hover::after {
     font-size: 20px;
     width: 100%;
     height: 100%;
+    text-align: center;
 }
-.semProdutos > button {
+.semProdutos > a {
+    display: block;
+    padding: 10px;
     position: relative;
     top: 50%;
     left:50%;
     transform: translate(-50%,-50%);
     border-style: none;
     border-radius: 7px;
-    width: 100px;
+    width: 200px;
     color: white;
     background-color: #6257b1;
-    height: 50px;
+    height: auto;
     cursor: pointer;
 }
-.semProdutos > button:hover {
-    background-color: #77cae4;
+.semProdutos > a:hover {
+    background-color: #5c53a1;
 }
 .fundoCarrinho {
     display: block !important;
