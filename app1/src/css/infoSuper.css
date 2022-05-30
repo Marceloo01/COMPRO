@@ -73,6 +73,28 @@
 br{
     user-select: none;
 }
+.Estrela {    
+    position: relative;
+    height: 50px;
+    width: 200px;
+}
+.EstrelaVazia {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    overflow: hidden;
+    background: url(../img/estrelas.png);
+    background-position: bottom;
+    background-size: auto 100px;
+}
+.EstrelaCheia {
+    position: absolute;
+    height: 50px;
+    width: 200px;
+    overflow: hidden;
+    background: url(../img/estrelas.png) 0% 3% ;
+    background-size: auto 100px;
+}
 @media screen and (max-width:950px) {
 
     .Supermercado-img-info {

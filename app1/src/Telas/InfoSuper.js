@@ -1,7 +1,7 @@
 import React, { useEffect , useState} from "react";
 import { useParams, Link } from 'react-router-dom';
-
 import Supermercado from "../img/SupermercadoSlide.jpg";
+import Estrela from "../img/estrelas.png";
 import "../css/infoSuper.css";
 import api from '../service/api_compro';
 
@@ -49,6 +49,14 @@ export default function InfoSupermercados (props) {
                 
                     <span className="dado">avaliação</span>
                     <p> {supermercado.avaliacao}</p>
+                    <div className="Estrela">
+                        <div className="EstrelaCheia" style={{ width: 40*supermercado.avaliacao+'px' }}>
+
+                        </div>
+                        <div className="EstrelaVazia">
+
+                        </div>
+                    </div>
                      
             </div>
             <Link to={`/Supermercado/${supermercado._id}/Produtos`}>VER PRODUTOS</Link>

@@ -180,6 +180,19 @@
     animation-iteration-count: infinite;
     animation-delay: var(--sec);
 }
+.naoEncontrado {
+    background-color: #888888;
+    color: #d4d4d4;
+    padding: 100px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    position: relative;
+    text-transform: capitalize;
+    
+}
 @keyframes carregar {
     0% {
         margin-top: 10px;

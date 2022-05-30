@@ -8,12 +8,14 @@ export default function ProdutosSupermercado(props) {
 
     document.title = "Informações";
     const [Prod_Super,setProdSuper] = useState(null);
+    const [produtosF,setProdF] = useState(null);
     const { id } = useParams();
     useEffect (() => {
         api
             .get(`/supermercado/produto/${id}`)
             .then((response) => {
-                setProdSuper(response.data)
+                setProdSuper(response.data);
+                setProdF(response.data);
             ;})
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
@@ -24,6 +26,25 @@ export default function ProdutosSupermercado(props) {
             window.location.pathname = `/Supermercado/${id}/Produtos/${classe}`;
         }
 
+        useEffect(() => {
+        
+            let filtroP = new RegExp(`(${props.filtro}){1,}`, 'gi');
+            console.log(filtroP)
+    
+            if(!Prod_Super) return;
+            setProdF(
+                Prod_Super.filter( v =>{
+                    return !!v.nome.match(filtroP);
+                })
+            );
+        },[props.filtro])
+        
+        useEffect(()=>{
+            console.log(produtosF);
+    
+        },[produtosF])
+        
+    
     return(
         <>
             <center><button className="filtro"
@@ -41,10 +62,22 @@ export default function ProdutosSupermercado(props) {
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
             </div>
-            {   Prod_Super?
+            {  produtosF?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" Many={false} indice={0} array_prod = {Prod_Super}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} Many={false} array_prod = {Prod_Super}/>
+                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod={
+                    produtosF.sort(function(a, b){
+                        if (a.preco > b.preco) return 1;
+                        if (a.preco < b.preco) return -1;
+                        return 0;
+                    })
+                    } filtro={props.filtro} />
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod={
+                        produtosF.sort(function(a, b){
+                            if (a.preco > b.preco) return -1;
+                            if (a.preco < b.preco) return 1;
+                            return 0;
+                        })
+                    } filtro={props.filtro} />
                 </>
                 : <div className="carregando">
                     <div className="quadrado" style={{animationDelay : "-.1s"}}></div>

@@ -10,6 +10,7 @@ export default function ProdutosClasse(props) {
     props.AlterarTela(window.location.pathname);
     const { classe } = useParams()
     const [produtos,setProd] = useState(null);
+    const [produtosF,setProdF] = useState(null);
     
     useEffect(() => {
         
@@ -17,11 +18,30 @@ export default function ProdutosClasse(props) {
         .get(`produto/${classe}`)
         .then((response) => {
             setProd(response.data);
+            setProdF(response.data);
         })
             .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
             });        
     }, []);
+
+    useEffect(() => {
+        
+        let filtroP = new RegExp(`(${props.filtro}){1,}`, 'gi');
+        console.log(filtroP)
+
+        if(!produtos) return;
+        setProdF(
+            produtos.filter( v =>{
+                return !!v.nome.match(filtroP);
+            })
+        );
+    },[props.filtro])
+    
+    useEffect(()=>{
+        console.log(produtosF);
+
+    },[produtosF])
 
     return(
         <>
@@ -35,10 +55,22 @@ export default function ProdutosClasse(props) {
                 <Filtro />
             </div>
 
-            {  produtos?
+            {  produtosF?
                 <>
-                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod = {produtos}/>
-                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod = {produtos}/>
+                    <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod={
+                    produtosF.sort(function(a, b){
+                        if (a.preco > b.preco) return 1;
+                        if (a.preco < b.preco) return -1;
+                        return 0;
+                    })
+                    } filtro={props.filtro} />
+                    <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod={
+                        produtosF.sort(function(a, b){
+                            if (a.preco > b.preco) return -1;
+                            if (a.preco < b.preco) return 1;
+                            return 0;
+                        })
+                    } filtro={props.filtro} />
                 </>
                 : <div className="carregando">
                     <div className="quadrado" style={{animationDelay : "-.1s"}}></div>
