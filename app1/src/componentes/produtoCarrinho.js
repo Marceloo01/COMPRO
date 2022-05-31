@@ -7,8 +7,11 @@ export default function ProdutoCarrinho(props) {
     
     const [temporario,setT] = useState(1);
     const [prodC,setProdC] = useState({});
+    const [atualValue,setAtualValue] = useState(0);
 
-    useEffect (() => {
+
+    useEffect(()=> {
+        
         api
         .get(`/produto/exibir/${props.id}`)
         .then((response) => {
@@ -19,15 +22,31 @@ export default function ProdutoCarrinho(props) {
         });
     },[])
 
+    useEffect(()=> {
+        let valorNovo =  (prodC.preco * temporario) - atualValue;
+        setAtualValue(prodC.preco * temporario);
+        props.setValor( props.valor + valorNovo)
+    }, [temporario])
+
+    useEffect(()=>{
+        if(isNaN(props.valor))
+        {
+            props.setValor( 0 +( prodC.preco * temporario ))
+            setAtualValue(prodC.preco * temporario);
+            return;
+        }
+        setAtualValue(prodC.preco * temporario);
+        props.setValor( props.valor + ( prodC.preco * temporario ))
+    },[prodC]);
+
     return(
         <div className="componente-ProdCar">
             <div className="remove-ProdCar" 
                 onClick={()=>{
-                    console.log(rId)
                     localStorage.setItem("carrinho",
                     localStorage.getItem("carrinho").
                         replaceAll(rId,""));
-                            
+                    props.setValor( props.valor - atualValue)
                     props.setCar(localStorage.getItem("carrinho"));
                 }}
             >x</div>

@@ -29,7 +29,7 @@ export default function blocoProd(props) {
                             }else{
                                 return
                             }
-                        }else { localStorage.setItem("carrinho", props._id); return }
+                        }else { localStorage.setItem("carrinho", props._id); }
 
                         let btn_carrinho = document.getElementById('carrinho');
                         

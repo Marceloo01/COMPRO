@@ -25,7 +25,7 @@ function App() {
   // subtitulos das telas
   const namePage = ["Home","Supermercado","Produto","Contato","Ajuda"];
   const descPage = ["Navegue por nosso menu para achar o que está procurando, ou veja um pouco dos nossos objetivos abaixo",
-                    "Procure seus supermercados favoritos e mais próximo de você, veja alguns dados deles ou procure outros supermercados",
+                    "Procure por seus supermercados favoritos e mais próximos de você, veja alguns dados deles aqui",
                     "Adicione produtos ao seu carrinho para comparar preços em varios supermercados da sua cidade",
                     "Entre em contato com nossa equipe",
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
@@ -34,6 +34,7 @@ function App() {
   const [logou,setLogou]=useState(1); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
   const [filtro,setFiltro] = useState("");
+  const [valor,setValor] = useState( 0 );
 
   const verificarLogin = async (u)=>{
     let newUser={
@@ -95,14 +96,17 @@ function App() {
   }
   function renderCarrinho() {
     if(carrinhoUser && carrinhoUser !== "-"){ 
-      console.log(carrinhoUser)
       return( 
-      <div className='list-ProdCar'>
-        {carrinhoUser.split("-").map((v)=>{
-          if(!v) return (<></>)
-          return (<ProdCar key={v} id={v} setCar={setCarrinho} />)
-        })}
-      </div>
+      <>
+        <div className='list-ProdCar'>
+          {carrinhoUser.split("-").map((v)=>{
+            if(!v) return (<></>)
+            return (<ProdCar key={v} id={v} setCar={setCarrinho} valor={valor} setValor={setValor} />)
+          })}
+          
+        </div>
+        Valor do carrinho: R${valor}
+      </>
       ) 
     }
     else
