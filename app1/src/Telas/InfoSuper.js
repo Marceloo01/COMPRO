@@ -46,9 +46,10 @@ export default function InfoSupermercados (props) {
                  
                     <span className="dado">e-mail</span>
                     <p>  {supermercado.email}</p>
+
+                    <span className="dado">Telefone</span>
+                    <p> {supermercado.telefone}</p>
                 
-                    <span className="dado">avaliação</span>
-                    <p> {supermercado.avaliacao}</p>
                     <div className="Estrela">
                         <div className="EstrelaCheia" style={{ width: 40*supermercado.avaliacao+'px' }}>
 

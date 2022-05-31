@@ -1,0 +1,76 @@
+.links:first-child {
+    padding: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 20px #d3d3d3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+}
+.links {
+    margin-bottom: 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 20px #d3d3d3;
+    display: grid;
+    grid-column-gap: 50px;
+}
+.links ul {
+    padding-left: 10px;
+}
+.links ul li {
+    margin: 20px 0px;
+    width: 100%;
+}
+.links > ul > h3 {
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.links > img {
+    border: 1px solid #333246;
+    width: 100%;
+    height: auto;
+}
+.ponto-ajuda {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-color: #333246;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(255, 0, 0);
+    transition: all 1s;
+    overflow: hidden;
+}
+.ponto-ajuda:hover {
+    left: 50%;
+    transform: translate(-10%,-90%);
+    width: 400px;
+    height: 200px;
+}
+.ponto-ajuda > p {
+    color: wheat;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: auto;
+    font-size: 20px;
+}
+@media screen and (max-width: 950px) {
+    .links:first-child {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 650px) {
+    .links:first-child {
+        grid-template-columns: 1fr;
+    }
+}
