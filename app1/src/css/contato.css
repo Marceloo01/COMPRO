@@ -103,7 +103,7 @@
         padding-bottom: 20px;
     }
     .card .data {
-        opacity: 100%;
+        opacity: 1;
         transition: 1s;
     }
 }
