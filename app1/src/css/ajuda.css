@@ -50,12 +50,14 @@
     overflow: hidden;
 }
 .ponto-ajuda:hover {
+    min-width: 250px;
     left: 50%;
     transform: translate(-10%,-90%);
     width: 400px;
     height: 200px;
 }
 .ponto-ajuda > p {
+    transition: all 1s;
     color: wheat;
     position: absolute;
     top: 20px;
@@ -68,9 +70,54 @@
     .links:first-child {
         grid-template-columns: 1fr 1fr;
     }
+    #supermercado-detalhes1:hover {
+        transform: translate(-15%,-90%);
+    }
+    #supermercado-detalhes1-1:hover {
+        transform: translate(-50%, -90%);
+    }
+    #supermercado-detalhes1-2:hover {
+        transform: translate(-73%, -90%);
+    }
+    #produto-detalhes1:hover {
+        transform: translate(-50%, -90%);
+    }
+    #produto-detalhes1-1:hover {
+        transform: translate(-30%, -90%);
+    }
+    #produto-detalhes1-2:hover {
+        transform: translate(-30%, -90%);
+    }
+    #carrinho-detalhes1:hover {
+        transform: translate(-95%, -90%);
+    }
+    #carrinho-detalhes1-1:hover{
+        transform: translate(-90%, -90%);
+    }
+    #carrinho-saldo:hover {
+        transform: translate(-90%, -80%);
+    }
 }
 @media screen and (max-width: 650px) {
     .links:first-child {
         grid-template-columns: 1fr;
+    }
+}
+@media  screen and (max-width: 415px) {
+    .ponto-ajuda:hover {
+        width: 300px;
+    }
+    .ponto-ajuda:hover > p {
+        left: 0px;
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 315px){
+    .ponto-ajuda:hover {
+        width: 250px;
+    }
+    .ponto-ajuda:hover > p {
+        left: 0px;
+        font-size: 15px;
     }
 }
