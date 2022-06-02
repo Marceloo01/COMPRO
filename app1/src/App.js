@@ -28,7 +28,7 @@ function App() {
                     "Procure por seus supermercados favoritos e mais próximos de você, veja alguns dados deles aqui",
                     "Adicione produtos ao seu carrinho para comparar preços em varios supermercados da sua cidade",
                     "Entre em contato com nossa equipe",
-                    "Procure tópicos que responderam suas duvidas sobre nosso site"];
+                    "Procure tópicos que responderão suas duvidas sobre nosso site"];
   // login
   const [sel,setSel]=useState(1);
   const [logou,setLogou]=useState(1); 
