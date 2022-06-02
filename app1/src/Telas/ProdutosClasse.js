@@ -15,7 +15,7 @@ export default function ProdutosClasse(props) {
     useEffect(() => {
         
         api
-        .get(`produto/${classe}`)
+        .get(`/supermercado/produto/629125e146583b24293df781/${classe}`)
         .then((response) => {
             setProd(response.data);
             setProdF(response.data);

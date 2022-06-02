@@ -4,6 +4,8 @@ import banana from '../img/banana.png';
 import '../css/produtos.css';
 
 export default function blocoProd(props) {
+    
+    console.log(props._idSuper); 
     return(
         
         <div className='produto'>
@@ -22,6 +24,9 @@ export default function blocoProd(props) {
                         <span className='maiorPreco'>{props.MaxPreco?"R$ "+ (Math.round(props.MaxPreco * 100) / 100).toFixed(2).toString().replace(".",","):""} </span> 
                         <span className='menorPreco'> {"R$ "+(Math.round(props.MinPreco * 100) / 100).toFixed(2).toString().replace(".",",")}</span>
                     </p>
+
+                    {
+                    props._idSuper !== "629125e146583b24293df781" ?
                     <button onClick={()=>{
                         if(localStorage.getItem("carrinho")){ 
                             if(!localStorage.getItem("carrinho").match(props._id)){
@@ -39,6 +44,7 @@ export default function blocoProd(props) {
                         setTimeout(()=>{btn_carrinho.classList.toggle('animar')},2500);
 
                     }}><p>Adicionar ao carrinho</p></button>
+                    : <></>}
                     <Link to={`/Produtos/informacoes/${props._id}` }><p>Informações</p></Link>
                 </div>
             </div> 
