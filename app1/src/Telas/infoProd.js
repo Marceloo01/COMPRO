@@ -54,7 +54,23 @@ export default function InformacaoProduto(props) {
                     <p>{produto.classeProduto}</p>
                     {
                         (produto._idSupermercado !== "629125e146583b24293df781")?
-                        <p><button className='adicionar'>Adicionar ao carrinho</button></p>
+                        <p><button className='adicionar' onClick={()=>{
+                            if(localStorage.getItem("carrinho")){ 
+                                if(!localStorage.getItem("carrinho").match(produto._id)){
+                                    localStorage.setItem("carrinho", localStorage.getItem("carrinho")+"-"+ produto._id);
+                                }else{
+                                    return
+                                }
+                            }else { localStorage.setItem("carrinho", produto._id);}
+    
+                            let btn_carrinho = document.getElementById('carrinho');
+                            
+                            if(btn_carrinho.classList.value === "animar"){ return }
+                            
+                            btn_carrinho.classList.toggle('animar');
+                            setTimeout(()=>{btn_carrinho.classList.toggle('animar')},2500);
+    
+                        }}>Adicionar ao carrinho</button></p>
                         :<></>
                     }
                 </div>

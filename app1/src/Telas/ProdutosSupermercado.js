@@ -29,7 +29,6 @@ export default function ProdutosSupermercado(props) {
         useEffect(() => {
         
             let filtroP = new RegExp(`(${props.filtro}){1,}`, 'gi');
-            console.log(filtroP)
     
             if(!Prod_Super) return;
             setProdF(
@@ -40,7 +39,6 @@ export default function ProdutosSupermercado(props) {
         },[props.filtro])
         
         useEffect(()=>{
-            console.log(produtosF);
     
         },[produtosF])
         

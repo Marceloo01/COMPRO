@@ -28,7 +28,6 @@ export default function ProdutosClasse(props) {
     useEffect(() => {
         
         let filtroP = new RegExp(`(${props.filtro}){1,}`, 'gi');
-        console.log(filtroP)
 
         if(!produtos) return;
         setProdF(
@@ -39,7 +38,6 @@ export default function ProdutosClasse(props) {
     },[props.filtro])
     
     useEffect(()=>{
-        console.log(produtosF);
 
     },[produtosF])
 

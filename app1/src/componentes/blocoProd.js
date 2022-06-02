@@ -4,8 +4,6 @@ import banana from '../img/banana.png';
 import '../css/produtos.css';
 
 export default function blocoProd(props) {
-    
-    console.log(props._idSuper); 
     return(
         
         <div className='produto'>

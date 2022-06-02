@@ -79,10 +79,9 @@
     }
     .card:hover .content .details {
         transform: translateY(0px);
-        /* overflow: visible; */
     }
     .card:hover .data {
-        opacity: 100%;
+        opacity: 1;
         transition: 1s;
     }
 }

@@ -11,7 +11,6 @@ export default function ProdutoCarrinho(props) {
     
     function adiconarValor(){
         props.setValor((state) => {
-            console.log(state)
             if(!prodC.preco) return state;
             // Importante: use `state` em vez de `this.state` quando estiver atualizando.
            if(isNaN(atualValue)) 
