@@ -51,7 +51,7 @@ export default function Ajuda(props) {
                         <a href='#carro-detalhes1'>carrinho</a>
                     </li>
                     <li>
-                        <a href='#carro-detalhes2'>cconteudo do carrinho</a>
+                        <a href='#carro-detalhes2'>cconteúdo do carrinho</a>
                     </li>
                 </ul>
             </div>
@@ -117,7 +117,7 @@ export default function Ajuda(props) {
                 <h1>carrinho</h1>
             </div>
 
-            <div  className='subititulo'>carrinho</div>
+            <div  className='subititulo'>sobre o carrinho</div>
             <div className='links' >
                 <div  id="carrinho-detalhes1" className='ponto-ajuda' style={{left:95+"%", top: 90+"%" }}>
                     <p>clique aqui para abrir e fechar o carrinho</p>
@@ -129,7 +129,7 @@ export default function Ajuda(props) {
                 <img id="carro-detalhes1" src={CarrinhoTela}/>
             </div>
 
-            <div  className='subititulo'>conteudo do carrinho</div>
+            <div  className='subititulo'>conteúdo do carrinho</div>
             <div className='links' >
                 <div  id="carrinho-detalhes1-1" className='ponto-ajuda' style={{left:88+"%", top: 23+"%" }}>
                     <p>abaixe e aumene a quantidade de produtos</p>
