@@ -12,13 +12,10 @@ export default function Produtos(props) {
     
     document.title = "Produtos";
 
-    function mostrarProdClasses(classe) {
-        return `/Produtos/${classe}`;
-    }
     
     useEffect(() => {
         api
-        .get('/produto')
+        .get('/supermercado/produto/629125e146583b24293df781')
         .then((response) => {
             setProd(response.data);
             setProdF(response.data);

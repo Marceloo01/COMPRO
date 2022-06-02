@@ -19,48 +19,48 @@ export default function Ajuda(props) {
                 <ul>
                     <h3>Supermercado</h3>
                     <li>
-                        <a href='#supermercado-detalhes'>ver informações do supermercado</a>
+                        <a href='#supermercado-detalhes'>Ver informações do supermercado</a>
                     </li>
                     <li>
-                        <a href='#supermercado-detalhes1'>carregar mais uspermercados</a>
+                        <a href='#supermercado-detalhes1'>Carregar mais uspermercados</a>
                     </li>
                     <li>
-                        <a href='#supermercado-detalhes2'>informações do supermercado</a>
+                        <a href='#supermercado-detalhes2'>Informações do supermercado</a>
                     </li>
                 </ul>
                         
                 <ul>
                     <h3>Produto</h3>
                 <li>
-                        <a href='#classe-de-produtos'>classe de produtos</a>
+                        <a href='#classe-de-produtos'>Classe de produtos</a>
                     </li>
                     <li>
-                        <a href='#classe-de-produtos'>como adicionar o produto no carrinho</a>
+                        <a href='#classe-de-produtos'>Como adicionar o produto no carrinho</a>
                     </li>
                     <li>
-                        <a href='#classe-de-produtos'>informações do produto</a>
+                        <a href='#classe-de-produtos'>Informações do produto</a>
                     </li>
                     <li>
-                        <a href='#produto-info'>informações do produto 2</a>
+                        <a href='#produto-info'>Informações do produto 2</a>
                     </li>
                 </ul>
 
                 <ul>
                     <h3>Carrinho</h3>
                     <li>
-                        <a href='#carro-detalhes1'>carrinho</a>
+                        <a href='#carro-detalhes1'>Carrinho</a>
                     </li>
                     <li>
-                        <a href='#carro-detalhes2'>cconteudo do carrinho</a>
+                        <a href='#carro-detalhes2'>Conteúdo do carrinho</a>
                     </li>
                 </ul>
             </div>
 
             <div className='titulo'>
-                <h1>supermercado</h1>
+                <h1>Supermercado</h1>
             </div>
 
-            <div className='subititulo' id="supermercado-detalhes">os supermercados</div>
+            <div className='subititulo' id="supermercado-detalhes">Os supermercados</div>
             <div className='links' >
                 <div id="supermercado-detalhes1" className='ponto-ajuda' style={{left:15+"%", top: 52.76+"%" }}>
                     <p>Clicando aqui você pode ver todos os dados do supermercado slecionado</p>
@@ -71,60 +71,60 @@ export default function Ajuda(props) {
                 <img src={Supermercados}/>
             </div>
 
-            <div  className='subititulo'>informações do supermercado</div>
+            <div  className='subititulo'>Informações do supermercado</div>
             <div className='links' >
                 <div  id="supermercado-detalhes1-2" className='ponto-ajuda' style={{left:72.50+"%", top: 69+"%" }}>
-                    <p>clique aqui para ver todos os produtos do supermercado selecionado</p>
+                    <p>Clique aqui para ver todos os produtos do supermercado selecionado</p>
                 </div>
                 <img id="supermercado-detalhes2" src={SupermercadoInfo}/>
             </div>
 
             <div className='titulo'>
-                <h1>produtos</h1>
+                <h1>Produtos</h1>
             </div>
 
-            <div id="classe-de-produtos" className='subititulo'>navegando na tela e produtos</div>
+            <div id="classe-de-produtos" className='subititulo'>Navegando na tela e produtos</div>
             <div className='links' >
                 <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 27+"%" }}>
-                    <p>aqui você pode esclher que tipo de produtos quer ver</p>
+                    <p>Aqui você pode esclher que tipo de produtos quer ver</p>
                 </div>
                 <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 85+"%" }}>
-                    <p>adiciona o produto no Carrinho</p>
+                    <p>Adiciona o produto no Carrinho</p>
                 </div>
                 <div  id="produto-detalhes1-1" className='ponto-ajuda' style={{left:30+"%", top: 90+"%" }}>
-                    <p>para ver as informações do produto</p>
+                    <p>Para ver as informações do produto</p>
                 </div>
                 <img id="supermercado-detalhes2" src={ProdutosTela}/>
             </div>
 
-            <div  className='subititulo'>informações do produto</div>
+            <div  className='subititulo'>Informações do produto</div>
             <div className='links' >
                 <div  id="produto-detalhes1-2" className='ponto-ajuda' style={{left:30.50+"%", top: 12+"%" }}>
-                    <p>aqui mosstra onde o produto fica no supermercado</p>
+                    <p>Aqui mosstra onde o produto fica no supermercado</p>
                 </div>
                 <img id="produto-info" src={InformacaoProduto}/>
             </div>
 
-            <div  className='subititulo'>informações do produto</div>
+            <div  className='subititulo'>Informações do produto</div>
             <div className='links' >
                 <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 50+"%" }}>
-                    <p>abaixo temos os upermercados com este produto</p>
+                    <p>Abaixo temos os upermercados com este produto</p>
                 </div>
                 <img id="supermercado-detalhes2" src={InformacaoProduto2}/>
             </div>
 
             <div className='titulo'>
-                <h1>carrinho</h1>
+                <h1>Carrinho</h1>
             </div>
 
-            <div  className='subititulo'>carrinho</div>
+            <div  className='subititulo'>Carrinho</div>
             <div className='links' >
                 <div  id="carrinho-detalhes1" className='ponto-ajuda' style={{left:95+"%", top: 90+"%" }}>
                     <p>clique aqui para abrir e fechar o carrinho</p>
                 </div>
 
                 <div  id="carrinho-detalhes1" className='ponto-ajuda' style={{left:90+"%", top: 50+"%" }}>
-                    <p>precisa-se ir para a tela de produtos para adiciona-los ao carrinho</p>
+                    <p>Precisa-se ir para a tela de produtos para adiciona-los ao carrinho</p>
                 </div>
                 <img id="carro-detalhes1" src={CarrinhoTela}/>
             </div>
@@ -132,11 +132,11 @@ export default function Ajuda(props) {
             <div  className='subititulo'>conteudo do carrinho</div>
             <div className='links' >
                 <div  id="carrinho-detalhes1-1" className='ponto-ajuda' style={{left:88+"%", top: 23+"%" }}>
-                    <p>abaixe e aumene a quantidade de produtos</p>
+                    <p>Abaixe e aumente a quantidade de produtos</p>
                 </div>
 
                 <div  id="carrro-saldo" className='ponto-ajuda' style={{left:85+"%", top: 75+"%" }}>
-                    <p>seu saldo</p>
+                    <p>Seu saldo</p>
                 </div>
 
                 <img id="carro-detalhes2" src={CarrinhoTela2}/>

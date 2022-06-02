@@ -6,7 +6,7 @@ export default function SlideProduto(props) {
     document.title = "Produtos";
     var contador = 0;
     const [carrinho,setCarrinho] = useState("");
-    // const [quantidade,seQuantidade] = useState("");
+    // const [quantidade,setQuantidade] = useState("");
 
     useEffect(() => {
         
@@ -56,7 +56,8 @@ export default function SlideProduto(props) {
                 { props.array_prod.length > 0 ? props.array_prod.map((value) =>{
                     return (<ConjuntoProd 
                         key={value._id} 
-                        _id={value._id} 
+                        _id={value._id}
+                        _idSuper={value._idSupermercado}
                         urlImg={value.urlImg}
                         urlImgLocal={value.urlImgLocal}
                         nome={value.nome} 

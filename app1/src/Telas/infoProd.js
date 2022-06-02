@@ -33,31 +33,42 @@ export default function InformacaoProduto(props) {
         <>
             <div className="conjunto-info-produto">
                 <div className="img-info-produto">
-                    <button id="Mapa" onClick={()=>{
-                        let srcImg = document.getElementById('imagem_m_p'); 
-                        srcImg.src === produto.urlImg ? 
-                        srcImg.src = produto.urlImgLocal :
-                        srcImg.src = produto.urlImg;
-                    }}
-                    >mapa do supermercado</button>
+                    {(produto._idSupermercado !== "629125e146583b24293df781")?
+                        <button id="Mapa" onClick={()=>{
+                            let srcImg = document.getElementById('imagem_m_p');    
+                        
+                            srcImg.src === produto.urlImg ? 
+                            srcImg.src = produto.urlImgLocal :
+                            srcImg.src = produto.urlImg;
+                        
+                        }}
+                        >mapa do supermercado</button>
+                        :<></>
+                    }
                     <img id="imagem_m_p" src={produto.urlImg} alt="produto"/>
                 </div>
                 <div className="info-produto">
                     <h3>{produto.nome}</h3>
                     <p>Encontrado em {Math.floor(Math.random()*400+1)} supermercados</p>
                     <p>Diferença de preço <span> R$90 </span> <span>R${produto.preco}</span> {produto.preco_medida}</p>
-                    <p>{produto.marca}</p>
                     <p>{produto.classeProduto}</p>
-                    <p><button className='adicionar'>Adicionar ao carrinho</button></p>
+                    {
+                        (produto._idSupermercado !== "629125e146583b24293df781")?
+                        <p><button className='adicionar'>Adicionar ao carrinho</button></p>
+                        :<></>
+                    }
                 </div>
             </div>
             <div className='subititulo'>Supermercados com este produto</div>
 
             {
                 produtos.map( v => {
-                    return(
-                        <SupermercadoProduto key={v._id} _idSuper={v._idSupermercado} preco={v.preco.toString().replace(".",",")}/>
-                    )
+                    if(v._idSupermercado !== "629125e146583b24293df781"){
+                        return(
+                            <SupermercadoProduto key={v._id} _id={v._id} _idSuper={v._idSupermercado} preco={v.preco.toString().replace(".",",")}/>
+                        )
+                    }
+                    return(<></>);
                 })
             }
             {/* <SupermercadoProduto img={Banana}/>

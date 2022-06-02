@@ -105,7 +105,9 @@ function App() {
           })}
           
         </div>
-        Valor do carrinho: R${valor}
+        <div id="exibirValorCar">
+          Valor do carrinho: R${ (Math.round(valor * 100) / 100).toFixed(2).toString().replace(".",",") }
+        </div>
       </>
       ) 
     }
