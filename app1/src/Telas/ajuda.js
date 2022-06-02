@@ -22,7 +22,7 @@ export default function Ajuda(props) {
                         <a href='#supermercado-detalhes'>ver informações do supermercado</a>
                     </li>
                     <li>
-                        <a href='#supermercado-detalhes1'>carregar mais uspermercados</a>
+                        <a href='#supermercado-detalhes1'>carregar mais supermercados</a>
                     </li>
                     <li>
                         <a href='#supermercado-detalhes2'>informações do supermercado</a>
