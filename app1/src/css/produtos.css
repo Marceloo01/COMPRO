@@ -11,7 +11,15 @@
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
     transition: height .7s;
 }
-
+.tipos:first-child {
+    text-align: center;
+    height: 100%;
+    text-align: center;
+    color: #49b5d6;
+    transition: background-color 1s;
+    cursor: pointer;
+    background-color: #3f3f3f;
+}
 .tipos {
     text-align: center;
     height: 100%;
@@ -243,7 +251,7 @@
     }
     .tipos-produtos {
         position: absolute;
-        height:435px;
+        height:560px;
         grid-template-columns: 1fr;
     }
     .tipos-produtos.aberto{

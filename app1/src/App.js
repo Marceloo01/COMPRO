@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import {Routes,Route,Link} from 'react-router-dom';
 import './css/menu.css';
 import './css/variaveis.css';
@@ -31,7 +31,7 @@ function App() {
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   // login
   const [sel,setSel]=useState(1);
-  const [logou,setLogou]=useState(1); 
+  const [logou,setLogou]=useState(0); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
   const [filtro,setFiltro] = useState("");
   const [valor,setValor] = useState( 0 );
@@ -50,7 +50,9 @@ function App() {
 
     setLogou(newUser);
   }
-
+useEffect(()=>{
+  console.log(sel)
+},[sel])
   if(sessionStorage.getItem("loginId") && sessionStorage.getItem("loginNome") && sessionStorage.getItem("loginFoto") && (!logou)){
     
     verificarLogin(
@@ -64,9 +66,10 @@ function App() {
     
   // mudar imagem da tela por url
   const AlterarTela = (v)=>{
-    if(v==='/')
+    
+    if(v.toUpperCase() === '/HOME')
       setSel(1);
-    else if(v.toUpperCase()==='/SUPERMERCADO')
+    else if(v.toUpperCase()==='/SUPERMERCADO' || v.toUpperCase()==='/' )
       setSel(2);
     else if(v.toUpperCase()==='/PRODUTOS')
       setSel(3);
@@ -153,7 +156,7 @@ function App() {
               <Link  
                 onClick={()=>{ setSel(1); abrirMenu() }} 
                 className={sel===1?"selecionado":""} 
-                to='/' >Home
+                to='/Home' >Home
               </Link>
                 
               <Link  
@@ -197,10 +200,11 @@ function App() {
         <main>
           {/* todas as rotas do site */}
         <Routes>
-          <Route path='/'                                   element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
+          <Route path='/'                                   element={<Supermercados key="1" AlterarTela={AlterarTela}/>}>              </Route>
+          <Route path='/Home'                               element={<Home AlterarTela={AlterarTela}/>}>                               </Route>
           <Route path='/Contato'                            element={<Contato AlterarTela={AlterarTela}/>}>                            </Route>
           <Route path='/Produtos'                           element={<Produtos AlterarTela={AlterarTela} filtro={filtro}/>}>           </Route>
-          <Route path='/Supermercado'                       element={<Supermercados AlterarTela={AlterarTela}/>}>                      </Route>
+          <Route path='/Supermercado'                       element={<Supermercados key="2" AlterarTela={AlterarTela}/>}>              </Route>
           <Route path='/Ajuda'                              element={<Ajuda AlterarTela={AlterarTela}/>}>                              </Route>
           <Route path='/Supermercado/informacoes/:id'       element={<Supers AlterarTela={AlterarTela}/>}>                             </Route>
           <Route path='/Produtos/informacoes/:id'           element={<InfoProd AlterarTela={AlterarTela}/>}>                           </Route>
@@ -213,7 +217,7 @@ function App() {
         
         {/* componente rodape */}
         <Rodape/>
-      </div>
+      </div> 
       )
     }else{
       return <Login AlterarTela={AlterarTela} verificarLogin={verificarLogin} logou={logou} setLogou={setLogou} />

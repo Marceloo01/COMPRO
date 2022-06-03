@@ -9,16 +9,27 @@ export default function InformacaoProduto(props) {
     props.AlterarTela(window.location.pathname);
     const [produto,setProd] = useState({});
     const [produtos,setProds] = useState([]);
+    const [diferenca, setDiferenca] = useState(null);
+
     const { id } = useParams();
     useEffect (() => {
         api
         .get(`/produto/exibir/${id}`)
-        .then((response) => {
-            setProd(response.data);
+        .then((responseP) => {
+            setProd(responseP.data);
             api
-                .get(`/produto/barato/${response.data.nome}`)
+                .get(`/produto/barato/${responseP.data.nome}`)
                 .then((response) => {
                     setProds(response.data);
+                    api
+                    .get(`/produto/diferenca/${responseP.data.nome}`)
+                        .then((response) => {
+                        
+                            setDiferenca(response.data);
+                    })
+                    .catch((err) => {
+                        console.error("ops! ocorreu um erro" + err);
+                    });
             })
             .catch((err) => {
                 console.error("ops! ocorreu um erro" + err);
@@ -50,7 +61,10 @@ export default function InformacaoProduto(props) {
                 <div className="info-produto">
                     <h3>{produto.nome}</h3>
                     <p>Encontrado em {Math.floor(Math.random()*400+1)} supermercados</p>
-                    <p>Diferença de preço <span> R$90 </span> <span>R${produto.preco}</span> {produto.preco_medida}</p>
+                    <p>Diferença de preço
+                    <span>{diferenca && diferenca.diferenca[0] ?"R$ "+(Math.round(diferenca.diferenca[1].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---"} </span> 
+                    <span>{diferenca && diferenca.diferenca[1] ?"R$ "+(Math.round(diferenca.diferenca[0].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---"}</span> 
+                    {produto.preco_medida}</p>
                     <p>{produto.classeProduto}</p>
                     {
                         (produto._idSupermercado !== "629125e146583b24293df781")?

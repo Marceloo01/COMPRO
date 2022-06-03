@@ -21,7 +21,7 @@ export default function Produtos(props) {
             setProdF(response.data);
         })
             .catch((err) => {
-            console.error("ops! ocorreu um erro" + err);
+            console.error("ops! ocorreu um erro" + err); 
             });        
     }, []);
      
@@ -47,7 +47,8 @@ export default function Produtos(props) {
                     var tiposGrid = document.getElementsByClassName('tipos-produtos')[0];
                     tiposGrid.classList.toggle("aberto");
                     
-                }}><p>Filtro</p></button></center>
+                }}>
+                    <p>Filtro</p></button></center>
             <div className="tipos-produtos aberto">
                 <Filtro />
             </div>

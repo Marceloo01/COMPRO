@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import banana from '../img/banana.png';
 import '../css/produtos.css';
+import api from '../service/api_compro';
 
 export default function blocoProd(props) {
+    const [diferenca, setDiferenca] = useState(null);
+
+    useEffect(()=> {
+        
+        api
+        .get(`/produto/diferenca/${props.nome}`)
+        .then((response) => {
+            setDiferenca(response.data)
+        ;})
+        .catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+        });
+    },[])
     return(
         
         <div className='produto'>
@@ -19,8 +33,8 @@ export default function blocoProd(props) {
             <div className='btns-produto'>
                 <div className='diferenca-preco-produto'>
                     <p>
-                        <span className='maiorPreco'>{props.MaxPreco?"R$ "+ (Math.round(props.MaxPreco * 100) / 100).toFixed(2).toString().replace(".",","):""} </span> 
-                        <span className='menorPreco'> {"R$ "+(Math.round(props.MinPreco * 100) / 100).toFixed(2).toString().replace(".",",")}</span>
+                        <span className='maiorPreco'>{diferenca && diferenca.diferenca[0] ?"R$ "+(Math.round(diferenca.diferenca[1].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---  ---"} </span> 
+                        <span className='menorPreco'>{diferenca && diferenca.diferenca[1] ?"R$ "+(Math.round(diferenca.diferenca[0].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---  ---"}</span>
                     </p>
 
                     {
