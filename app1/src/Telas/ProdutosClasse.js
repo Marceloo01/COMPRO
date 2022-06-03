@@ -22,6 +22,7 @@ export default function ProdutosClasse(props) {
         })
             .catch((err) => {
             console.error("ops! ocorreu um erro" + err);
+            
             });        
     }, []);
 

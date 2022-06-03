@@ -23,6 +23,7 @@ export default function blocoProd(props) {
         <div className='produto'>
             <div className='img-produto'>
                 <img draggable="false" src={props.urlImg || banana} alt="produto"/>
+                
             </div>
             <div className='nome-produto'>
                 <span>{props.nome}</span>

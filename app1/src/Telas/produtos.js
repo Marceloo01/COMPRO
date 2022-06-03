@@ -51,6 +51,7 @@ export default function Produtos(props) {
                     <p>Filtro</p></button></center>
             <div className="tipos-produtos aberto">
                 <Filtro />
+                
             </div>
 
             {  produtosF?

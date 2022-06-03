@@ -21,6 +21,7 @@
     transition: .5s;
 }
 .data {
+    
     overflow: hidden;
     transition: .3s;
     opacity: 0;

@@ -20,6 +20,7 @@ export default function menu(props){
     <header>
       
       <div className="cab">
+        
         <img src={COMPRO}/>
       </div>
 

@@ -44,6 +44,7 @@ export default function ProdutosSupermercado(props) {
         
     
     return(
+        
         <>
             <center><button className="filtro"
                 onClick={()=> {

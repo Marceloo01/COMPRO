@@ -21,4 +21,5 @@ export default function Integrantes(props) {
         </div>
         
     )
+    
 }

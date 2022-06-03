@@ -33,6 +33,7 @@ export default function Login(props) {
                     <button onClick={mover}><BsGoogle /></button>
                     <div className='para-preencher'>Login Facebook</div>
                     <button onClick={mover}><ImFacebook /></button>
+                    
             </div>
             
         </div>

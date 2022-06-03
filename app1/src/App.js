@@ -110,6 +110,7 @@ useEffect(()=>{
         </div>
         <div id="exibirValorCar">
           Valor do carrinho: R${ (Math.round(valor * 100) / 100).toFixed(2).toString().replace(".",",") }
+          
         </div>
       </>
       ) 

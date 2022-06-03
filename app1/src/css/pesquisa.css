@@ -23,6 +23,7 @@
     padding-right: 10px;
 }
 .pesquisa > img {
+    
     object-fit: cover;
     width: 40px;
 }

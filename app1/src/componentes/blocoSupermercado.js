@@ -7,6 +7,7 @@ export default function bloco(props) {
    
     return (
         
+        
         <div className="conjunto">
             <div className="Supermercado-img">
                 {/* <h2>{props.nome}</h2> */}

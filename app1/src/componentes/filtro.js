@@ -17,6 +17,7 @@ export default function Filtro(props){
             <div className="tipos" onClick={()=>{ mostrarProdClasses("processados") }}><p>processados</p></div>
             <div className="tipos" onClick={()=>{ mostrarProdClasses("bebidas") }}><p>bebidas</p></div>
             <div className="tipos" onClick={()=>{ mostrarProdClasses("Limpeza") }}><p>Limpeza</p></div>
+            
         </>
     )
 }

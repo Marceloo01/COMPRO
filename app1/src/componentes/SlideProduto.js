@@ -20,6 +20,7 @@ export default function SlideProduto(props) {
                 setCarrinho(localStorage.getItem("carrinho"));
 
     },[carrinho])
+    
 
 
 

@@ -39,6 +39,7 @@ export default function Slid(props){
                         bairro={value.bairro} 
                         estado={value.estado}
                         abertura={value.abertura}
+                        
                         fechamento={value.fechamento}
                     />)}) 
                     : <div className="carregando">

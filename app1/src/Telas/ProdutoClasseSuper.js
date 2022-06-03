@@ -21,6 +21,7 @@ export default function Produtos(props) {
         .get(`supermercado/produto/${id}/${classe}`)
         .then((response) => {
             setProd(response.data);
+            
             setProdF(response.data);
         })
             .catch((err) => {

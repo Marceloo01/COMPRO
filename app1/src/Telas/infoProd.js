@@ -14,6 +14,7 @@ export default function InformacaoProduto(props) {
     const { id } = useParams();
     useEffect (() => {
         api
+        
         .get(`/produto/exibir/${id}`)
         .then((responseP) => {
             setProd(responseP.data);

@@ -7,6 +7,7 @@ import facebook from '../img/facebook.png';
 
 export default function Rodape() {
   return (
+      
     <>
     <footer className="rodape">
         <div className="rodLogo">

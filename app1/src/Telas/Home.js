@@ -11,6 +11,7 @@ export default function Home(props) {
         <p>em nosso site você pode achar o que precisa sem ter que sair de casa e com facilidade, comparar preços de produtos e mais</p>
       </div> 
     </>
+    
   );
 }
 

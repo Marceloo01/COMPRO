@@ -41,6 +41,7 @@ export default function SupermercadoProduto(props) {
                         
                         if(btn_carrinho.classList.value === "animar"){ return }
                         
+                        
                         btn_carrinho.classList.toggle('animar');
                         setTimeout(()=>{btn_carrinho.classList.toggle('animar')},2500);
 

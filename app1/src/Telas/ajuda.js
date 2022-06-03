@@ -121,6 +121,7 @@ export default function Ajuda(props) {
                     <p>Abaixo temos os supermercados com este produto</p>
                 </div>
                 <img id="supermercado-detalhes2" src={InformacaoProduto2}/>
+                
             </div>
 
 

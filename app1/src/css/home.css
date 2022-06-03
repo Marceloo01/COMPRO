@@ -21,6 +21,7 @@ body {
     overflow-x: hidden;
     animation-name: example;
     animation-duration: 1.5s;
+    
     min-width: 250px;
 }
 .imagem-home {

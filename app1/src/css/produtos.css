@@ -219,6 +219,7 @@
         min-width: var(--i);
         --qt:4;
     }
+    
 }
 @media screen and (max-width:1250px) {
     .produto{

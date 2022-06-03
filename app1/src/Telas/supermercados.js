@@ -23,6 +23,7 @@ export default function superMercados(props) {
                 setSlides([...slides,<Slid key={slides.length+1} 
                     titulo="" />])
             }}><p>Mais supermercados</p></button>
+            
         </div>
 
         </>
