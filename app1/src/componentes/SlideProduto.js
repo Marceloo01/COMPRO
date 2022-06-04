@@ -4,7 +4,6 @@ import ConjuntoProd from './blocoProd.js';
 
 export default function SlideProduto(props) {
     document.title = "Produtos";
-    var contador = 0;
     const [carrinho,setCarrinho] = useState("");
     // const [quantidade,setQuantidade] = useState("");
 

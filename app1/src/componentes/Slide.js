@@ -10,7 +10,6 @@ export default function Slid(props){
         api
             .get("/supermercado")
             .then((response) => {
-                console.log(supermercados)
             setSuper(response.data)
         })
 

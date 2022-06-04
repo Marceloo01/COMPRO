@@ -4,7 +4,6 @@ import '../css/variaveis.css';
 import Supermercados from '../img/ajuda/supermercados.png';
 import Supermercados2 from '../img/ajuda/supermercados2.png';
 import SupermercadoInfo from  '../img/ajuda/supermercado-info.png';
-import ProdutosTela from '../img/ajuda/produtos-Tela.png';
 import InformacaoProduto from '../img/ajuda/informacao-produto.png';
 import InformacaoProduto2 from '../img/ajuda/informacao-produto2.png';
 import CarrinhoTela from '../img/ajuda/carrinho-Tela.png';
@@ -71,8 +70,8 @@ export default function Ajuda(props) {
                 <div  id="supermercado-detalhes1-1" className='ponto-ajuda' style={{left:50+"%", top: 94+"%" }}>
                     <p>Clicando aqui você carrega mais supermercados</p>
                 </div>
-                <img src={Supermercados}/>
-                <img id="carregar-mais-supermercados" src={Supermercados2}/>
+                <img alt="ajuda" src={Supermercados}/>
+                <img alt="ajuda" id="carregar-mais-supermercados" src={Supermercados2}/>
             </div>
 
             <div  className='subititulo'>Informações do supermercado</div>
@@ -80,7 +79,7 @@ export default function Ajuda(props) {
                 <div  id="supermercado-detalhes1-2" className='ponto-ajuda' style={{left:75.50+"%", top: 70+"%" }}>
                     <p>Clique aqui para ver todos os produtos do supermercado selecionado</p>
                 </div>
-                <img id="supermercado-detalhes2" src={SupermercadoInfo}/>
+                <img alt="ajuda" id="supermercado-detalhes2" src={SupermercadoInfo}/>
             </div>
 
 
@@ -101,7 +100,7 @@ export default function Ajuda(props) {
                 <div  id="produto-detalhes1-1" className='ponto-ajuda' style={{left:15+"%", top: 86.50+"%" }}>
                     <p>Para ver as informações do produto</p>
                 </div>
-                <img id="supermercado-detalhes2" src={Barrapesquisa}/>
+                <img alt="ajuda" id="supermercado-detalhes2" src={Barrapesquisa}/>
             </div>
 
             <div  className='subititulo'>Informações do produto</div>
@@ -109,7 +108,7 @@ export default function Ajuda(props) {
                 <div  id="produto-detalhes1-2" className='ponto-ajuda' style={{left:30.50+"%", top: 12+"%" }}>
                     <p>Aqui mosstra onde o produto fica no supermercado</p>
                 </div>
-                <img id="produto-info" src={InformacaoProduto}/>
+                <img alt="ajuda" id="produto-info" src={InformacaoProduto}/>
             </div>
 
             <div  className='subititulo'>Informações do produto</div>
@@ -120,7 +119,7 @@ export default function Ajuda(props) {
                 <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 50+"%" }}>
                     <p>Abaixo temos os supermercados com este produto</p>
                 </div>
-                <img id="supermercado-detalhes2" src={InformacaoProduto2}/>
+                <img alt="ajuda" id="supermercado-detalhes2" src={InformacaoProduto2}/>
                 
             </div>
 
@@ -139,7 +138,7 @@ export default function Ajuda(props) {
                 <div  id="carrinho-detalhes1" className='ponto-ajuda' style={{left:90+"%", top: 50+"%" }}>
                     <p>Precisa-se ir para a tela de produtos para adiciona-los ao carrinho</p>
                 </div>
-                <img id="carro-detalhes1" src={CarrinhoTela}/>
+                <img alt="ajuda" id="carro-detalhes1" src={CarrinhoTela}/>
             </div>
 
             <div  className='subititulo'>conteudo do carrinho</div>
@@ -152,7 +151,7 @@ export default function Ajuda(props) {
                     <p>Seu saldo</p>
                 </div>
 
-                <img id="carro-detalhes2" src={CarrinhoTela2}/>
+                <img alt="ajuda" id="carro-detalhes2" src={CarrinhoTela2}/>
             </div>
         </>
     )
