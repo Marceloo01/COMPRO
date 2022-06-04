@@ -51,7 +51,6 @@ function App() {
     setLogou(newUser);
   }
 useEffect(()=>{
-  console.log(sel)
 },[sel])
   if(sessionStorage.getItem("loginId") && sessionStorage.getItem("loginNome") && sessionStorage.getItem("loginFoto") && (!logou)){
     

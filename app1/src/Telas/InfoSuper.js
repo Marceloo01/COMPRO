@@ -1,7 +1,6 @@
 import React, { useEffect , useState} from "react";
 import { useParams, Link } from 'react-router-dom';
 import Supermercado from "../img/SupermercadoSlide.jpg";
-import Estrela from "../img/estrelas.png";
 import "../css/infoSuper.css";
 import api from '../service/api_compro';
 
