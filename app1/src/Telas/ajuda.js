@@ -105,13 +105,13 @@ export default function Ajuda(props) {
                     <p>Para ver as informações do produto.</p>
                 </div>
                 <img alt="ajuda" id="supermercado-detalhes2" src={Barrapesquisa}/>
-                <p>na tela de produtos temos os comparadores de preço, para adicionar ao carrinho você precisa clicar em informações ou ver os produtos de um supermercado especifico.</p>
+                <p>Na tela de produtos temos os comparadores de preço, para adicionar ao carrinho você precisa clicar em informações ou ver os produtos de um supermercado especifico.</p>
             </div>
 
             <div  className='subititulo'>Informações do produto</div>
             <div className='links' >
             <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 30+"%" }}>
-                    <p>alguns dados do produto.</p>
+                    <p>Alguns dados do produto.</p>
                 </div>
                 <div  id="produto-detalhes1" className='ponto-ajuda' style={{left:50+"%", top: 50+"%" }}>
                     <p>Abaixo temos os supermercados com este produto.</p>
@@ -133,7 +133,7 @@ export default function Ajuda(props) {
                 </div>
 
                 <div  id="carrinho-detalhes1" className='ponto-ajuda' style={{left:90+"%", top: 50+"%" }}>
-                    <p>Tela de informações do porduto você pode adicionar o produto ao carrinho.</p>
+                    <p>Na tela de informações do porduto você pode adicionar o produto ao carrinho.</p>
                 </div>
                 <img alt="ajuda" id="carro-detalhes1" src={CarrinhoTela}/>
             </div>
