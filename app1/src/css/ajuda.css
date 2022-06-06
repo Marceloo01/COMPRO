@@ -1,14 +1,9 @@
 .links:first-child {
     padding: 30px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
     width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 20px #d3d3d3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 50px;
+    text-align: left;
 }
 .links {
     margin-bottom: 30px;
@@ -20,6 +15,7 @@
     box-shadow: 0px 0px 20px #d3d3d3;
     display: grid;
     grid-column-gap: 50px;
+    text-align: center;
 }
 .links ul {
     padding-left: 10px;
@@ -48,9 +44,28 @@
     box-sizing: border-box;
     background-color: #333246;
     transform: translate(-50%,-50%);
-    border: 1px solid rgb(255, 0, 0);
     transition: all 1s;
     overflow: hidden;
+    animation-name: identifier;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    border-radius: 5px;
+    text-align: left;
+    z-index: 1;
+}
+.links > p {
+    padding: 10px;
+}
+@keyframes identifier {
+    0% {
+        box-shadow: 0px 0px 15px 5px#ff0000d5;
+    }
+    50% {
+        box-shadow: 0px 0px 15px 10px#ff0000d5;
+    } 
+    90% {
+        box-shadow: 0px 0px 15px 5px#ff0000d5;
+    }
 }
 .ponto-ajuda:hover {
     min-width: 250px;
@@ -58,6 +73,8 @@
     transform: translate(-10%,-90%);
     width: 400px;
     height: 200px;
+    animation-name: none;
+    z-index: 5;
 }
 .ponto-ajuda > p {
     transition: all 1s;
@@ -69,7 +86,7 @@
     height: auto;
     font-size: 20px;
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1200px) {
     .links {
         width: 100%;
     }

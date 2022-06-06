@@ -54,6 +54,7 @@ export default function Produtos(props) {
                     
                 }}><p>Filtro</p></button></center>
             <div className="tipos-produtos aberto">
+                <div className="tipos" onClick={()=>{ mostrarProdClasses("") }}><p>Tirar filtro</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("brinquedos") }}><p>brinquedos</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("frutas") }}><p>frutas/verduras</p></div>
                 <div className="tipos" onClick={()=>{ mostrarProdClasses("eletrodomesticos") }}><p>eletrodomesticos</p></div>
