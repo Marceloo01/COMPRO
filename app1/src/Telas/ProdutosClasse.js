@@ -50,9 +50,7 @@ export default function ProdutosClasse(props) {
                     tiposGrid.classList.toggle("aberto");
                     
                 }}><p>Filtro</p></button></center>
-            <div className="tipos-produtos aberto">
                 <Filtro />
-            </div>
 
             {  produtosF?
                 <>

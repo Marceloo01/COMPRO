@@ -37,7 +37,6 @@ export default function Produtos(props) {
         );
     },[props.filtro])
     useEffect(()=>{
-
     },[produtosF])
     
     return(
@@ -46,13 +45,11 @@ export default function Produtos(props) {
                 onClick={()=> {
                     var tiposGrid = document.getElementsByClassName('tipos-produtos')[0];
                     tiposGrid.classList.toggle("aberto");
-                    
-                }}>
-                    <p>Filtro</p></button></center>
-            <div className="tipos-produtos aberto">
+                    setTimeout(()=> {
+                        tiposGrid.classList.add("aberto")
+                    }, 20000);
+                }}><p>Filtro</p></button></center>
                 <Filtro />
-                
-            </div>
 
             {  produtosF?
                 <>
