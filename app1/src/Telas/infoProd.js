@@ -62,9 +62,11 @@ export default function InformacaoProduto(props) {
                 <div className="info-produto">
                     <h3>{produto.nome}</h3>
                     <p>Encontrado em {Math.floor(Math.random()*400+1)} supermercados</p>
-                    <p>Diferença de preço
+                    <p>Diferença de preço &nbsp;
                     <span>{diferenca && diferenca.diferenca[0] ?"R$ "+(Math.round(diferenca.diferenca[1].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---"} </span> 
+                    &nbsp;
                     <span>{diferenca && diferenca.diferenca[1] ?"R$ "+(Math.round(diferenca.diferenca[0].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---"}</span> 
+                    &nbsp;
                     {produto.preco_medida}</p>
                     <p>{produto.classeProduto}</p>
                     {
@@ -93,10 +95,11 @@ export default function InformacaoProduto(props) {
             <div className='subititulo'>Supermercados com este produto</div>
 
             {
+                
                 produtos.map( v => {
                     if(v._idSupermercado !== "629125e146583b24293df781"){
                         return(
-                            <SupermercadoProduto key={v._id} _id={v._id} _idSuper={v._idSupermercado} preco={v.preco.toString().replace(".",",")}/>
+                            <SupermercadoProduto key={v._id} _id={v._id} _idSuper={v._idSupermercado} preco={v.preco}/>
                         )
                     }
                     return(<></>);

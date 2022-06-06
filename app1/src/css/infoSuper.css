@@ -8,7 +8,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 500px 100px;
+    grid-template-rows: 550px 100px;
     grid-column-gap: 1vw;
     left: 50%;
     transform: translate(-50%);

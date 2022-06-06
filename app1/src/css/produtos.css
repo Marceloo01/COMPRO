@@ -9,6 +9,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     box-sizing: border-box;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
     transition: height .5s;
 }
 .tipos:first-child {
@@ -65,6 +66,7 @@
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #b9b9b9;
+    -moz-box-shadow: 0px 0px 10px #b9b9b9;
     height: auto;
     --i: calc(20% - 16px);
     min-width: var(--i);

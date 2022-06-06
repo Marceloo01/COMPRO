@@ -61,9 +61,8 @@ export default function SlideProduto(props) {
                         urlImg={value.urlImg}
                         urlImgLocal={value.urlImgLocal}
                         nome={value.nome} 
-                        marca={value.marca} 
-                        MinPreco={value.preco}
-                        MaxPreco={props.Many ?value.preco+90: ""}
+                        marca={value.marca}
+                        preco={value.preco}
                         preco_medida={value.preco_medida}
                         classeProduto={value.classeProduto}
                         carrinho={carrinho} setCarrinho={setCarrinho}

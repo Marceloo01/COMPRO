@@ -49,6 +49,9 @@ export default function InfoSupermercados (props) {
 
                     <span className="dado">Telefone</span>
                     <p> {supermercado.telefone}</p>
+
+                    <span className="dado">atendimento</span>
+                    <p> {supermercado.abertura} - {supermercado.fechamento}</p>
                 
                     <div className="Estrela">
                         <div className="EstrelaCheia" style={{ width: 40*supermercado.avaliacao+'px' }}>

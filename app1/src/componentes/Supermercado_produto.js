@@ -24,8 +24,8 @@ export default function SupermercadoProduto(props) {
                     <img src={supermercado.urlImg} alt="produto"/>
                 </div>
                 <div className="descricao-supermercado-produto">
-                    <h3>{supermercado.nome}</h3> 
-                    <p>Valor encontrado R${props.preco}</p>
+                    <h3>{supermercado.nome}</h3>
+                    <p>Valor encontrado R${(Math.round( Number(props.preco) * 100) / 100).toFixed(2).toString().replace(".",",")}</p>
                     <Link to={`/Supermercado/informacoes/${props._idSuper}`}>Ver Supermercado</Link>
                     
                     <button onClick={()=>{

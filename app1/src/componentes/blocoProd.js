@@ -34,10 +34,18 @@ export default function blocoProd(props) {
             </div>
             <div className='btns-produto'>
                 <div className='diferenca-preco-produto'>
+                    {
+                    props._idSuper === "629125e146583b24293df781" ?
                     <p>
                         <span className='maiorPreco'>{diferenca && diferenca.diferenca[0] ?"R$ "+(Math.round(diferenca.diferenca[1].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---  ---"} </span> 
                         <span className='menorPreco'>{diferenca && diferenca.diferenca[1] ?"R$ "+(Math.round(diferenca.diferenca[0].preco * 100) / 100).toFixed(2).toString().replace(".",","):"---  ---"}</span>
                     </p>
+                    : 
+                    <p>
+    
+                        <span className='menorPreco'>{"R$ "+(Math.round(props.preco * 100) / 100).toFixed(2).toString().replace(".",",")}</span>
+                    </p>
+                    }
 
                     {
                     props._idSuper !== "629125e146583b24293df781" ?

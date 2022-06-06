@@ -30,7 +30,7 @@ function App() {
                     "Entre em contato com nossa equipe",
                     "Procure tópicos que responderam suas duvidas sobre nosso site"];
   // login
-  const [sel,setSel]=useState(1);
+  const [sel,setSel]=useState(2);
   const [logou,setLogou]=useState(0); 
   const [carrinhoUser,setCarrinho]=useState(localStorage.getItem("carrinho")); 
   const [filtro,setFiltro] = useState("");
@@ -70,7 +70,7 @@ useEffect(()=>{
       setSel(1);
     else if(v.toUpperCase()==='/SUPERMERCADO' || v.toUpperCase()==='/' )
       setSel(2);
-    else if(v.toUpperCase()==='/PRODUTOS')
+    else if(v.toUpperCase()==='/PRODUTOS' || v.toUpperCase()==='/PRODUTOS')
       setSel(3);
     else if(v.toUpperCase()==='/CONTATO')
       setSel(4);
