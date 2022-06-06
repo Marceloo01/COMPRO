@@ -9,6 +9,7 @@ export default function blocoProd(props) {
 
     useEffect(()=> {
         
+        
         api
         .get(`/produto/diferenca/${props.nome}`)
         .then((response) => {
