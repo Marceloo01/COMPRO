@@ -39,6 +39,7 @@ body {
 }
 .imagem-home > p:first-child {
     font-size: 30px;
+    top: 40%;
 }
 .imagem-home > p {
     color: #ffffff;
