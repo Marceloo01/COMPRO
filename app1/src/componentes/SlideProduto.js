@@ -46,6 +46,34 @@ export default function SlideProduto(props) {
         
     }
 
+    function renderizarBaratos() {
+        props.array_prod.sort(function (a, b) {
+            if (a.preco > b.preco) {
+              return 1;
+            }
+            if (a.preco < b.preco) {
+              return -1;
+            }
+
+            return 0;
+          });
+          console.log(props.array_prod)
+          return (props.array_prod.map((value) =>{
+            return (<ConjuntoProd 
+                key={value._id} 
+                _id={value._id}
+                _idSuper={value._idSupermercado}
+                urlImg={value.urlImg}
+                urlImgLocal={value.urlImgLocal}
+                nome={value.nome} 
+                marca={value.marca}
+                preco={value.preco}
+                preco_medida={value.preco_medida}
+                classeProduto={value.classeProduto}
+                carrinho={carrinho} setCarrinho={setCarrinho}
+                />);
+            }))
+    }
     return(
         <>
         <div className="titulo-slide" style={{marginTop: '100px'}}>{props.titulo}</div>
@@ -53,21 +81,28 @@ export default function SlideProduto(props) {
                 <div onClick={()=>slideToLeft(document.getElementsByClassName("Slide-produto")[props.indice].firstChild)} className='botao-slide-produto left'></div>
                 <div className='Slide-produto'>  
 
-                { props.array_prod.length > 0 ? props.array_prod.map((value) =>{
-                    return (<ConjuntoProd 
-                        key={value._id} 
-                        _id={value._id}
-                        _idSuper={value._idSupermercado}
-                        urlImg={value.urlImg}
-                        urlImgLocal={value.urlImgLocal}
-                        nome={value.nome} 
-                        marca={value.marca}
-                        preco={value.preco}
-                        preco_medida={value.preco_medida}
-                        classeProduto={value.classeProduto}
-                        carrinho={carrinho} setCarrinho={setCarrinho}
-                        />);
-                    }) : <div className='naoEncontrado'>nenhum produto encontrado com este valor: {props.filtro}</div>}
+                { props.titulo === "Mais Baratos" && props.array_prod.length >0 
+                ? renderizarBaratos() 
+
+                : props.array_prod.length >0 ? 
+                    props.array_prod.map((value) =>{
+                        return (<ConjuntoProd 
+                            key={value._id} 
+                            _id={value._id}
+                            _idSuper={value._idSupermercado}
+                            urlImg={value.urlImg}
+                            urlImgLocal={value.urlImgLocal}
+                            nome={value.nome} 
+                            marca={value.marca}
+                            preco={value.preco}
+                            preco_medida={value.preco_medida}
+                            classeProduto={value.classeProduto}
+                            carrinho={carrinho} setCarrinho={setCarrinho}
+                            />);
+                        })
+                :
+                
+                <div className='naoEncontrado'>nenhum produto encontrado com este valor: {props.filtro}</div>}
                 </div>
                 <div onClick={()=>slideToRight(document.getElementsByClassName("Slide-produto")[props.indice].firstChild)} className='botao-slide-produto right'></div> 
             </div>

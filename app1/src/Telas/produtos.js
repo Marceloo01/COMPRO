@@ -54,18 +54,10 @@ export default function Produtos(props) {
             {  produtosF?
                 <>
                     <SlideProduto titulo="Produtos mais procurados" indice={0} Many={true} array_prod={
-                    produtosF.sort(function(a, b){
-                        if (a.preco > b.preco) return 1;
-                        if (a.preco < b.preco) return -1;
-                        return 0;
-                    })
+                    produtosF
                     } filtro={props.filtro} />
                     <SlideProduto titulo="Mais Baratos" indice={1} Many={true} array_prod={
-                        produtosF.sort(function(a, b){
-                            if (a.preco > b.preco) return -1;
-                            if (a.preco < b.preco) return 1;
-                            return 0;
-                        })
+                        produtosF
                     } filtro={props.filtro} />
                 </>
                 : <div className="carregando">

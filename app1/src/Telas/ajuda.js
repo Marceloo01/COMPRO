@@ -69,7 +69,7 @@ export default function Ajuda(props) {
             <div className='subititulo' id="supermercado-detalhes">Os supermercados</div>
             <div className='links' >
                 <div id="supermercado-detalhes1" className='ponto-ajuda' style={{left:16+"%", top: 41.60+"%" }}>
-                    <p>Clicando aqui você pode ver todos os dados do supermercado slecionado.</p>
+                    <p>Clicando aqui você pode ver todos os dados do supermercado selecionado.</p>
                 </div>
                 <div  id="supermercado-detalhes1-1" className='ponto-ajuda' style={{left:50+"%", top: 94+"%" }}>
                     <p>Clicando aqui você carrega mais supermercados.</p>
